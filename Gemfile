@@ -40,4 +40,4 @@ gem 'spring',        group: :development
 
 gem 'globalize', '~> 4.0.2'
 
-gem 'formtastic'
+gem 'simple_form'
