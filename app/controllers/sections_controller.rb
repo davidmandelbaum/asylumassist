@@ -1,6 +1,8 @@
 class SectionsController < ApplicationController
   before_action :set_section, only: [:show, :edit, :update, :destroy]
 
+  before_action :authenticate_user!
+
   # GET /sections
   # GET /sections.json
   def index
@@ -10,6 +12,12 @@ class SectionsController < ApplicationController
   # GET /sections/1
   # GET /sections/1.json
   def show
+    @sections = Section.all
+  end
+
+  def show_seqno
+    @section = Section.find(seq_no: params[:seq_no])
+    render "show", id: @section.id
   end
 
   # GET /sections/new

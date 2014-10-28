@@ -8,6 +8,9 @@
 #
 
 personal = Section.create({ name: 'Personal', seq_no: 1 })
+family = Section.create({ name: 'Family', seq_no: 2 })
+background = Section.create({ name: 'Background', seq_no: 3 })
+asylum_application = Section.create({ name: 'Asylum Application', seq_no: 4 })
 
 personal_p1 = Page.create({ seq_no: 1, guidance: 'bla' })
 

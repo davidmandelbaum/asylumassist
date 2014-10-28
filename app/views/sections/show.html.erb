@@ -1,19 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @section.name %>
-</p>
+<div class="row">
+    <div class="col-md-6">
+    </div>
+    <div class="col-md-6">
+        <ul class="nav nav-pills">
+            <% @sections.each do |s| %>
+                <% if s.name == @section.name %>
+                    <li class="active"><a href="#"><%= s.name %></a></li>
+                <% else %>
+                    <li><a href="#"><%= s.name %></a></li>
+                <% end %>
+            <% end %>
+        </ul>
+    </div>
+<br /><br />
 
-<p>
-  <strong>Seq no:</strong>
-  <%= @section.seq_no %>
-</p>
-
-<p>
-  <strong>Guidance:</strong>
-  <%= @section.guidance %>
-</p>
-
-<%= link_to 'Edit', edit_section_path(@section) %> |
-<%= link_to 'Back', sections_path %>
+<h1><%= @section.name %></h1>
+<br /><br />
+<%= @section.guidance %>
