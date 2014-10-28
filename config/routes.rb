@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  root 'page#'
+
+  get 'form/:section/:seq_no' => 'page#show'
+
   resources :questions
 
   resources :pages

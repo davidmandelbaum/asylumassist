@@ -41,3 +41,8 @@ gem 'spring',        group: :development
 gem 'globalize', '~> 4.0.2'
 
 gem 'simple_form'
+
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
+
+gem 'btter_errors'

@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20141028060341) do
 
   create_table "questions", force: true do |t|
     t.string   "name"
-    t.string   "type"
+    t.string   "field_type"
     t.string   "form_id"
     t.string   "explanation"
     t.integer  "page_id"
