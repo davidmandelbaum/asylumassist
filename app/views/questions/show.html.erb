@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @question.name %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @question.type %>
+</p>
+
+<p>
+  <strong>Form:</strong>
+  <%= @question.form_id %>
+</p>
+
+<p>
+  <strong>Explanation:</strong>
+  <%= @question.explanation %>
+</p>
+
+<p>
+  <strong>Page:</strong>
+  <%= @question.page %>
+</p>
+
+<p>
+  <strong>Seq no:</strong>
+  <%= @question.seq_no %>
+</p>
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', questions_path %>

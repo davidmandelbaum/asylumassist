@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  type: 
+  form_id: MyString
+  explanation: MyString
+  page_id: 
+  seq_no: 
+
+two:
+  name: MyString
+  type: 
+  form_id: MyString
+  explanation: MyString
+  page_id: 
+  seq_no: 
