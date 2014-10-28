@@ -17,6 +17,7 @@ class SectionsController < ApplicationController
   end
 
   def show_seqno
+    # TODO: fix so that this doesn't just use the id
     @section = Section.find(seq_no: params[:seq_no])
     render "show", id: @section.id
   end
