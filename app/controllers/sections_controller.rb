@@ -13,6 +13,7 @@ class SectionsController < ApplicationController
   # GET /sections/1.json
   def show
     @sections = Section.all
+    @next_section = Section.find_by_id(@section.id+1)
   end
 
   def show_seqno

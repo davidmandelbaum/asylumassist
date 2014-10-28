@@ -7,9 +7,9 @@
         <ul class="nav nav-pills">
             <% @sections.each do |s| %>
                 <% if s.name == @section.name %>
-                    <li class="active"><a href="#"><%= s.name %></a></li>
+                    <li class="active"><%= link_to( s.name, action: 'show', id: s.id ) %></li>
                 <% else %>
-                    <li><a href="#"><%= s.name %></a></li>
+                    <li><%= link_to( s.name, action: 'show', id: s.id ) %></li>
                 <% end %>
             <% end %>
         </ul>
@@ -18,4 +18,16 @@
 
 <h1><%= @section.name %></h1>
 <br /><br />
+<strong>Guidance: </strong><br />
 <%= @section.guidance %>
+
+<br /><br />
+
+<button type="button" class="btn btn-success btn-lg">
+    <% if @next_section %>
+        <%= link_to( @next_section.name, action: 'show', id: @next_section.id ) %>
+    <% else %>
+        <!-- TODO: check for missing answers and change button text to reflect this change -->
+        <%= link_to( 'Review answers', controller: 'home', action: 'review_answers' ) %>
+    <% end %>
+</button>

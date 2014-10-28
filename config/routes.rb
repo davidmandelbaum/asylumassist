@@ -10,6 +10,12 @@ Rails.application.routes.draw do
 
   get 'home/structure'
 
+  get 'home/review_answers'
+
+  get 'home/submit'
+
+  get 'home/show_submission'
+
   resources :questions
 
   resources :pages

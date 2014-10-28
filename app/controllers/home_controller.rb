@@ -7,4 +7,17 @@ class HomeController < ApplicationController
 
   def structure
   end
+
+  def review_answers
+    @sections = Section.all
+  end
+
+  def submit
+    redirect_to '/home/show_submission'
+  end
+
+  def show_submission
+    @message = 'Submitted form stub'
+  end
+
 end
