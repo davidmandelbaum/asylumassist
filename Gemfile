@@ -45,4 +45,6 @@ gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 
-gem 'btter_errors'
+gem 'better_errors'
+
+gem 'devise'

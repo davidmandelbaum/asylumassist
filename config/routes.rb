@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'page#'
+  devise_for :users
+  root 'page#index'
 
   get 'form/:section/:seq_no' => 'page#show'
 
