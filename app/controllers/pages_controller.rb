@@ -19,6 +19,22 @@ class PagesController < ApplicationController
     @section = @page.section
     @next_section = Section.find_by_id(@page.section.id+1)
     @next_page = Page.find_by(seq_no: @page.seq_no+1)
+    @page_responses
+  end
+
+  def submit
+    params.each do |k, v|
+      puts "k = " + k
+      puts "v = " + v
+      if k.include? "answer"
+        q_id = k[7..-1].to_i
+        answer = Answer.create( text: v, question: Question.find(q_id))
+        answer.entry = Entry.find(current_user.curr_entry)
+        answer.save()
+      end
+    end
+    # TODO: change this to seqno (from id)
+    render :controller => 'pages', :action => 'show', :id => Page.find(params[:page])
   end
 
   # GET /pages/new

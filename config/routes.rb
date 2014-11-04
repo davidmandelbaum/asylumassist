@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get 'logout' => 'devise/sessions#destroy'
   get 'login' => 'devise/sessions#new'
 
+  post 'pages/submit' => 'pages#submit'
+
   devise_for :users
 
   get 'home/index'

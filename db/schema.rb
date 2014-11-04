@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141104080118) do
+ActiveRecord::Schema.define(version: 20141104094955) do
+
+  create_table "answers", force: true do |t|
+    t.string   "text"
+    t.integer  "question_id"
+    t.integer  "entry_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "answers", ["entry_id"], name: "index_answers_on_entry_id"
+  add_index "answers", ["question_id"], name: "index_answers_on_question_id"
+
+  create_table "entries", force: true do |t|
+    t.integer  "user_id"
+    t.text     "note"
+    t.datetime "completed_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "entries", ["user_id"], name: "index_entries_on_user_id"
 
   create_table "pages", force: true do |t|
     t.integer  "seq_no"
@@ -75,6 +96,7 @@ ActiveRecord::Schema.define(version: 20141104080118) do
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.integer  "curr_page"
+    t.integer  "curr_entry"
     t.datetime "remember_created_at"
     t.integer  "sign_in_count",          default: 0,  null: false
     t.datetime "current_sign_in_at"

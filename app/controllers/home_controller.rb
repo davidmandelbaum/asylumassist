@@ -14,6 +14,12 @@ class HomeController < ApplicationController
   end
 
   def structure
+    # TODO: don't make duplicate entries
+    @entry = Entry.new
+    @entry.user = current_user
+    @entry.save()
+    current_user.curr_entry = @entry.id
+    current_user.save()
   end
 
   def review_answers

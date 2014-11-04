@@ -18,20 +18,20 @@
   <% @page.questions.each do |q| %>
     <%= q.name %><br />
     <% if q.field_type == "string" %>
-      <%= text_field(@page, q.id) %>
+      <%= text_field_tag "answer_" + q.id.to_s %>
     <% elsif q.field_type == "checkbox" %>
-      <%= check_box(@page, q.id) %>
+      <%= check_box_tag "answer_" + q.id.to_s %>
     <% elsif q.field_type == "date" %>
-      <%= date_field(@page, q.id) %>
+      <%= date_field_tag "answer_" + q.id.to_s %>
     <% elsif q.field_type == "text" %>
-      <%= text_area(@page, q.id) %>
+      <%= text_area_tag "answer" + q.id.to_s %>
     <% else %>
       Unknown type for question id = <%= q.id %>
     <% end %>
     <br /><br />
   <% end %>
+  <%= hidden_field_tag 'page', @page.id %>
+  <%= submit_tag 'save and continue' %>
 <% end %>
 
 <br /><br />
-
-<%= render "shared/next" %>
