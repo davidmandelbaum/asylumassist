@@ -28,9 +28,7 @@ Rails.application.routes.draw do
 
   resources :sections
 
-  get 'translation_editor/es' => 'translation_editor#show', locale: :es
-  get 'translation_editor/en' => 'translation_editor#show', locale: :en
-  get 'translation_editor/zh' => 'translation_editor#show', locale: :zh
+  get 'translation_editor/:locale' => 'translation_editor#show'
 
   get 'sections/:seq_no' => 'sections#show_seqno'
 

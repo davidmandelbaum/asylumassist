@@ -2,7 +2,7 @@
     <% if @next_page and @page %>
         <%= link_to( t('save_and_continue'), controller: 'pages', action: 'show', id: @next_page.id ) %>
     <% elsif @next_page %>
-        <%= link_to( t('continue'), controller: 'pages', action: 'show', id: @next_page.id ) %>
+        <%= link_to( t('continue') + @next_page.seq_no.to_s, controller: 'pages', action: 'show', id: @next_page.id ) %>
     <% elsif @next_section %>
         <%= link_to( t('proceed_to') + @next_section.name, controller: 'sections', action: 'show', id: @next_section.id ) %>
     <% else %>

@@ -85,9 +85,3 @@ fp1q3.save()
 fp2q1.save()
 fp2q2.save()
 fp2q3.save()
-
-I18n.locale = :es
-question1.name = "Test in Spanish"
-question2.name = "Test2 in Spanish"
-question1.save()
-question2.save()

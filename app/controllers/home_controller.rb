@@ -27,8 +27,14 @@ class HomeController < ApplicationController
 
   def review_answers
     @sections = Section.all
-    @entry = Entry.find(current_user.curr_entry)
-    @answers = @entry.answers
+    if current_user.curr_entry
+      @entry = Entry.find(current_user.curr_entry)
+      @answers = @entry.answers
+    else
+      section = Section.find_by(seq_no: 4)
+      # TODO: fix flash below (showing in params)
+      redirect_to :controller => 'sections', :action => 'show', :id => section.id, :flash => { :notice => "No current form entry in progress" }
+    end
   end
 
   def submit
