@@ -1,0 +1,10 @@
+<button type="button" class="btn btn-success btn-lg">
+    <% if @next_page %>
+        <%= link_to( @next_page.name, controller: 'pages', action: 'show', id: @next_page.id ) %>
+    <% elsif @next_section %>
+        <%= link_to( @next_section.name, controller: 'sections', action: 'show', id: @next_section.id ) %>
+    <% else %>
+        <!-- TODO: check for missing answers and change button text to reflect this change -->
+        <%= link_to( 'Review answers', controller: 'home', action: 'review_answers' ) %>
+    <% end %>
+</button>
