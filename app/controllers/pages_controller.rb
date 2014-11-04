@@ -23,20 +23,27 @@ class PagesController < ApplicationController
   end
 
   def submit
+    curr_page = Page.find(params[:page])
     params.each do |k, v|
       puts "k = " + k
       puts "v = " + v
       if k.include? "answer"
         q_id = k[7..-1].to_i
-        answer = Answer.create( text: v, question: Question.find(q_id))
-        answer.entry = Entry.find(current_user.curr_entry)
-        answer.save()
+        answer = Answer.find_by(question: Question.find(q_id))
+        if answer
+          answer.text = v
+          answer.save()
+        else
+          answer = Answer.create( text: v, question: Question.find(q_id))
+          answer.entry = Entry.find(current_user.curr_entry)
+          answer.save()
+        end
       end
     end
     curr_seq_no = Page.find(params[:page]).seq_no
-    next_page_id = Page.find_by(seq_no: curr_seq_no+1).id
-    if next_page_id
-      redirect_to :controller => 'pages', :action => 'show', :id => next_page_id
+    next_page = Page.find_by(section: curr_page.section, seq_no: curr_seq_no+1)
+    if next_page
+      redirect_to :controller => 'pages', :action => 'show', :id => next_page.id
     else
       curr_section = Page.find(params[:page]).section
       next_section = Section.find_by(seq_no: curr_section.seq_no+1)

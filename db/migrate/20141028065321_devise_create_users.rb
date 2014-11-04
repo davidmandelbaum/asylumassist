@@ -12,6 +12,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       ## Custom
       t.integer :curr_page
       t.integer :curr_entry
+      t.string :locale
 
       ## Rememberable
       t.datetime :remember_created_at

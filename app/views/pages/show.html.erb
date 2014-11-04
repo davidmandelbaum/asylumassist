@@ -14,13 +14,13 @@
   <% @page.questions.order('seq_no asc').each do |q| %>
     <%= q.name %><br />
     <% if q.field_type == "string" %>
-      <%= text_field_tag "answer_" + q.id.to_s %>
+      <%= text_field_tag "answer_" + q.id.to_s, q.answer_text %>
     <% elsif q.field_type == "checkbox" %>
-      <%= check_box_tag "answer_" + q.id.to_s %>
+      <%= check_box_tag "answer_" + q.id.to_s, q.answer_text %>
     <% elsif q.field_type == "date" %>
-      <%= date_field_tag "answer_" + q.id.to_s %>
+      <%= date_field_tag "answer_" + q.id.to_s, q.answer_text %>
     <% elsif q.field_type == "text" %>
-      <%= text_area_tag "answer" + q.id.to_s %>
+      <%= text_area_tag "answer" + q.id.to_s, q.answer_text %>
     <% else %>
       Unknown type for question id = <%= q.id %>
     <% end %>

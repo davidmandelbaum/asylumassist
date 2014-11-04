@@ -25,6 +25,16 @@
         <%= link_to t('login'), new_user_session_path %>
       </button>
     <% end %>
+      <button type="button" class="btn btn-default navbar-btn">
+        <%= link_to 'English', url_for( :locale => 'en' ) %>
+      </button>
+      <button type="button" class="btn btn-default navbar-btn">
+        <%= link_to 'Español', url_for( :locale => 'es' ) %>
+      </button>
+      <button type="button" class="btn btn-default navbar-btn">
+        <%= link_to '官话', url_for( :locale => 'zh' ) %>
+      </button>
+      </ul>
   </div>
 </nav>
 

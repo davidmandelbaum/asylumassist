@@ -9,9 +9,9 @@
           <h3 class="panel-title"><%= s.name %></h3>
         </div>
         <div class="panel-body">
-            <% @answers.each do |a| %>
-                <%= @answer.question.name %> <br />
-                <%= @answer.text %><br />
+            <% @entry.get_section_answers(s).each do |a| %>
+                <strong><%= a.question.name %></strong> <br />
+                <%= a.text %><br />
             <% end %>
         </div>
       </div>
@@ -22,3 +22,5 @@
 <button type="button" class="btn btn-success btn-lg">
   <%= link_to('Submit application', controller: 'home', action: 'submit') %>
 </button>
+
+<br />

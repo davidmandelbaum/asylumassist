@@ -1,6 +1,7 @@
+- carry through locale (session/user?)
 - handle missing answers (left blank or never added as models)
-- answer review
 - answer validation
+- refactor seeds
 - add model for FormText
 - add the rest of models
 - add translation for the rest of models

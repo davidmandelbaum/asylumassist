@@ -14,6 +14,9 @@ class HomeController < ApplicationController
   end
 
   def structure
+    # set locale
+    u = current_user
+    u.locale = params[:locale] || session[:locale]
     # TODO: don't make duplicate entries
     @entry = Entry.new
     @entry.user = current_user
@@ -24,7 +27,7 @@ class HomeController < ApplicationController
 
   def review_answers
     @sections = Section.all
-    @entry = current_user.curr_entry
+    @entry = Entry.find(current_user.curr_entry)
     @answers = @entry.answers
   end
 
@@ -38,6 +41,7 @@ class HomeController < ApplicationController
 
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
+    session[:locale] = params[:locale]
   end
 
 end
