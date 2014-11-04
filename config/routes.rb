@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :entries
+
+  resources :answers
+
   root 'home#index'
 
   get 'logout' => 'devise/sessions#destroy'
