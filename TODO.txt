@@ -1,5 +1,4 @@
 - add the rest of models
 - decide on question types
-- add localization
 - develop DSL for simpleforms
 - redesign nav bar

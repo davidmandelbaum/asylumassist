@@ -14,12 +14,23 @@
 
 <h3>Questions</h3>
 
-<% @page.questions.each do |q| %>
-  English Name: <%= q.name %><br />
-  <% I18n.locale = :es %>
-  Spanish Name: <%= q.name %><br />
-  Type: <%= q.field_type %>
-  <br />
+<%= form_tag("/pages/submit", method: "post") do %>
+  <% @page.questions.each do |q| %>
+    <%= q.name %><br />
+    <% if q.field_type == "string" %>
+      <%= text_field(@page, q.id) %>
+    <% elsif q.field_type == "checkbox" %>
+      <%= check_box(@page, q.id) %>
+    <% elsif q.field_type == "date" %>
+      <%= date_field(@page, q.id) %>
+    <% elsif q.field_type == "text" %>
+      <%= text_area(@page, q.id) %>
+    <% else %>
+      Unknown type for question id = <%= q.id %>
+    <% end %>
+
+    <br />
+  <% end %>
 <% end %>
 
 <br /><br />

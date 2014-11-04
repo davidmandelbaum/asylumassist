@@ -13,6 +13,8 @@ class PagesController < ApplicationController
   # GET /pages/1.json
   def show
     session[:curr_page] = @page
+    current_user.curr_page = @page.id
+    current_user.save
     @sections = Section.all
     @section = @page.section
     @next_section = Section.find_by_id(@page.section.id+1)

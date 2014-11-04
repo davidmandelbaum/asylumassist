@@ -4,13 +4,19 @@
 <div class="row">
   <div class="col-md-4">
     <br />
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
+    <%= t 'welcome_text' %>
 
     <br /><br />
-    <button type="button" class="btn btn-success btn-lg"><%= link_to 'Get Started', controller: 'home', action: 'structure' %></button>
+    <button type="button" class="btn btn-success btn-lg"><%= link_to t('start'), controller: 'home', action: 'structure' %></button>
   </div>
 
   <div class="col-md-4">
+    <ul class="nav nav-pills">
+      <li <% if I18n.locale == :en %>class="active"<% end %>><%= link_to 'English', url_for( :locale => 'en' ) %></li>
+      <li <% if I18n.locale == :es %>class="active"<% end %>><%= link_to 'Español', url_for( :locale => 'es' ) %></li>
+      <li <% if I18n.locale == :zh %>class="active"<% end %>><%= link_to '>官话', url_for( :locale => 'zh' ) %></li>
+    </ul>
+    <br />
     <%= image_tag("i589.png", width: "400") %>
   </div>
 </div>
