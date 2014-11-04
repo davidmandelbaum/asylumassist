@@ -1,7 +1,5 @@
 - add the rest of models
 - decide on question types
-- properly link questions to pages
 - add localization
-- modify user model to track current step
 - develop DSL for simpleforms
 - redesign nav bar

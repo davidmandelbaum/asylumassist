@@ -22,6 +22,10 @@ Rails.application.routes.draw do
 
   resources :sections
 
+  get 'translation_editor/es' => 'translation_editor#show', lang: "es"
+  get 'translation_editor/en' => 'translation_editor#show', lang: "en"
+  get 'translation_editor/zh' => 'translation_editor#show', lang: "zh"
+
   get 'sections/:seq_no' => 'sections#show_seqno'
 
   # The priority is based upon order of creation: first created -> highest priority.

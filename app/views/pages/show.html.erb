@@ -1,9 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Seq no:</strong>
-  <%= @page.seq_no %>
-</p>
+<%= render "shared/tracker" %>
 
 <p>
   <strong>Name:</strong>
@@ -15,10 +12,16 @@
   <%= @page.guidance %>
 </p>
 
-<p>
-  <strong>Section:</strong>
-  <%= @page.section %>
-</p>
+<h3>Questions</h3>
 
-<%= link_to 'Edit', edit_page_path(@page) %> |
-<%= link_to 'Back', pages_path %>
+<% @page.questions.each do |q| %>
+  English Name: <%= q.name %><br />
+  <% I18n.locale = :es %>
+  Spanish Name: <%= q.name %><br />
+  Type: <%= q.field_type %>
+  <br />
+<% end %>
+
+<br /><br />
+
+<%= render "shared/next" %>

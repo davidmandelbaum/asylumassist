@@ -12,6 +12,11 @@ class PagesController < ApplicationController
   # GET /pages/1
   # GET /pages/1.json
   def show
+    session[:curr_page] = @page
+    @sections = Section.all
+    @section = @page.section
+    @next_section = Section.find_by_id(@page.section.id+1)
+    @next_page = Page.find_by(seq_no: @page.seq_no+1)
   end
 
   # GET /pages/new

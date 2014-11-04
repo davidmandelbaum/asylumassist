@@ -14,6 +14,7 @@ class SectionsController < ApplicationController
   def show
     @sections = Section.all
     @next_section = Section.find_by_id(@section.id+1)
+    @next_page = @section.pages.find_by(seq_no: 1)
   end
 
   def show_seqno

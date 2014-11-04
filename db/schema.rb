@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141028065321) do
+ActiveRecord::Schema.define(version: 20141104080118) do
 
   create_table "pages", force: true do |t|
     t.integer  "seq_no"
@@ -23,6 +23,18 @@ ActiveRecord::Schema.define(version: 20141028065321) do
   end
 
   add_index "pages", ["section_id"], name: "index_pages_on_section_id"
+
+  create_table "question_translations", force: true do |t|
+    t.integer  "question_id", null: false
+    t.string   "locale",      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+    t.string   "explanation"
+  end
+
+  add_index "question_translations", ["locale"], name: "index_question_translations_on_locale"
+  add_index "question_translations", ["question_id"], name: "index_question_translations_on_question_id"
 
   create_table "questions", force: true do |t|
     t.string   "name"
@@ -37,6 +49,18 @@ ActiveRecord::Schema.define(version: 20141028065321) do
 
   add_index "questions", ["page_id"], name: "index_questions_on_page_id"
 
+  create_table "section_translations", force: true do |t|
+    t.integer  "section_id", null: false
+    t.string   "locale",     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+    t.text     "guidance"
+  end
+
+  add_index "section_translations", ["locale"], name: "index_section_translations_on_locale"
+  add_index "section_translations", ["section_id"], name: "index_section_translations_on_section_id"
+
   create_table "sections", force: true do |t|
     t.string   "name"
     t.integer  "seq_no"
@@ -50,6 +74,7 @@ ActiveRecord::Schema.define(version: 20141028065321) do
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
+    t.integer  "curr_page"
     t.datetime "remember_created_at"
     t.integer  "sign_in_count",          default: 0,  null: false
     t.datetime "current_sign_in_at"

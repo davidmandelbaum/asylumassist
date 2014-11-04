@@ -7,22 +7,26 @@
         <td>What you need</td>
     </tr>
     <tr>
-        <td>Personal</td>
+        <% @personal = Section.find_by(name: "Personal") %>
+        <td><%= link_to("Personal", controller: 'sections', action: 'show', id: @personal.id) %></td>
         <td>Lorem ipsum</td>
         <td>Lorem ipsum</td>
     </tr>
     <tr>
-        <td>Family</td>
+        <% @family = Section.find_by(name: "Family") %>
+        <td><%= link_to("Family", controller: 'sections', action: 'show', id: @family.id) %></td>
         <td>Lorem ipsum</td>
         <td>Lorem ipsum</td>
     </tr>
     <tr>
-        <td>Background</td>
+        <% @background = Section.find_by(name: "Background") %>
+        <td><%= link_to("Background", controller: 'sections', action: 'show', id: @background.id) %></td>
         <td>Lorem ipsum</td>
         <td>Lorem ipsum</td>
     </tr>
     <tr>
-        <td>Asylum Application</td>
+        <% @asylum_application = Section.find_by(name: "Asylum Application") %>
+        <td><%= link_to("Asylum Application", controller: 'sections', action: 'show', id: @asylum_application.id) %></td>
         <td>Lorem ipsum</td>
         <td>Lorem ipsum</td>
     </tr>

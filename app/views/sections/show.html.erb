@@ -1,20 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<div class="row">
-    <div class="col-md-6">
-    </div>
-    <div class="col-md-6">
-        <ul class="nav nav-pills">
-            <% @sections.each do |s| %>
-                <% if s.name == @section.name %>
-                    <li class="active"><%= link_to( s.name, action: 'show', id: s.id ) %></li>
-                <% else %>
-                    <li><%= link_to( s.name, action: 'show', id: s.id ) %></li>
-                <% end %>
-            <% end %>
-        </ul>
-    </div>
-<br /><br />
+<%= render "shared/tracker" %>
 
 <h1><%= @section.name %></h1>
 <br /><br />
@@ -23,11 +9,4 @@
 
 <br /><br />
 
-<button type="button" class="btn btn-success btn-lg">
-    <% if @next_section %>
-        <%= link_to( @next_section.name, action: 'show', id: @next_section.id ) %>
-    <% else %>
-        <!-- TODO: check for missing answers and change button text to reflect this change -->
-        <%= link_to( 'Review answers', controller: 'home', action: 'review_answers' ) %>
-    <% end %>
-</button>
+<%= render "shared/next" %>

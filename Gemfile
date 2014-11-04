@@ -39,6 +39,7 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'globalize', '~> 4.0.2'
+gem 'i18n'
 
 gem 'simple_form'
 
