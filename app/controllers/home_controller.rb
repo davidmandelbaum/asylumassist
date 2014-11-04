@@ -24,6 +24,8 @@ class HomeController < ApplicationController
 
   def review_answers
     @sections = Section.all
+    @entry = current_user.curr_entry
+    @answers = @entry.answers
   end
 
   def submit

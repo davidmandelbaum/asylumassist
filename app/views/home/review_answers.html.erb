@@ -9,7 +9,10 @@
           <h3 class="panel-title"><%= s.name %></h3>
         </div>
         <div class="panel-body">
-          Missing answers 
+            <% @answers.each do |a| %>
+                <%= @answer.question.name %> <br />
+                <%= @answer.text %><br />
+            <% end %>
         </div>
       </div>
     <% end %>

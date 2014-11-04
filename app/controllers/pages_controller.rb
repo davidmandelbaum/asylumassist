@@ -33,8 +33,19 @@ class PagesController < ApplicationController
         answer.save()
       end
     end
-    # TODO: change this to seqno (from id)
-    render :controller => 'pages', :action => 'show', :id => Page.find(params[:page])
+    curr_seq_no = Page.find(params[:page]).seq_no
+    next_page_id = Page.find_by(seq_no: curr_seq_no+1).id
+    if next_page_id
+      redirect_to :controller => 'pages', :action => 'show', :id => next_page_id
+    else
+      curr_section = Page.find(params[:page]).section
+      next_section = Section.find_by(seq_no: curr_section.seq_no+1)
+      if next_section
+        redirect_to :controller => 'sections', :action => 'show', :id => next_section.id
+      else
+        redirect_to :controller => 'home', :action => 'review answers'
+      end
+    end
   end
 
   # GET /pages/new

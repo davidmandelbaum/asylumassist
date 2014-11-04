@@ -1,10 +1,10 @@
-- better handling of entries (probably should have names, etc.)
 - handle missing answers (left blank or never added as models)
 - answer review
 - answer validation
 - add model for FormText
 - add the rest of models
 - add translation for the rest of models
+- better handling of entries (probably should have names, etc.)
 - simpleforms without specific model?
 - add link to change language to top bar
 - redesign nav bar

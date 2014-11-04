@@ -2,20 +2,16 @@
 
 <%= render "shared/tracker" %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @page.name %>
-</p>
+<h3><%= @page.name %></h3>
 
 <p>
-  <strong>Guidance:</strong>
   <%= @page.guidance %>
 </p>
 
 <br />
 
 <%= form_tag("/pages/submit", method: "post") do %>
-  <% @page.questions.each do |q| %>
+  <% @page.questions.order('seq_no asc').each do |q| %>
     <%= q.name %><br />
     <% if q.field_type == "string" %>
       <%= text_field_tag "answer_" + q.id.to_s %>
