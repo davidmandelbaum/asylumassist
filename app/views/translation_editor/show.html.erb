@@ -1,0 +1,6 @@
+<h3>Locale = <%= @locale %></h3>
+
+<% @questions.each do |q| %>
+  Name: <%= q.name %><br />
+  Expl: <%= q.explanation %><br />
+<% end %>
