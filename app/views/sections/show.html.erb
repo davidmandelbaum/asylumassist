@@ -2,11 +2,9 @@
 
 <%= render "shared/tracker" %>
 
-Locale: <%= I18n.locale %>
-
 <h1><%= t(@section.name) %></h1>
 <br /><br />
-<%= @section.guidance %>
+<%= t(@section.guidance) %>
 
 <br /><br />
 

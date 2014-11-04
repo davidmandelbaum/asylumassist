@@ -10,9 +10,18 @@
 user = User.create! :email => 'david.m.mandelbaum@gmail.com', :password => 'password', :password_confirmation => 'password'
 
 personal = Section.create({ name: 'Personal', seq_no: 1, guidance: 'Personal information' })
-family = Section.create({ name: 'Family', seq_no: 2 })
-background = Section.create({ name: 'Background', seq_no: 3 })
-asylum_application = Section.create({ name: 'Asylum Application', seq_no: 4 })
+family = Section.create({ name: 'Family', seq_no: 2, guidance: 'Family information' })
+background = Section.create({ name: 'Background', seq_no: 3, guidance: 'Background information' })
+asylum_application = Section.create({ name: 'Asylum Application', seq_no: 4, guidance: 'Asylum application information' })
+
+I18n.locale = :es
+personal.name = "Personal"
+family.name = "Familia"
+background.name = "Antecedentes"
+asylum_application.name = "Solicitud de Asilo"
+[personal, family, background, asylum_application].each do |x|
+  x.save()
+end
 
 personal_p1 = Page.create({ seq_no: 1, name: 'Basic Personal Information', guidance: 'This is for your most basic personal information. Ensure that all names are spelled correctly, and that your last name is filled out in ALL CAPS.' })
 personal_p2 = Page.create({ seq_no: 2, guidance: 'bla 2' })

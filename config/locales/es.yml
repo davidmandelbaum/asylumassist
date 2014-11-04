@@ -5,3 +5,6 @@ es:
   logged_in_as: "Conectado como David"
   welcome_text: "Bienvenidos a Asylum Assist!"
   start: 'Empezar'
+  continue: 'Continuar'
+  save_and_continue: 'Guardar y Continuar'
+  proceed_to: 'Proceder a '
