@@ -20,4 +20,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  login: "Log in"
+  logout: "Log out"
+  sign_up: "Sign up"
+  logged_in_as: "Logged in as "
   welcome_text: "Welcome to Asylum Assist!"
+  start: 'Get Started'

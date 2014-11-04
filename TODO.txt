@@ -1,4 +1,8 @@
+- add model for FormText
 - add the rest of models
-- decide on question types
-- develop DSL for simpleforms
+- add translation for the rest of models
+- simpleforms without specific model?
+- add link to change language to top bar
 - redesign nav bar
+- modularize translations
+- finish translation editor view

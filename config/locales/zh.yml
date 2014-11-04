@@ -1,2 +1,7 @@
 zh:
-  hello: "Hello world"
+  login: "登录"
+  logout: "注销"
+  sign_up: "报名"
+  logged_in_as: "登录为"
+  welcome_text: "欢迎协助庇护"
+  start: "开始"

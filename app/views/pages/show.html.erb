@@ -12,7 +12,7 @@
   <%= @page.guidance %>
 </p>
 
-<h3>Questions</h3>
+<br />
 
 <%= form_tag("/pages/submit", method: "post") do %>
   <% @page.questions.each do |q| %>
@@ -28,8 +28,7 @@
     <% else %>
       Unknown type for question id = <%= q.id %>
     <% end %>
-
-    <br />
+    <br /><br />
   <% end %>
 <% end %>
 

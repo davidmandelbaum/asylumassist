@@ -9,18 +9,23 @@
 
 user = User.create! :email => 'david.m.mandelbaum@gmail.com', :password => 'password', :password_confirmation => 'password'
 
-personal = Section.create({ name: 'Personal', seq_no: 1 })
+personal = Section.create({ name: 'Personal', seq_no: 1, guidance: 'Personal information' })
 family = Section.create({ name: 'Family', seq_no: 2 })
 background = Section.create({ name: 'Background', seq_no: 3 })
 asylum_application = Section.create({ name: 'Asylum Application', seq_no: 4 })
 
-personal_p1 = Page.create({ seq_no: 1, guidance: 'bla' })
+personal_p1 = Page.create({ seq_no: 1, name: 'Basic Personal Information', guidance: 'This is for your most basic personal information. Ensure that all names are spelled correctly, and that your last name is filled out in ALL CAPS.' })
 personal_p2 = Page.create({ seq_no: 2, guidance: 'bla 2' })
 
-question1 = Question.create({ name: 'Test', form_id: 'form_id', explanation: 'explanation', seq_no: 1, field_type: 'string' })
-question2 = Question.create({ name: 'Test 2', form_id: 'form_id2', explanation: 'explanation 2', seq_no: 2, field_type: 'date' })
-question3 = Question.create({ name: 'Test 3', form_id: 'form_id3', explanation: 'explanation 3', seq_no: 3, field_type: 'checkbox' })
-question4 = Question.create({ name: 'Test 4', form_id: 'form_id4', explanation: 'explanation 4', seq_no: 4, field_type: 'text' })
+question1 = Question.create({ name: 'Alien Registration Number', form_id: 'form_id', explanation: 'A-Number (if any)', seq_no: 1, field_type: 'string' })
+question2 = Question.create({ name: 'U.S. Social Security Number', form_id: 'form_id2', explanation: '(if any)', seq_no: 2, field_type: 'string' })
+question3 = Question.create({ name: 'First Name', form_id: 'form_id3', explanation: '', seq_no: 3, field_type: 'string' })
+question4 = Question.create({ name: 'Last Name', form_id: 'form_id4', explanation: 'Make sure this is complete and in ALL CAPS', seq_no: 4, field_type: 'string' })
+question5 = Question.create({ name: 'Middle Name', form_id: 'form_id5', explanation: '', seq_no: 5, field_type: 'string' })
+
+p2q1 = Question.create({ name: 'Male', form_id: 'form_id6', explanation: '', seq_no: 1, field_type: 'checkbox' })
+p2q2 = Question.create({ name: 'Female', form_id: 'form_id7', explanation: '', seq_no: 2, field_type: 'checkbox' })
+p2q3 = Question.create({ name: 'Date of Birth', form_id: 'form_id8', explanation: '', seq_no: 3, field_type: 'date' })
 
 personal_p1.section = personal
 personal_p1.save()
@@ -31,10 +36,18 @@ question1.page = personal_p1
 question2.page = personal_p1
 question3.page = personal_p1
 question4.page = personal_p1
+question5.page = personal_p1
+p2q1.page = personal_p2
+p2q2.page = personal_p2
+p2q3.page = personal_p2
 question1.save()
 question2.save()
 question3.save()
 question4.save()
+question5.save()
+p2q1.save()
+p2q2.save()
+p2q3.save()
 
 I18n.locale = :es
 question1.name = "Test in Spanish"

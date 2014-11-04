@@ -1,2 +1,7 @@
 es:
+  login: "Iniciar sesión"
+  logout: "Finalizar la sesión"
+  sign_up: "Contratar"
+  logged_in_as: "Conectado como David"
   welcome_text: "Bienvenidos a Asylum Assist!"
+  start: 'Empezar'
