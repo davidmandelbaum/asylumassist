@@ -31,7 +31,7 @@ question2 = Question.create({ name: 'U.S. Social Security Number', form_id: 'for
 question3 = Question.create({ name: 'First Name', form_id: 'form1[0].#subform[0].TextField1[7]', explanation: '', seq_no: 3, field_type: 'string' })
 question4 = Question.create({ name: 'Last Name', form_id: 'form1[0].#subform[0].TextField1[2]', explanation: 'Make sure this is complete and in ALL CAPS', seq_no: 5, field_type: 'string' })
 question5 = Question.create({ name: 'Middle Name', form_id: 'form1[0].#subform[0].TextField1[8]', explanation: '', seq_no: 4, field_type: 'string' })
-question6 = Question.create({ name: 'What other names have you used?', form_id: 'form1[0].#subform[0].TextField1[3]', explanation: 'Include maiden name and aliases', field_type: 'string', seq_no: 1 })
+question6 = Question.create({ name: 'What other names have you used?', form_id: 'form1[0].#subform[0].TextField1[3]', explanation: 'Include maiden name and aliases', field_type: 'string', seq_no: 6 })
 question7a = Question.create({ name: 'Street Number and Name', form_id: 'form1[0].#subform[0].TextField1[4]', explanation: '', field_type: 'string', seq_no: 2 })
 question7b = Question.create({ name: 'Apt. Number', form_id: 'form1[0].#subform[0].TextField1[9]', explanation: '', field_type: 'string', seq_no: 3 })
 question7c = Question.create({ name: 'City', form_id: 'form1[0].#subform[0].TextField1[5]', explanation: '', field_type: 'string', seq_no: 4 })
@@ -39,6 +39,11 @@ question7d = Question.create({ name: 'State', form_id: 'form1[0].#subform[0].Tex
 question7e = Question.create({ name: 'Zip Code', form_id: 'form1[0].#subform[0].TextField1[11]', explanation: '', field_type: 'string', seq_no: 6 })
 question7f = Question.create({ name: 'Phone (Area Code)', form_id: 'form1[0].#subform[0].TextField2[0]', explanation: '', field_type: 'string', seq_no: 7 })
 question7g = Question.create({ name: 'Phone', form_id: 'form1[0].#subform[0].TextField2[1]', explanation: '', field_type: 'string', seq_no: 7 })
+
+question3.validations = { :"parsley-required" => "", :"parsley-trigger" => "change" }
+question4.validations = { :"parsley-required" => "", :"parsley-trigger" => "change" }
+question7e.validations = { :"parsley-required" => "", :"parsley-type" => "digits", :"parsley-trigger" => "keydown" }
+question7g.validations = { :"parsley-type" => "digits", :"parsley-trigger" => "keydown" }
 
 personal_p1.section = personal
 personal_p1.save()
@@ -50,7 +55,7 @@ question2.page = personal_p1
 question3.page = personal_p1
 question4.page = personal_p1
 question5.page = personal_p1
-question6.page = personal_p2
+question6.page = personal_p1
 question7a.page = personal_p2
 question7b.page = personal_p2
 question7c.page = personal_p2

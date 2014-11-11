@@ -13,13 +13,13 @@
       <div class="col-md-8">
         <div class="name"><%= q.name %></div>
         <% if q.field_type == "string" %>
-            <%= text_field_tag "answer_" + q.id.to_s, q.answer_text, class: 'text_answer', data: { :"parsley-required" => "", :"parsley-trigger" => "change" } %>
+            <%= text_field_tag "answer_" + q.id.to_s, q.answer_text, class: 'text_answer', data: q.validations %>
         <% elsif q.field_type == "checkbox" %>
-          <%= check_box_tag "answer_" + q.id.to_s, q.answer_text %>
+          <%= check_box_tag "answer_" + q.id.to_s, q.answer_text, data: q.validations %>
         <% elsif q.field_type == "date" %>
-          <%= date_field_tag "answer_" + q.id.to_s, q.answer_text %>
+          <%= date_field_tag "answer_" + q.id.to_s, q.answer_text, data: q.validations %>
         <% elsif q.field_type == "text" %>
-          <%= text_area_tag "answer" + q.id.to_s, q.answer_text, class: 'text_answer' %>
+          <%= text_area_tag "answer" + q.id.to_s, q.answer_text, class: 'text_answer', data: q.validations %>
         <% else %>
           Unknown type for question id = <%= q.id %>
         <% end %>

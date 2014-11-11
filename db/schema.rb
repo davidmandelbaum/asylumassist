@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 20141104094955) do
     t.string   "explanation"
     t.integer  "page_id"
     t.integer  "seq_no"
+    t.text     "validations"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
