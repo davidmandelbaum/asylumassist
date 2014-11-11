@@ -4,7 +4,7 @@
     <div class="col-md-6">
         <ul class="nav nav-pills">
             <% @sections.each do |s| %>
-                <% if s.name == @section.name %>
+                <% if @section and s.name == @section.name %>
                     <% if @page %>
                       <% link_string = s.name + ": " + @page.seq_no.to_s %>
                     <% else %>

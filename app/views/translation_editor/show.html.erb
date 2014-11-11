@@ -2,7 +2,6 @@
 
 <h3>Locale = <%= @locale %></h3>
 
-<!-- TODO: properly order questions and separate by section/page -->
 <% @questions.order('seq_no asc').order('page_id asc').each do |q| %>
   Name: <%= q.name %><br />
   Expl: <%= q.explanation %><br />

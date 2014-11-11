@@ -3,6 +3,5 @@
 - add model for FormText
 - better handling of entries (probably should have names, etc.)
 - simpleforms without specific model?
-- redesign nav bar
 - modularize translations (yaml files)
 - finish translation editor view

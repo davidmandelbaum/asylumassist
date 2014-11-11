@@ -38,6 +38,8 @@ class HomeController < ApplicationController
   end
 
   def submit
+    pdftk = PdfForms.new('/usr/local/bin/pdftk')
+
     redirect_to '/home/show_submission'
   end
 
