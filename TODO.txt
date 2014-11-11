@@ -5,3 +5,4 @@
 - simpleforms without specific model?
 - modularize translations (yaml files)
 - finish translation editor view
+- handling of phone numbers

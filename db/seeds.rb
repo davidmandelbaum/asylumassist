@@ -24,17 +24,21 @@ asylum_application.name = "Solicitud de Asilo"
 end
 
 personal_p1 = Page.create({ seq_no: 1, name: 'Basic Personal Information', guidance: 'This is for your most basic personal information. Ensure that all names are spelled correctly, and that your last name is filled out in ALL CAPS.' })
-personal_p2 = Page.create({ seq_no: 2, guidance: 'bla 2' })
+personal_p2 = Page.create({ seq_no: 2, name: 'Residence in the U.S.', guidance: 'Where you physically reside' })
 
-question1 = Question.create({ name: 'Alien Registration Number', form_id: 'form_id', explanation: 'A-Number (if any)', seq_no: 1, field_type: 'string' })
-question2 = Question.create({ name: 'U.S. Social Security Number', form_id: 'form_id2', explanation: '(if any)', seq_no: 2, field_type: 'string' })
-question3 = Question.create({ name: 'First Name', form_id: 'form_id3', explanation: '', seq_no: 3, field_type: 'string' })
-question4 = Question.create({ name: 'Last Name', form_id: 'form_id4', explanation: 'Make sure this is complete and in ALL CAPS', seq_no: 5, field_type: 'string' })
-question5 = Question.create({ name: 'Middle Name', form_id: 'form_id5', explanation: '', seq_no: 4, field_type: 'string' })
-
-p2q1 = Question.create({ name: 'Male', form_id: 'form_id6', explanation: '', seq_no: 1, field_type: 'checkbox' })
-p2q2 = Question.create({ name: 'Female', form_id: 'form_id7', explanation: '', seq_no: 2, field_type: 'checkbox' })
-p2q3 = Question.create({ name: 'Date of Birth', form_id: 'form_id8', explanation: '', seq_no: 3, field_type: 'date' })
+question1 = Question.create({ name: 'Alien Registration Number', form_id: 'form1[0].#subform[0].TextField1[0]', explanation: 'A-Number (if any)', seq_no: 1, field_type: 'string' })
+question2 = Question.create({ name: 'U.S. Social Security Number', form_id: 'form1[0].#subform[0].TextField1[1]', explanation: '(if any)', seq_no: 2, field_type: 'string' })
+question3 = Question.create({ name: 'First Name', form_id: 'form1[0].#subform[0].TextField1[7]', explanation: '', seq_no: 3, field_type: 'string' })
+question4 = Question.create({ name: 'Last Name', form_id: 'form1[0].#subform[0].TextField1[2]', explanation: 'Make sure this is complete and in ALL CAPS', seq_no: 5, field_type: 'string' })
+question5 = Question.create({ name: 'Middle Name', form_id: 'form1[0].#subform[0].TextField1[8]', explanation: '', seq_no: 4, field_type: 'string' })
+question6 = Question.create({ name: 'What other names have you used?', form_id: 'form1[0].#subform[0].TextField1[3]', explanation: 'Include maiden name and aliases', field_type: 'string', seq_no: 1 })
+question7a = Question.create({ name: 'Street Number and Name', form_id: 'form1[0].#subform[0].TextField1[4]', explanation: '', field_type: 'string', seq_no: 2 })
+question7b = Question.create({ name: 'Apt. Number', form_id: 'form1[0].#subform[0].TextField1[9]', explanation: '', field_type: 'string', seq_no: 3 })
+question7c = Question.create({ name: 'City', form_id: 'form1[0].#subform[0].TextField1[5]', explanation: '', field_type: 'string', seq_no: 4 })
+question7d = Question.create({ name: 'State', form_id: 'form1[0].#subform[0].TextField1[10]', explanation: '', field_type: 'string', seq_no: 5 })
+question7e = Question.create({ name: 'Zip Code', form_id: 'form1[0].#subform[0].TextField1[11]', explanation: '', field_type: 'string', seq_no: 6 })
+question7f = Question.create({ name: 'Phone (Area Code)', form_id: 'form1[0].#subform[0].TextField2[0]', explanation: '', field_type: 'string', seq_no: 7 })
+question7g = Question.create({ name: 'Phone', form_id: 'form1[0].#subform[0].TextField2[1]', explanation: '', field_type: 'string', seq_no: 7 })
 
 personal_p1.section = personal
 personal_p1.save()
@@ -46,17 +50,27 @@ question2.page = personal_p1
 question3.page = personal_p1
 question4.page = personal_p1
 question5.page = personal_p1
-p2q1.page = personal_p2
-p2q2.page = personal_p2
-p2q3.page = personal_p2
+question6.page = personal_p2
+question7a.page = personal_p2
+question7b.page = personal_p2
+question7c.page = personal_p2
+question7d.page = personal_p2
+question7e.page = personal_p2
+question7f.page = personal_p2
+question7g.page = personal_p2
 question1.save()
 question2.save()
 question3.save()
 question4.save()
 question5.save()
-p2q1.save()
-p2q2.save()
-p2q3.save()
+question6.save()
+question7a.save()
+question7b.save()
+question7c.save()
+question7d.save()
+question7e.save()
+question7f.save()
+question7g.save()
 
 family_p1 = Page.create({ seq_no: 1, name: 'Basic Spouse Information', guidance: 'This is for your most basic spousal information. Ensure that all names are spelled correctly, and that last names is filled out in ALL CAPS.' })
 family_p2 = Page.create({ seq_no: 2, name: 'Basic Spouse Information 2', guidance: 'Basic spouse information guidance. page 2' })

@@ -39,8 +39,19 @@ class HomeController < ApplicationController
 
   def submit
     pdftk = PdfForms.new('/usr/local/bin/pdftk')
+    @entry = Entry.find(current_user.curr_entry)
+    @entry_answers = @entry.answers
+    answers = {}
 
-    redirect_to '/home/show_submission'
+    @entry_answers.each do |a|
+      answers[a.question.form_id] = a.text
+    end
+
+    form_path = Rails.public_path.to_s + '/i589.pdf'
+    tmp_path = "#{Rails.root.to_s}/tmp/" + @entry.id.to_s
+
+    pdftk.fill_form form_path, tmp_path, answers
+    send_file(tmp_path, :filename => 'i589.pdf', :type => "application/pdf", :disposition => 'inline')
   end
 
   def show_submission
