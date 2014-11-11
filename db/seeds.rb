@@ -43,7 +43,7 @@ question7g = Question.create({ name: 'Phone', form_id: 'form1[0].#subform[0].Tex
 question3.validations = { :"parsley-required" => "", :"parsley-trigger" => "change" }
 question4.validations = { :"parsley-required" => "", :"parsley-trigger" => "change" }
 question7e.validations = { :"parsley-required" => "", :"parsley-type" => "digits", :"parsley-trigger" => "keydown" }
-question7g.validations = { :"parsley-type" => "digits", :"parsley-trigger" => "keydown" }
+question7g.validations = { :"parsley-type" => "digits", :"parsley-trigger" => "keydown", :"parsley-validation-threshold" => "1" }
 
 personal_p1.section = personal
 personal_p1.save()

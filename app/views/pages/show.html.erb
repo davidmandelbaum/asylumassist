@@ -1,11 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<%= render "shared/tracker" %>
-
-<h3 class="page_title"><%= @page.name %></h3>
 
 <div class="row">
 <div class="col-md-5">
+
+<h3 class="page_title"><%= @page.name %></h3>
 
 <%= form_tag("/pages/submit", method: "post", id: 'form') do %>
   <% @page.questions.order('seq_no asc').each do |q| %>
@@ -38,6 +37,11 @@
 </div>
 
 <div class="col-md-6">
+  <!-- TODO: formatting -->
+  <br >
+<%= render "shared/tracker_page" %>
+<br /><br />
+
     <div class="guidance">
       <%= @page.guidance %>
     </div>
@@ -50,12 +54,12 @@
     $(".text_answer").focus(function() {
         var id = $(this).attr('id').split("_")[1];
         var exp = "#exp_" + id;
-        $(exp).fadeIn();
+        $(exp).fadeIn(200);
     });
     $(".text_answer").blur(function() {
         var id = $(this).attr('id').split("_")[1];
         var exp = "#exp_" + id;
-        $(exp).fadeOut();
+        $(exp).fadeOut(200);
     });
 </script>
 
