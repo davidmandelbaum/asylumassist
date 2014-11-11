@@ -2,9 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@mixin transition($transition-prop) {
+    -webkit-transition: $transition-prop;
+    -moz-transition: $transition-prop;
+    transition: $transition-prop;
+}
+
 form {
     font-size: 18px;
     padding-left: 10px;
+}
+
+input {
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid rgb(165, 165, 165);
+    @include transition(border .5s);
+    @include transition(background-color .5s);
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid rgb(117, 188, 243);
 }
 
 .page_title {
@@ -41,4 +60,13 @@ form {
 
 .name {
     margin-bottom: 7px;
+}
+
+.parsley-error {
+    background-color: red;
+    opacity: .3;
+}
+
+.parsley-errors-list {
+    list-style-type: none;
 }

@@ -7,13 +7,13 @@
 <div class="row">
 <div class="col-md-5">
 
-<%= form_tag("/pages/submit", method: "post") do %>
+<%= form_tag("/pages/submit", method: "post", id: 'form') do %>
   <% @page.questions.order('seq_no asc').each do |q| %>
     <div class="row question">
       <div class="col-md-8">
         <div class="name"><%= q.name %></div>
         <% if q.field_type == "string" %>
-          <%= text_field_tag "answer_" + q.id.to_s, q.answer_text, class: 'text_answer' %>
+            <%= text_field_tag "answer_" + q.id.to_s, q.answer_text, class: 'text_answer', data: { :"parsley-required" => "", :"parsley-trigger" => "change" } %>
         <% elsif q.field_type == "checkbox" %>
           <%= check_box_tag "answer_" + q.id.to_s, q.answer_text %>
         <% elsif q.field_type == "date" %>
@@ -46,6 +46,7 @@
 </div>
 
 <script type="text/javascript">
+    var form_parsley = $('#form').parsley();
     $(".text_answer").focus(function() {
         var id = $(this).attr('id').split("_")[1];
         var exp = "#exp_" + id;

@@ -1,8 +1,9 @@
-- answer validation
-- refactor seeds
+- answer validation on back end
 - add model for FormText
 - better handling of entries (probably should have names, etc.)
-- simpleforms without specific model?
-- modularize translations (yaml files)
 - finish translation editor view
-- handling of phone numbers
+- handling of phone numbers (when split on backend btw. zip and rest)
+- modularize translations (yaml files)
+- parsley localizations
+- refactor seeds
+- responsive
