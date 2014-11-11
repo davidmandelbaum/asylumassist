@@ -1,3 +1,44 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+form {
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.page_title {
+    background-color: #eee;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 500px;
+}
+
+.guidance {
+    width: 450px;
+    border-left: 1px solid gray;
+    padding-left: 10px;
+    line-height: 1.7;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.explanation {
+    color: gray;
+    font-size: 15px;
+    margin-top: 40px;
+    margin-left: -50px;
+    display: none;
+}
+
+.row {
+    margin-left: 5px;
+}
+
+.question {
+    margin-bottom: 15px;
+}
+
+.name {
+    margin-bottom: 7px;
+}

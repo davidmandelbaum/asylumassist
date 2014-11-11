@@ -2,32 +2,60 @@
 
 <%= render "shared/tracker" %>
 
-<h3><%= @page.name %></h3>
+<h3 class="page_title"><%= @page.name %></h3>
 
-<p>
-  <%= @page.guidance %>
-</p>
-
-<br />
+<div class="row">
+<div class="col-md-5">
 
 <%= form_tag("/pages/submit", method: "post") do %>
   <% @page.questions.order('seq_no asc').each do |q| %>
-    <%= q.name %><br />
-    <% if q.field_type == "string" %>
-      <%= text_field_tag "answer_" + q.id.to_s, q.answer_text %>
-    <% elsif q.field_type == "checkbox" %>
-      <%= check_box_tag "answer_" + q.id.to_s, q.answer_text %>
-    <% elsif q.field_type == "date" %>
-      <%= date_field_tag "answer_" + q.id.to_s, q.answer_text %>
-    <% elsif q.field_type == "text" %>
-      <%= text_area_tag "answer" + q.id.to_s, q.answer_text %>
-    <% else %>
-      Unknown type for question id = <%= q.id %>
-    <% end %>
+    <div class="row question">
+      <div class="col-md-8">
+        <div class="name"><%= q.name %></div>
+        <% if q.field_type == "string" %>
+          <%= text_field_tag "answer_" + q.id.to_s, q.answer_text, class: 'text_answer' %>
+        <% elsif q.field_type == "checkbox" %>
+          <%= check_box_tag "answer_" + q.id.to_s, q.answer_text %>
+        <% elsif q.field_type == "date" %>
+          <%= date_field_tag "answer_" + q.id.to_s, q.answer_text %>
+        <% elsif q.field_type == "text" %>
+          <%= text_area_tag "answer" + q.id.to_s, q.answer_text, class: 'text_answer' %>
+        <% else %>
+          Unknown type for question id = <%= q.id %>
+        <% end %>
+      </div>
+      <div class="col-md-4">
+        <% if q.explanation %>
+            <div class="explanation <% if q.field_type != "string" and q.field_type != "text" %>show<% end %>" id="exp_<%= q.id.to_s %>"><%= q.explanation %></div>
+        <% end %>
+      </div>
     <br /><br />
+    </div>
   <% end %>
   <%= hidden_field_tag 'page', @page.id %>
-  <%= submit_tag 'save and continue' %>
+  <%= submit_tag 'save and continue', class: "btn btn-lg btn-success" %>
 <% end %>
+</div>
+
+<div class="col-md-6">
+    <div class="guidance">
+      <%= @page.guidance %>
+    </div>
+</div>
+
+</div>
+
+<script type="text/javascript">
+    $(".text_answer").focus(function() {
+        var id = $(this).attr('id').split("_")[1];
+        var exp = "#exp_" + id;
+        $(exp).fadeIn();
+    });
+    $(".text_answer").blur(function() {
+        var id = $(this).attr('id').split("_")[1];
+        var exp = "#exp_" + id;
+        $(exp).fadeOut();
+    });
+</script>
 
 <br /><br />
