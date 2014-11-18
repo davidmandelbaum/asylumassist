@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20141118025855) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "answers", force: true do |t|
     t.string   "text"
     t.integer  "question_id"
@@ -21,8 +24,8 @@ ActiveRecord::Schema.define(version: 20141118025855) do
     t.datetime "updated_at"
   end
 
-  add_index "answers", ["entry_id"], name: "index_answers_on_entry_id"
-  add_index "answers", ["question_id"], name: "index_answers_on_question_id"
+  add_index "answers", ["entry_id"], name: "index_answers_on_entry_id", using: :btree
+  add_index "answers", ["question_id"], name: "index_answers_on_question_id", using: :btree
 
   create_table "entries", force: true do |t|
     t.integer  "user_id"
@@ -32,7 +35,7 @@ ActiveRecord::Schema.define(version: 20141118025855) do
     t.datetime "updated_at"
   end
 
-  add_index "entries", ["user_id"], name: "index_entries_on_user_id"
+  add_index "entries", ["user_id"], name: "index_entries_on_user_id", using: :btree
 
   create_table "form_texts", force: true do |t|
     t.text     "guidance"
@@ -42,7 +45,7 @@ ActiveRecord::Schema.define(version: 20141118025855) do
     t.datetime "updated_at"
   end
 
-  add_index "form_texts", ["page_id"], name: "index_form_texts_on_page_id"
+  add_index "form_texts", ["page_id"], name: "index_form_texts_on_page_id", using: :btree
 
   create_table "pages", force: true do |t|
     t.integer  "seq_no"
@@ -53,7 +56,7 @@ ActiveRecord::Schema.define(version: 20141118025855) do
     t.datetime "updated_at"
   end
 
-  add_index "pages", ["section_id"], name: "index_pages_on_section_id"
+  add_index "pages", ["section_id"], name: "index_pages_on_section_id", using: :btree
 
   create_table "question_translations", force: true do |t|
     t.integer  "question_id", null: false
@@ -64,8 +67,8 @@ ActiveRecord::Schema.define(version: 20141118025855) do
     t.string   "explanation"
   end
 
-  add_index "question_translations", ["locale"], name: "index_question_translations_on_locale"
-  add_index "question_translations", ["question_id"], name: "index_question_translations_on_question_id"
+  add_index "question_translations", ["locale"], name: "index_question_translations_on_locale", using: :btree
+  add_index "question_translations", ["question_id"], name: "index_question_translations_on_question_id", using: :btree
 
   create_table "questions", force: true do |t|
     t.string   "name"
@@ -79,7 +82,7 @@ ActiveRecord::Schema.define(version: 20141118025855) do
     t.datetime "updated_at"
   end
 
-  add_index "questions", ["page_id"], name: "index_questions_on_page_id"
+  add_index "questions", ["page_id"], name: "index_questions_on_page_id", using: :btree
 
   create_table "section_translations", force: true do |t|
     t.integer  "section_id", null: false
@@ -90,8 +93,8 @@ ActiveRecord::Schema.define(version: 20141118025855) do
     t.text     "guidance"
   end
 
-  add_index "section_translations", ["locale"], name: "index_section_translations_on_locale"
-  add_index "section_translations", ["section_id"], name: "index_section_translations_on_section_id"
+  add_index "section_translations", ["locale"], name: "index_section_translations_on_locale", using: :btree
+  add_index "section_translations", ["section_id"], name: "index_section_translations_on_section_id", using: :btree
 
   create_table "sections", force: true do |t|
     t.string   "name"
@@ -120,7 +123,7 @@ ActiveRecord::Schema.define(version: 20141118025855) do
     t.datetime "updated_at"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end

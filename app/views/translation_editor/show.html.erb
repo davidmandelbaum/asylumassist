@@ -7,7 +7,7 @@
 
     <%= form_tag("/translation_editor/submit", method: "post", id: 'translation_editor_form', :class => 'form-inline', :role => 'form') do %>
 
-      <% @sections.each do |s| %>
+      <% @sections.order('seq_no ASC').each do |s| %>
         <h4>Section: <% I18n.locale = :en %><%= s.name %></h4>
         <div class="section">
         <div class="input-group"><div class="input-group-addon" style="width: 10px;">Name: <% I18n.locale = :en %><%= s.name %></div>
@@ -17,7 +17,7 @@
         <% I18n.locale = @locale %>
         <%= text_area_tag "sect_guid_" + s.id.to_s, s.guidance, :cols => 80, :rows => 3, :class => 'form-control' %> <br />
 
-        <% s.pages.each do |p| %>
+        <% s.pages.order('seq_no ASC').each do |p| %>
           <h5>Page: <% I18n.locale = :en %><%= p.name %></h5>
           <div class="page">
             <div class="input-group"><div class="input-group-addon" style="width: 10px;">Name: <% I18n.locale = :en %><%= p.name %></div>
