@@ -31,6 +31,8 @@ Rails.application.routes.draw do
   resources :sections
 
   get 'translation_editor/:locale' => 'translation_editor#show'
+  
+  post 'translation_editor/submit' => 'translation_editor#submit'
 
   get 'sections/:seq_no' => 'sections#show_seqno'
 

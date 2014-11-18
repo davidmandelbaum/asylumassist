@@ -1,8 +1,8 @@
 - actually collect guidance
+- add guidance to translation editor page
 - last name in all caps
 - answer validation on back end
 - better handling of entries (probably should have names, etc.)
-- finish translation editor view
 - magnifying glass effect on current question?
 - handling of phone numbers (when split on backend btw. zip and rest)
 - modularize translations (yaml files)

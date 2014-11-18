@@ -56,6 +56,7 @@ class HomeController < ApplicationController
 
   def show_submission
     @message = 'Submitted form stub'
+    @tmp_path
   end
 
   def set_locale

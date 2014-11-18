@@ -2,7 +2,13 @@
 
 <h3>Locale = <%= @locale %></h3>
 
-<% @questions.order('seq_no asc').order('page_id asc').each do |q| %>
-  Name: <%= q.name %><br />
-  Expl: <%= q.explanation %><br />
+<%= form_tag("/translation_editor/submit", method: "post", id: 'form') do %>
+  <% @questions.order('seq_no asc').order('page_id asc').each do |q| %>
+    Name: <% I18n.locale = :en %><%= q.name %><br /> 
+    Name translated: <% I18n.locale = @locale %><%= text_field_tag "trans_" + q.id.to_s, q.name %><br />
+    Explanation: <% I18n.locale = :en %><%= q.explanation %><br />
+    Expl. translated: <% I18n.locale = @locale %><%= text_field_tag "trans_expl_" + q.id.to_s, q.explanation %><br />
+  <% end %>
+  <!-- TODO: add guidance to translation -->
+  <%= submit_tag 'Submit translation', class: "btn btn-lg btn-success" %>
 <% end %>

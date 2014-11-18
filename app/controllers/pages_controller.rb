@@ -25,8 +25,6 @@ class PagesController < ApplicationController
   def submit
     curr_page = Page.find(params[:page])
     params.each do |k, v|
-      puts "k = " + k
-      puts "v = " + v
       if k.include? "answer"
         q_id = k[7..-1].to_i
         answer = Answer.find_by(question: Question.find(q_id))
