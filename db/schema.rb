@@ -109,6 +109,7 @@ ActiveRecord::Schema.define(version: 20141118025855) do
     t.integer  "curr_page"
     t.integer  "curr_entry"
     t.string   "locale"
+    t.integer  "admin"
     t.datetime "remember_created_at"
     t.integer  "sign_in_count",          default: 0,  null: false
     t.datetime "current_sign_in_at"

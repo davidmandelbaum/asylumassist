@@ -26,6 +26,11 @@
       <button type="button" class="btn btn-default navbar-btn">
         <%= link_to t('login'), new_user_session_path %>
       </button>
+      <% if user.admin == 1 %>
+        <button type="button" class="btn btn-default navbar-btn">
+          <%= link_to t('translation_editor'), :controller => "translation_editor", :action => "show", :locale => user.locale %>
+        </button>
+      <% end %>
     <% end %>
     <nav class="navbar-right">
     <button type="button" class="btn btn-default navbar-btn<% if I18n.locale == :en %> active<% end %>">

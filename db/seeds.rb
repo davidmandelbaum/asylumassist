@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 #
 
-user = User.create! :email => 'david.m.mandelbaum@gmail.com', :password => 'password', :password_confirmation => 'password'
+user = User.create! :email => 'david.m.mandelbaum@gmail.com', :password => 'password', :password_confirmation => 'password', :admin => 1
 
 personal = Section.create({ name: 'Personal', seq_no: 1, guidance: 'Personal information' })
 family = Section.create({ name: 'Family', seq_no: 2, guidance: 'Family information' })

@@ -1,5 +1,4 @@
 - actually collect guidance
-- add guidance to translation editor page
 - last name in all caps
 - answer validation on back end
 - better handling of entries (probably should have names, etc.)
