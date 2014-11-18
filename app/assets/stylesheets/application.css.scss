@@ -19,8 +19,97 @@
 body {
     font-family: 'Open Sans', sans-serif;
     padding-bottom: 15px;
+    padding-left: 25px;
 }
 
 a:hover, a:focus {
     background-color: initial;
+}
+/*
+ * # Semantic - Steps
+ * http://github.com/jlukic/semantic-ui/
+ *
+ *
+ * Copyright 2014 Contributors
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+/*******************************
+             Step
+ *******************************/
+.ui.step,
+.ui.steps .step {
+  display: inline-block;
+  position: relative;
+  padding: 1em 2em 1em 3em;
+  vertical-align: top;
+  color: #888888;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  color: black;
+  font-size: 14px;
+}
+.ui.step:after,
+.ui.steps .step:after {
+  position: absolute;
+  z-index: 2;
+  content: '';
+  top: 0.42em;
+  right: -1em;
+  border: medium none;
+  background-color: #FFFFFF;
+  width: 2.2em;
+  height: 2.2em;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-box-shadow: -1px -1px 0 0 rgba(0, 0, 0, 0.15) inset;
+  box-shadow: -1px -1px 0 0 rgba(0, 0, 0, 0.15) inset;
+}
+.ui.step.active a{
+  color: white;
+}
+.ui.step,
+.ui.steps .step,
+.ui.steps .step:after {
+  -webkit-transition: background-color 0.1s ease, opacity 0.1s ease, color 0.1s ease, -webkit-box-shadow 0.1s ease;
+  -moz-transition: background-color 0.1s ease, opacity 0.1s ease, color 0.1s ease, box-shadow 0.1s ease;
+  transition: background-color 0.1s ease, opacity 0.1s ease, color 0.1s ease, box-shadow 0.1s ease;
+}
+/*******************************
+            Group
+ *******************************/
+.ui.steps {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0em;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  line-height: 1;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 0.3125rem;
+}
+.ui.steps .step:first-child {
+  padding-left: 1.35em;
+  border-radius: 0.3125em 0em 0em 0.3125em;
+}
+.ui.steps .step:last-child {
+  border-radius: 0em 0.3125em 0.3125em 0em;
+}
+.ui.steps .step:only-child {
+  border-radius: 0.3125em;
+}
+.ui.steps .step:last-child {
+  margin-right: 0em;
+}
+.ui.steps .step:last-child:after {
+  display: none;
 }

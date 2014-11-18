@@ -1,4 +1,4 @@
-<ul class="nav nav-pills">
+<!-- <ul class="nav nav-pills">
   <% @sections.each do |s| %>
     <% if @section and s.name == @section.name %>
     <% if @page %>
@@ -12,3 +12,19 @@
 <% end %>
 <% end %>
 </ul>
+-->
+<link rel="stylesheet" href="/assets/stylesheets/semantic.css">
+<div class="ui steps">
+  <% @sections.each do |s| %>
+    <% if @section and s.name == @section.name %>
+    <% if @page %>
+      <% link_string = s.name + ": " + @page.seq_no.to_s %>
+    <% else %>
+      <% link_string = s.name %>
+  <% end %>
+  <div class="ui active step"><%= link_to( link_string, controller: 'sections', action: 'show', id: s.id ) %> </div>
+  <% else %>
+    <div class="ui step"><%= link_to( s.name, controller: 'sections', action: 'show', id: s.id ) %></div>
+  <% end %>
+<% end %>
+</div>

@@ -1,3 +1,5 @@
+- actually collect guidance
+- last name in all caps
 - answer validation on back end
 - better handling of entries (probably should have names, etc.)
 - finish translation editor view
