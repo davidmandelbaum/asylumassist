@@ -6,4 +6,8 @@ class Answer < ActiveRecord::Base
     question.page.section
   end
 
+  def page
+    question.page
+  end
+
 end

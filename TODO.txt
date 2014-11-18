@@ -1,8 +1,6 @@
 - answer validation on back end
-- add model for FormText
 - better handling of entries (probably should have names, etc.)
 - finish translation editor view
-- make review answers clickable and group in pages
 - magnifying glass effect on current question?
 - handling of phone numbers (when split on backend btw. zip and rest)
 - modularize translations (yaml files)

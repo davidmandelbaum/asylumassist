@@ -11,9 +11,13 @@
           <h3 class="panel-title"><%= s.name %></h3>
         </div>
         <div class="panel-body">
-            <% @entry.get_section_answers(s).each do |a| %>
-                <strong><%= a.question.name %></strong> <br />
-                <%= a.text %><br />
+            <% s.pages.each do |p| %>
+              <h4>Page <%= p.seq_no %></h4>
+              <hr>
+              <% @entry.get_page_answers(p).each do |a| %>
+                <strong><%= link_to a.question.name, p, :class => "review_answers_link" %></strong> <br />
+                  <%= a.text %><br />
+              <% end %>
             <% end %>
         </div>
       </div>
