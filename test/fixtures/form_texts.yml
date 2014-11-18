@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  guidance: MyText
+  seq_no: 1
+  page_id: 
+
+two:
+  guidance: MyText
+  seq_no: 1
+  page_id: 

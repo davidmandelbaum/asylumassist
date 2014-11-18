@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :form_texts
+
   resources :entries
 
   resources :answers

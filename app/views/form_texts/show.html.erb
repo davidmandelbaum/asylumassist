@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Guidance:</strong>
+  <%= @form_text.guidance %>
+</p>
+
+<p>
+  <strong>Seq no:</strong>
+  <%= @form_text.seq_no %>
+</p>
+
+<p>
+  <strong>Page:</strong>
+  <%= @form_text.page %>
+</p>
+
+<%= link_to 'Edit', edit_form_text_path(@form_text) %> |
+<%= link_to 'Back', form_texts_path %>

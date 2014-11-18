@@ -29,7 +29,7 @@ personal_p2 = Page.create({ seq_no: 2, name: 'Residence in the U.S.', guidance: 
 question1 = Question.create({ name: 'Alien Registration Number', form_id: 'form1[0].#subform[0].TextField1[0]', explanation: 'A-Number (if any)', seq_no: 1, field_type: 'string' })
 question2 = Question.create({ name: 'U.S. Social Security Number', form_id: 'form1[0].#subform[0].TextField1[1]', explanation: '(if any)', seq_no: 2, field_type: 'string' })
 question3 = Question.create({ name: 'First Name', form_id: 'form1[0].#subform[0].TextField1[7]', explanation: '', seq_no: 3, field_type: 'string' })
-question4 = Question.create({ name: 'Last Name', form_id: 'form1[0].#subform[0].TextField1[2]', explanation: 'Make sure this is complete and in ALL CAPS', seq_no: 5, field_type: 'string' })
+question4 = Question.create({ name: 'Last Name', form_id: 'form1[0].#subform[0].TextField1[2]', explanation: 'Make sure this is complete', seq_no: 5, field_type: 'string' })
 question5 = Question.create({ name: 'Middle Name', form_id: 'form1[0].#subform[0].TextField1[8]', explanation: '', seq_no: 4, field_type: 'string' })
 question6 = Question.create({ name: 'What other names have you used?', form_id: 'form1[0].#subform[0].TextField1[3]', explanation: 'Include maiden name and aliases', field_type: 'string', seq_no: 6 })
 question7a = Question.create({ name: 'Street Number and Name', form_id: 'form1[0].#subform[0].TextField1[4]', explanation: '', field_type: 'string', seq_no: 2 })
@@ -41,7 +41,7 @@ question7f = Question.create({ name: 'Phone (Area Code)', form_id: 'form1[0].#su
 question7g = Question.create({ name: 'Phone', form_id: 'form1[0].#subform[0].TextField2[1]', explanation: '', field_type: 'string', seq_no: 7 })
 
 question3.validations = { :"parsley-required" => "", :"parsley-trigger" => "change" }
-question4.validations = { :"parsley-required" => "", :"parsley-trigger" => "change" }
+question4.validations = { :"parsley-required" => "", :"parsley-trigger" => "change", :"onkeyup" => "javascript:this.value=this.value.toUpperCase();" }
 question7e.validations = { :"parsley-required" => "", :"parsley-type" => "digits", :"parsley-trigger" => "keydown" }
 question7g.validations = { :"parsley-type" => "digits", :"parsley-trigger" => "keydown", :"parsley-validation-threshold" => "1" }
 

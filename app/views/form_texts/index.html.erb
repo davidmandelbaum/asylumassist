@@ -1,0 +1,29 @@
+<h1>Listing form_texts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Guidance</th>
+      <th>Seq no</th>
+      <th>Page</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @form_texts.each do |form_text| %>
+      <tr>
+        <td><%= form_text.guidance %></td>
+        <td><%= form_text.seq_no %></td>
+        <td><%= form_text.page %></td>
+        <td><%= link_to 'Show', form_text %></td>
+        <td><%= link_to 'Edit', edit_form_text_path(form_text) %></td>
+        <td><%= link_to 'Destroy', form_text, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Form text', new_form_text_path %>
