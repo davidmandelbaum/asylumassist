@@ -5,13 +5,13 @@
 
 <div class="row">
   <div class="col-md-6">
-    <% @sections.each do |s| %>
+    <% @sections.order('seq_no ASC').each do |s| %>
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3 class="panel-title"><%= s.name %></h3>
         </div>
         <div class="panel-body">
-            <% s.pages.each do |p| %>
+            <% s.pages.order('seq_no ASC').each do |p| %>
               <h4>Page <%= p.seq_no %></h4>
               <hr>
               <% @entry.get_page_answers(p).each do |a| %>

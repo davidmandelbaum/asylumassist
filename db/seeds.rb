@@ -91,12 +91,12 @@ family_p2.section = family
 family_p1.save()
 family_p2.save()
 
-fp2q1 = Question.create({ name: 'A-Number', field_type: 'string', seq_no: 1 })
-fp2q2 = Question.create({ name: 'Passport/ID Card Number', field_type: 'string', seq_no: 2 })
-fp2q3 = Question.create({ name: 'Date of Birth', field_type: 'date', seq_no: 3 })
-fp1q1 = Question.create({ name: 'First Name', field_type: 'string', seq_no: 1 })
-fp1q2 = Question.create({ name: 'Middle Name', field_type: 'string', seq_no: 2 })
-fp1q3 = Question.create({ name: 'Last Name', field_type: 'string', seq_no: 3 })
+fp2q1 = Question.create({ name: 'A-Number', field_type: 'string', seq_no: 1, explanation: '' })
+fp2q2 = Question.create({ name: 'Passport/ID Card Number', field_type: 'string', seq_no: 2, explanation: '' })
+fp2q3 = Question.create({ name: 'Date of Birth', field_type: 'date', seq_no: 3, explanation: '' })
+fp1q1 = Question.create({ name: 'First Name', field_type: 'string', seq_no: 1, explanation: '' })
+fp1q2 = Question.create({ name: 'Middle Name', field_type: 'string', seq_no: 2, explanation: '' })
+fp1q3 = Question.create({ name: 'Last Name', field_type: 'string', seq_no: 3, explanation: '' })
 
 fp1q1.page = family_p1
 fp1q2.page = family_p1
