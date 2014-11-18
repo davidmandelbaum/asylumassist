@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 20141118025855) do
     t.string   "name"
     t.string   "field_type"
     t.string   "form_id"
-    t.string   "explanation"
+    t.text     "explanation"
     t.integer  "page_id"
     t.integer  "seq_no"
     t.text     "validations"

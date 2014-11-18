@@ -1,6 +1,8 @@
 - actually collect guidance
-- last name in all caps
-- answer validation on back end
+- go right to field from answer review page
+- answer validation on back end (?)
+- missing answers
+- pdftk on heroku buildpack
 - better handling of entries (probably should have names, etc.)
 - handling of phone numbers (when split on backend btw. zip and rest)
 - modularize translations (yaml files)

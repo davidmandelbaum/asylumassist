@@ -24,9 +24,6 @@
       </button>
     <% end %>
     <nav class="navbar-right">
-    <div class="navbar-text">
-        Language options:
-    </div>
     <button type="button" class="btn btn-default navbar-btn<% if I18n.locale == :en %> active<% end %>">
         <%= link_to 'English', url_for( :locale => 'en' ) %>
       </button>
