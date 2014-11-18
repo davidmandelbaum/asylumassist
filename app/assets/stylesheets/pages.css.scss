@@ -48,6 +48,8 @@ input:focus {
     font-size: 15px;
     margin-top: 15px;
     display: none;
+    width: 400px;
+    word-wrap: break-word;
 }
 
 .row {
@@ -64,11 +66,11 @@ input:focus {
 }
 
 .focus {
-    background-color: #ccc;
+    background-color: #E2E2E2;
 }
 
 .focus input {
-    font-size: 26px;
+    // font-size: 26px;
 }
 
 .name {

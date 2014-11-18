@@ -1,5 +1,6 @@
 - actually collect guidance
 - go right to field from answer review page
+- translation of page name is saving for english when done in spanish
 - answer validation on back end (?)
 - missing answers
 - pdftk on heroku buildpack

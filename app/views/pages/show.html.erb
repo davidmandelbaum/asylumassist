@@ -21,19 +21,19 @@
         <% else %>
           <div class="name"><%= q.name %></div>
           <% if q.field_type == "string" %>
-              <%= text_field_tag "answer_" + q.id.to_s, q.answer_text, class: 'answer text_answer', data: q.validations %>
+              <%= text_field_tag "answer_" + q.id.to_s, q.answer_text, class: 'answer text_answer', data: q.validations, tabindex: (q.seq_no).to_s %>
           <% elsif q.field_type == "checkbox" %>
             <%= check_box_tag "answer_" + q.id.to_s, q.answer_text, class: 'answer', data: q.validations %>
           <% elsif q.field_type == "date" %>
             <%= date_field_tag "answer_" + q.id.to_s, q.answer_text, class: 'answer', data: q.validations %>
           <% elsif q.field_type == "text" %>
-            <%= text_area_tag "answer" + q.id.to_s, q.answer_text, class: 'text_answer', data: q.validations %>
+            <%= text_area_tag "answer" + q.id.to_s, q.answer_text, class: 'text_answer', data: q.validations, tabindex: (q.seq_no).to_s %>
           <% else %>
             Unknown type for question id = <%= q.id %>
         <% end %>
       <% end %>
     <% if q.class == Question and q.explanation != "" %>
-        <div class="explanation <% if q.field_type != "string" and q.field_type != "text" %>show<% end %>" id="exp_<%= q.id.to_s %>"><%= q.explanation %></div>
+        <div class="explanation <% if q.field_type != "string" and q.field_type != "text" %>show<% end %>" id="exp_<%= q.id.to_s %>"><%=raw q.explanation %></div>
     <% end %>
       </div>
     <br /><br />
@@ -71,9 +71,10 @@
         });
         var id = $(this).attr('id').split("_")[1];
         var exp = "#exp_" + id;
+        var height = $(exp).height() + 30;
         if ($(exp).length > 0) {
             parent.animate({
-                height: "+=50"
+                height: "+=" + height,
                 }, 500);
             $(exp).fadeIn(200);
         }
@@ -88,9 +89,10 @@
         });
         var id = $(this).attr('id').split("_")[1];
         var exp = "#exp_" + id;
+        var height = $(exp).height() + 30;
         if ($(exp).length > 0) {
             parent.animate({
-                height: "-=50"
+                height: "-=" + height,
             }, 500);
             $(exp).fadeOut(200);
         }

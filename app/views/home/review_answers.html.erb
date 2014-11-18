@@ -12,7 +12,7 @@
         </div>
         <div class="panel-body">
             <% s.pages.order('seq_no ASC').each do |p| %>
-              <h4>Page <%= p.seq_no %></h4>
+              <h5>Page <%= p.seq_no %>: <%= p.name %></h5>
               <hr>
               <% @entry.get_page_answers(p).each do |a| %>
                 <strong><%= link_to a.question.name, p, :class => "review_answers_link" %></strong> <br />

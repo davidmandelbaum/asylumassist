@@ -1,5 +1,5 @@
 <div class="ui steps">
-  <% @sections.each do |s| %>
+  <% @sections.order('seq_no ASC').each do |s| %>
     <% if @section and s.name == @section.name %>
     <% if @page %>
       <% link_string = s.name + ": " + @page.seq_no.to_s %>
