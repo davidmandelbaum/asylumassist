@@ -1,14 +1,60 @@
 <% I18n.locale = @locale %>
 
-<h3>Locale = <%= @locale %></h3>
+<h3>Translation Editor: <%= @locale %></h3>
 
-<%= form_tag("/translation_editor/submit", method: "post", id: 'form') do %>
-  <% @questions.order('seq_no asc').order('page_id asc').each do |q| %>
-    Name: <% I18n.locale = :en %><%= q.name %><br /> 
-    Name translated: <% I18n.locale = @locale %><%= text_field_tag "trans_" + q.id.to_s, q.name %><br />
-    Explanation: <% I18n.locale = :en %><%= q.explanation %><br />
-    Expl. translated: <% I18n.locale = @locale %><%= text_field_tag "trans_expl_" + q.id.to_s, q.explanation %><br />
-  <% end %>
-  <!-- TODO: add guidance to translation -->
-  <%= submit_tag 'Submit translation', class: "btn btn-lg btn-success" %>
-<% end %>
+<div class="row">
+  <div class="col-md-8">
+
+    <%= form_tag("/translation_editor/submit", method: "post", id: 'translation_editor_form', :class => 'form-inline', :role => 'form') do %>
+
+      <% @sections.each do |s| %>
+        <h4>Section: <% I18n.locale = :en %><%= s.name %></h4>
+        <div class="section">
+        <div class="input-group"><div class="input-group-addon" style="width: 10px;">Name: <% I18n.locale = :en %><%= s.name %></div>
+          <% I18n.locale = @locale %><%= text_field_tag "sect_name_" + s.id.to_s, s.name, :class => 'form-control' %>
+        </div><br />
+        <strong>Guidance: </strong><br /><% I18n.locale = :en %><%= s.guidance %> <br />
+        <% I18n.locale = @locale %>
+        <%= text_area_tag "sect_guid_" + s.id.to_s, s.guidance, :cols => 80, :rows => 3, :class => 'form-control' %> <br />
+
+        <% s.pages.each do |p| %>
+          <h5>Page: <% I18n.locale = :en %><%= p.name %></h5>
+          <div class="page">
+            <div class="input-group"><div class="input-group-addon" style="width: 10px;">Name: <% I18n.locale = :en %><%= p.name %></div>
+            <% I18n.locale = @locale %><%= text_field_tag "page_name_" + p.id.to_s, p.name, :class => 'form-control' %>
+          </div>
+            <br />
+            <strong>Guidance:</strong> <br /><% I18n.locale = :en %><%= p.guidance %> <br />
+            <% I18n.locale = @locale %>
+            <%= text_area_tag "page_guid_" + p.id.to_s, p.guidance, :cols => 80, :rows => 3, :class => 'form-control' %> <br /> <br />
+
+          <% p.elements.each do |e| %>
+              <% if e.class == FormText %>
+                <div class="input-group">
+                <% I18n.locale = :en %><div class="input-group-addon" style="width: 10px;"><%= e.guidance %></div>
+                <% I18n.locale = @locale %><%= text_field_tag "text_" + e.id.to_s, e.guidance, :class => 'form-control' %>
+                </div>
+              <% else %>
+                <div class="input-group">
+                <% I18n.locale = :en %><div class="input-group-addon" style="width: 10px;"><%= e.name %></div>
+                <% I18n.locale = @locale %><%= text_field_tag "name_" + e.id.to_s, e.name, :class => 'form-control' %>
+              </div>
+              <br />
+                <% if e.explanation != "" %>
+                  <div class="input-group">
+                    <div class="input-group-addon" style="width: 10px;"><% I18n.locale = :en %><%= e.explanation %></div>
+                    <% I18n.locale = @locale %><%= text_field_tag "expl_" + e.id.to_s, e.explanation, :class => 'form-control' %>
+                  </div>
+                <% end %>
+              <% end %>
+            <% end %>
+            </div>
+          <% end %>
+        <% end %>
+
+      <%= hidden_field_tag 'locale', @locale %>
+      <%= submit_tag 'Submit translation', class: "btn btn-lg btn-success" %>
+    <% end %>
+
+  </div>
+</div>

@@ -2,6 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#form {
+#translation_editor_form {
   font-size: 12px;
+}
+
+#translation_editor_form .section {
+  margin-left: 10px;
+}
+
+#translation_editor_form .page {
+  margin-left: 20px;
+}
+
+.input-group {
+  margin-bottom: 5px;
+  width: 100%;
 }

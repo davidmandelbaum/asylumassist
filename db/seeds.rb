@@ -23,6 +23,8 @@ asylum_application.name = "Solicitud de Asilo"
   x.save()
 end
 
+I18n.locale = :en
+
 personal_p1 = Page.create({ seq_no: 1, name: 'Basic Personal Information', guidance: 'This is for your most basic personal information. Ensure that all names are spelled correctly, and that your last name is filled out in ALL CAPS.' })
 personal_p2 = Page.create({ seq_no: 2, name: 'Residence in the U.S.', guidance: 'Where you physically reside' })
 
