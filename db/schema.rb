@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141104094955) do
+ActiveRecord::Schema.define(version: 20141118025855) do
 
   create_table "answers", force: true do |t|
     t.string   "text"
@@ -33,6 +33,16 @@ ActiveRecord::Schema.define(version: 20141104094955) do
   end
 
   add_index "entries", ["user_id"], name: "index_entries_on_user_id"
+
+  create_table "form_texts", force: true do |t|
+    t.text     "guidance"
+    t.integer  "seq_no"
+    t.integer  "page_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "form_texts", ["page_id"], name: "index_form_texts_on_page_id"
 
   create_table "pages", force: true do |t|
     t.integer  "seq_no"

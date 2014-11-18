@@ -28,16 +28,16 @@ personal_p2 = Page.create({ seq_no: 2, name: 'Residence in the U.S.', guidance: 
 
 question1 = Question.create({ name: 'Alien Registration Number', form_id: 'form1[0].#subform[0].TextField1[0]', explanation: 'A-Number (if any)', seq_no: 1, field_type: 'string' })
 question2 = Question.create({ name: 'U.S. Social Security Number', form_id: 'form1[0].#subform[0].TextField1[1]', explanation: '(if any)', seq_no: 2, field_type: 'string' })
-question3 = Question.create({ name: 'First Name', form_id: 'form1[0].#subform[0].TextField1[7]', explanation: '', seq_no: 3, field_type: 'string' })
-question4 = Question.create({ name: 'Last Name', form_id: 'form1[0].#subform[0].TextField1[2]', explanation: 'Make sure this is complete', seq_no: 5, field_type: 'string' })
-question5 = Question.create({ name: 'Middle Name', form_id: 'form1[0].#subform[0].TextField1[8]', explanation: '', seq_no: 4, field_type: 'string' })
-question6 = Question.create({ name: 'What other names have you used?', form_id: 'form1[0].#subform[0].TextField1[3]', explanation: 'Include maiden name and aliases', field_type: 'string', seq_no: 6 })
-question7a = Question.create({ name: 'Street Number and Name', form_id: 'form1[0].#subform[0].TextField1[4]', explanation: '', field_type: 'string', seq_no: 2 })
-question7b = Question.create({ name: 'Apt. Number', form_id: 'form1[0].#subform[0].TextField1[9]', explanation: '', field_type: 'string', seq_no: 3 })
-question7c = Question.create({ name: 'City', form_id: 'form1[0].#subform[0].TextField1[5]', explanation: '', field_type: 'string', seq_no: 4 })
-question7d = Question.create({ name: 'State', form_id: 'form1[0].#subform[0].TextField1[10]', explanation: '', field_type: 'string', seq_no: 5 })
-question7e = Question.create({ name: 'Zip Code', form_id: 'form1[0].#subform[0].TextField1[11]', explanation: '', field_type: 'string', seq_no: 6 })
-question7f = Question.create({ name: 'Phone (Area Code)', form_id: 'form1[0].#subform[0].TextField2[0]', explanation: '', field_type: 'string', seq_no: 7 })
+question3 = Question.create({ name: 'First Name', form_id: 'form1[0].#subform[0].TextField1[7]', explanation: '', seq_no: 4, field_type: 'string' })
+question4 = Question.create({ name: 'Last Name', form_id: 'form1[0].#subform[0].TextField1[2]', explanation: 'Make sure this is complete', seq_no: 6, field_type: 'string' })
+question5 = Question.create({ name: 'Middle Name', form_id: 'form1[0].#subform[0].TextField1[8]', explanation: '', seq_no: 5, field_type: 'string' })
+question6 = Question.create({ name: 'What other names have you used?', form_id: 'form1[0].#subform[0].TextField1[3]', explanation: 'Include maiden name and aliases', field_type: 'string', seq_no: 7 })
+question7a = Question.create({ name: 'Street Number and Name', form_id: 'form1[0].#subform[0].TextField1[4]', explanation: '', field_type: 'string', seq_no: 1 })
+question7b = Question.create({ name: 'Apt. Number', form_id: 'form1[0].#subform[0].TextField1[9]', explanation: '', field_type: 'string', seq_no: 2 })
+question7c = Question.create({ name: 'City', form_id: 'form1[0].#subform[0].TextField1[5]', explanation: '', field_type: 'string', seq_no: 3 })
+question7d = Question.create({ name: 'State', form_id: 'form1[0].#subform[0].TextField1[10]', explanation: '', field_type: 'string', seq_no: 4 })
+question7e = Question.create({ name: 'Zip Code', form_id: 'form1[0].#subform[0].TextField1[11]', explanation: '', field_type: 'string', seq_no: 5 })
+question7f = Question.create({ name: 'Phone (Area Code)', form_id: 'form1[0].#subform[0].TextField2[0]', explanation: '', field_type: 'string', seq_no: 6 })
 question7g = Question.create({ name: 'Phone', form_id: 'form1[0].#subform[0].TextField2[1]', explanation: '', field_type: 'string', seq_no: 7 })
 
 question3.validations = { :"parsley-required" => "", :"parsley-trigger" => "change" }
@@ -49,6 +49,10 @@ personal_p1.section = personal
 personal_p1.save()
 personal_p2.section = personal
 personal_p2.save()
+
+form_text1 = FormText.create({ guidance: 'test guidance', seq_no: 3 })
+form_text1.page = personal_p1
+form_text1.save()
 
 question1.page = personal_p1
 question2.page = personal_p1
