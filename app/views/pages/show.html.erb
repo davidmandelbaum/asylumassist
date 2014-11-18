@@ -61,6 +61,7 @@
 
 <script type="text/javascript">
     var form_parsley = $('#form').parsley();
+
     $(".answer").focus(function() {
         var parent = $(this).parents('div.question');
         parent.addClass("focus");
@@ -77,6 +78,7 @@
             $(exp).fadeIn(200);
         }
     });
+
     $(".answer").blur(function() {
         var parent = $(this).parents('div.question');
         parent.removeClass("focus");
@@ -92,6 +94,11 @@
             }, 500);
             $(exp).fadeOut(200);
         }
+    });
+
+    // LAST NAME VALIDATION
+    var all_caps = $('.answer[data-allcaps="true"]').blur(function() {
+        $(this).val($(this).val().toUpperCase()); 
     });
 </script>
 

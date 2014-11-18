@@ -43,7 +43,7 @@ question7f = Question.create({ name: 'Phone (Area Code)', form_id: 'form1[0].#su
 question7g = Question.create({ name: 'Phone', form_id: 'form1[0].#subform[0].TextField2[1]', explanation: '', field_type: 'string', seq_no: 7 })
 
 question3.validations = { :"parsley-required" => "", :"parsley-trigger" => "change" }
-question4.validations = { :"parsley-required" => "", :"parsley-trigger" => "change", :"onkeyup" => "javascript:this.value=this.value.toUpperCase();" }
+question4.validations = { :"parsley-required" => "", :"parsley-trigger" => "change", :"allcaps" => "true"}
 question7e.validations = { :"parsley-required" => "", :"parsley-type" => "digits", :"parsley-trigger" => "keydown" }
 question7g.validations = { :"parsley-type" => "digits", :"parsley-trigger" => "keydown", :"parsley-validation-threshold" => "1" }
 
