@@ -1,0 +1,14 @@
+<ul class="nav nav-pills">
+  <% @sections.each do |s| %>
+    <% if @section and s.name == @section.name %>
+    <% if @page %>
+    <% link_string = s.name + ": " + @page.seq_no.to_s %>
+<% else %>
+    <% link_string = s.name %>
+<% end %>
+  <li class="active"><%= link_to( link_string, controller: 'sections', action: 'show', id: s.id ) %> </li>
+<% else %>
+    <li><%= link_to( s.name, controller: 'sections', action: 'show', id: s.id ) %></li>
+<% end %>
+<% end %>
+</ul>
