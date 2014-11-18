@@ -2,8 +2,9 @@ es:
   login: "Iniciar sesión"
   logout: "Finalizar la sesión"
   sign_up: "Contratar"
-  logged_in_as: "Conectado como David"
+  logged_in_as: "Conectado como "
   welcome_text: "Bienvenidos a Asylum Assist!"
+  translation_editor: 'Translation Editor'
   start: 'Empezar'
   continue: 'Continuar a página '
   save_and_continue: 'Guardar y Continuar'
