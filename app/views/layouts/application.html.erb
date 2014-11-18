@@ -10,41 +10,8 @@
 </head>
 <body>
 
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <% if user_signed_in? %>
-      <button type="button" class="btn btn-default navbar-btn">
-        <%= t('logged_in') %> <strong><%= current_user.email %></strong>
-      </button>
-      <button type="button" class="btn btn-default navbar-btn">
-        <%= link_to t('logout'), destroy_user_session_path, method: :delete %>
-      </button>
-      <% if current_user.admin == 1 %>
-        <button type="button" class="btn btn-default navbar-btn">
-          <%= link_to t('translation_editor'), :controller => "translation_editor", :action => "show", :locale => I18n.locale %>
-        </button>
-      <% end %>
-    <% else %>
-      <button type="button" class="btn btn-default navbar-btn">
-        <%= link_to t('sign_up'), new_user_registration_path %> 
-      </button>
-      <button type="button" class="btn btn-default navbar-btn">
-        <%= link_to t('login'), new_user_session_path %>
-      </button>
-    <% end %>
-    <nav class="navbar-right">
-    <button type="button" class="btn btn-default navbar-btn<% if I18n.locale == :en %> active<% end %>">
-        <%= link_to 'English', url_for( :locale => 'en' ) %>
-      </button>
-      <button type="button" class="btn btn-default navbar-btn<% if I18n.locale == :es %> active<% end %>">
-        <%= link_to 'Español', url_for( :locale => 'es' ) %>
-      </button>
-      <button type="button" class="btn btn-default navbar-btn<% if I18n.locale == :zh %> active<% end %>">
-        <%= link_to '官话', url_for( :locale => 'zh' ) %>
-      </button>
-    </nav>
-  </div>
-</nav>
+
+<%= render "shared/nav" %>
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
