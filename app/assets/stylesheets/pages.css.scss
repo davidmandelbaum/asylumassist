@@ -35,7 +35,7 @@ input:focus {
 }
 
 .guidance {
-    width: 450px;
+    width: auto;
     border-left: 1px solid gray;
     padding-left: 10px;
     line-height: 1.7;
@@ -44,10 +44,9 @@ input:focus {
 }
 
 .explanation {
-    color: gray;
+    color: #505050;
     font-size: 15px;
-    margin-top: 40px;
-    margin-left: -50px;
+    margin-top: 15px;
     display: none;
 }
 
@@ -56,7 +55,20 @@ input:focus {
 }
 
 .question {
+    padding-top: 10px;
     margin-bottom: 15px;
+    background-color: white;
+    border-radius: 4px;
+    transition: background-color 1s;
+    transition: font-size 1s;
+}
+
+.focus {
+    background-color: #ccc;
+}
+
+.focus input {
+    font-size: 26px;
 }
 
 .name {

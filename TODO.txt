@@ -2,7 +2,6 @@
 - last name in all caps
 - answer validation on back end
 - better handling of entries (probably should have names, etc.)
-- magnifying glass effect on current question?
 - handling of phone numbers (when split on backend btw. zip and rest)
 - modularize translations (yaml files)
 - parsley localizations

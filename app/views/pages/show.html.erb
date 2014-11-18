@@ -8,35 +8,33 @@
 </div>
 
 <div class="row">
-<div class="col-md-5">
+<div class="col-md-6">
 
 <h3 class="page_title"><%= @page.name %></h3>
 
 <%= form_tag("/pages/submit", method: "post", id: 'form') do %>
   <% @page.elements.each do |q| %>
-    <div class="row question">
+      <div class="row question" id="q_<%= q.id %>">
       <div class="col-md-8">
         <% if q.class == FormText %>
           <div class="form_text"><%= q.guidance %></div>
         <% else %>
           <div class="name"><%= q.name %></div>
           <% if q.field_type == "string" %>
-              <%= text_field_tag "answer_" + q.id.to_s, q.answer_text, class: 'text_answer', data: q.validations %>
+              <%= text_field_tag "answer_" + q.id.to_s, q.answer_text, class: 'answer text_answer', data: q.validations %>
           <% elsif q.field_type == "checkbox" %>
-            <%= check_box_tag "answer_" + q.id.to_s, q.answer_text, data: q.validations %>
+            <%= check_box_tag "answer_" + q.id.to_s, q.answer_text, class: 'answer', data: q.validations %>
           <% elsif q.field_type == "date" %>
-            <%= date_field_tag "answer_" + q.id.to_s, q.answer_text, data: q.validations %>
+            <%= date_field_tag "answer_" + q.id.to_s, q.answer_text, class: 'answer', data: q.validations %>
           <% elsif q.field_type == "text" %>
             <%= text_area_tag "answer" + q.id.to_s, q.answer_text, class: 'text_answer', data: q.validations %>
           <% else %>
             Unknown type for question id = <%= q.id %>
         <% end %>
       <% end %>
-      </div>
-      <div class="col-md-4">
-        <% if q.class == Question and q.explanation %>
-            <div class="explanation <% if q.field_type != "string" and q.field_type != "text" %>show<% end %>" id="exp_<%= q.id.to_s %>"><%= q.explanation %></div>
-        <% end %>
+    <% if q.class == Question and q.explanation != "" %>
+        <div class="explanation <% if q.field_type != "string" and q.field_type != "text" %>show<% end %>" id="exp_<%= q.id.to_s %>"><%= q.explanation %></div>
+    <% end %>
       </div>
     <br /><br />
     </div>
@@ -56,19 +54,44 @@
     </div>
 </div>
 
+<div class="col-md-1">
+</div>
+
 </div>
 
 <script type="text/javascript">
     var form_parsley = $('#form').parsley();
-    $(".text_answer").focus(function() {
+    $(".answer").focus(function() {
+        var parent = $(this).parents('div.question');
+        parent.addClass("focus");
+        $(this).animate({
+            width: "+=150",
+            height: "+=15"
+        });
         var id = $(this).attr('id').split("_")[1];
         var exp = "#exp_" + id;
-        $(exp).fadeIn(200);
+        if ($(exp).length > 0) {
+            parent.animate({
+                height: "+=50"
+                }, 500);
+            $(exp).fadeIn(200);
+        }
     });
-    $(".text_answer").blur(function() {
+    $(".answer").blur(function() {
+        var parent = $(this).parents('div.question');
+        parent.removeClass("focus");
+        $(this).animate({
+            width: "-=150",
+            height: "-=15"
+        });
         var id = $(this).attr('id').split("_")[1];
         var exp = "#exp_" + id;
-        $(exp).fadeOut(200);
+        if ($(exp).length > 0) {
+            parent.animate({
+                height: "-=50"
+            }, 500);
+            $(exp).fadeOut(200);
+        }
     });
 </script>
 
