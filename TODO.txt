@@ -14,7 +14,6 @@
 - checkboxes and date selectors
 
 ## BACK-(E)ND CODE
-- better handling of entries (probably should have names, etc.)
 
 ## DE(P)LOYMENT
 - pdftk on heroku buildpack
@@ -29,3 +28,4 @@
 ## (B)ONUS
 - responsive
 - refactor seeds
+- better handling of entries (names, etc.)

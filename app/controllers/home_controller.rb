@@ -17,12 +17,14 @@ class HomeController < ApplicationController
     # set locale
     u = current_user
     u.locale = params[:locale] || session[:locale]
-    # TODO: don't make duplicate entries
-    @entry = Entry.new
-    @entry.user = current_user
-    @entry.save()
-    current_user.curr_entry = @entry.id
-    current_user.save()
+
+    if !current_user.curr_entry
+      @entry = Entry.new
+      @entry.user = current_user
+      @entry.save()
+      current_user.curr_entry = @entry.id
+      current_user.save()
+    end
   end
 
   def review_answers
