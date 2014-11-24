@@ -27,14 +27,32 @@ class PagesController < ApplicationController
     params.each do |k, v|
       if k.include? "answer"
         q_id = k[7..-1].to_i
-        answer = Answer.find_by(question: Question.find(q_id))
-        if answer
-          answer.text = v
-          answer.save()
+        q = Question.find(q_id)
+        if q.field_type == 'checkbox'
+          answer = Answer.find_by(question: q)
+          if v.include? "1"
+            text = "on"
+          else
+            text = "off"
+          end
+          if answer
+            answer.text = text
+            answer.save()
+          else
+            answer = Answer.create( text: text, question: q )
+            answer.entry = Entry.find(current_user.curr_entry)
+            answer.save()
+          end
         else
-          answer = Answer.create( text: v, question: Question.find(q_id))
-          answer.entry = Entry.find(current_user.curr_entry)
-          answer.save()
+          answer = Answer.find_by(question: q)
+          if answer
+            answer.text = v
+            answer.save()
+          else
+            answer = Answer.create( text: v, question: q )
+            answer.entry = Entry.find(current_user.curr_entry)
+            answer.save()
+          end
         end
       end
     end

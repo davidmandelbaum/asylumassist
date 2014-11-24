@@ -46,8 +46,17 @@ class HomeController < ApplicationController
     answers = {}
 
     @entry_answers.each do |a|
-      answers[a.question.form_id] = a.text
+      if a.question.field_type == 'string'
+        answers[a.question.form_id] = a.text
+      elsif a.question.field_type == 'checkbox'
+        if a.text == "on"
+          answers[a.question.form_id] = a.question.checkbox_value
+        end
+      end
     end
+
+    @entry.completed_at = Time.now()
+    @entry.save()
 
     form_path = Rails.public_path.to_s + '/i589.pdf'
     tmp_path = "#{Rails.root.to_s}/tmp/" + @entry.id.to_s

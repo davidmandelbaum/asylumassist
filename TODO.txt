@@ -1,6 +1,5 @@
-## (B)UGS
-- translation of page name is saving for english when done in spanish
-- review answers not working for p1
+## BU(G)S
+- sort answers on review answers page
 - chevrons bunching at certain widths
 - pulling up answers from different user
 
@@ -8,10 +7,12 @@
 - interface (changes from literature)
 - go right to field from answer review page
 - missing answers
+- switch to helvetica?
 
 ## (F)RONT-END CODE
 - handling of phone numbers (when split on backend btw. zip and rest)
 - checkboxes and date selectors
+- put a tags outside of buttons
 
 ## BACK-(E)ND CODE
 
@@ -29,3 +30,4 @@
 - responsive
 - refactor seeds
 - better handling of entries (names, etc.)
+- translator view

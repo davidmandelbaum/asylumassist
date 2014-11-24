@@ -11,7 +11,7 @@ class Question < ActiveRecord::Base
     if answer
       return answer.text
     else
-      return ""
+      return nil
     end
   end
 

@@ -4,6 +4,7 @@ class CreateQuestions < ActiveRecord::Migration
       t.string :name
       t.string :field_type
       t.string :form_id
+      t.string :checkbox_value
       t.text :explanation
       t.belongs_to :page, index: true
       t.integer :seq_no

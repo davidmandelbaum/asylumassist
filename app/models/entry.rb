@@ -14,6 +14,8 @@ class Entry < ActiveRecord::Base
 
   def get_page_answers (page)
     answers_out = []
+    answers_in = []
+    answers_in << answers
     answers.each do |a|
       if a.page == page
         answers_out << a

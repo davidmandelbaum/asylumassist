@@ -27,6 +27,7 @@ I18n.locale = :en
 
 personal_p1 = Page.create({ seq_no: 1, name: 'Basic Personal Information', guidance: 'This is for your most basic personal information. Ensure that all names are spelled correctly, and that your last name is filled out in ALL CAPS.' })
 personal_p2 = Page.create({ seq_no: 2, name: 'Residence in the U.S.', guidance: 'Where you physically reside' })
+personal_p3 = Page.create({ seq_no: 3, name: 'Checkbox and date test' })
 
 question1 = Question.create({ name: 'Alien Registration Number', form_id: 'form1[0].#subform[0].TextField1[0]', explanation: 'A-Number (if any)', seq_no: 1, field_type: 'string' })
 question2 = Question.create({ name: 'U.S. Social Security Number', form_id: 'form1[0].#subform[0].TextField1[1]', explanation: '(if any)', seq_no: 2, field_type: 'string' })
@@ -41,6 +42,8 @@ question7d = Question.create({ name: 'State', form_id: 'form1[0].#subform[0].Tex
 question7e = Question.create({ name: 'Zip Code', form_id: 'form1[0].#subform[0].TextField1[11]', explanation: '', field_type: 'string', seq_no: 5 })
 question7f = Question.create({ name: 'Phone (Area Code)', form_id: 'form1[0].#subform[0].TextField2[0]', explanation: '', field_type: 'string', seq_no: 6 })
 question7g = Question.create({ name: 'Phone', form_id: 'form1[0].#subform[0].TextField2[1]', explanation: '', field_type: 'string', seq_no: 7 })
+test_male = Question.create({ name: 'Male', form_id: 'form1[0].#subform[0].PartALine9Gender[0]', field_type: 'checkbox', seq_no: 1, checkbox_value: 'M' })
+test_female = Question.create({ name: 'Female', form_id: 'form1[0].#subform[0].PartALine9Gender[1]', field_type: 'checkbox', seq_no: 1, checkbox_value: 'F' })
 
 question3.validations = { }
 question4.validations = { :"allcaps" => "true"}
@@ -51,10 +54,17 @@ personal_p1.section = personal
 personal_p1.save()
 personal_p2.section = personal
 personal_p2.save()
+personal_p3.section = personal
+personal_p3.save()
 
 # form_text1 = FormText.create({ guidance: 'test guidance', seq_no: 3 })
 # form_text1.page = personal_p1
 # form_text1.save()
+
+test_male.page = personal_p3
+test_female.page = personal_p3
+test_male.save()
+test_female.save()
 
 question1.page = personal_p1
 question2.page = personal_p1

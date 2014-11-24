@@ -55,11 +55,17 @@ body {
 }
 
 a:hover, a:focus {
-    background-color: initial;
+  background-color: initial;
+}
+
+.btn-success {
+  text-transform: uppercase;
 }
 
 .btn-success a {
-  color: black;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 /*
  * # Semantic - Steps
