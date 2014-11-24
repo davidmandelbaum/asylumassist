@@ -27,6 +27,7 @@
             <strong>Guidance:</strong> <br /><% I18n.locale = :en %><%= p.guidance %> <br />
             <% I18n.locale = @locale %>
             <%= text_area_tag "page_guid_" + p.id.to_s, p.guidance, :cols => 80, :rows => 3, :class => 'form-control' %> <br /> <br />
+            <hr />
 
           <% p.elements.each do |e| %>
               <% if e.class == FormText %>
@@ -42,10 +43,12 @@
               <br />
                 <% if e.explanation != "" %>
                   <div class="input-group">
-                    <div class="input-group-addon" style="width: 10px;"><% I18n.locale = :en %><%= e.explanation %></div>
+                    <strong>Explanation: </strong><br />
+                    <% I18n.locale = :en %><%= e.explanation %><br />
                     <% I18n.locale = @locale %><%= text_field_tag "expl_" + e.id.to_s, e.explanation, :class => 'form-control' %>
                   </div>
                 <% end %>
+                <hr />
               <% end %>
             <% end %>
             </div>
