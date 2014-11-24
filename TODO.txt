@@ -1,20 +1,18 @@
 ## BU(G)S
 - sort answers on review answers page
-- chevrons bunching at certain widths
-- pulling up answers from different user
 
 ## FRONT-END (D)ESIGN
 - interface (changes from literature)
-- go right to field from answer review page
 - missing answers
 - switch to helvetica?
 
 ## (F)RONT-END CODE
 - handling of phone numbers (when split on backend btw. zip and rest)
-- checkboxes and date selectors
 - put a tags outside of buttons
 
 ## BACK-(E)ND CODE
+- skip spouse if not married
+- skip kids if they don't exist
 
 ## DE(P)LOYMENT
 - pdftk on heroku buildpack
@@ -27,7 +25,8 @@
 - parsley localizations
 
 ## (B)ONUS
+- translator view
 - responsive
 - refactor seeds
 - better handling of entries (names, etc.)
-- translator view
+- go right to field from answer review page

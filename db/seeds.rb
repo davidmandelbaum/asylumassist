@@ -103,7 +103,7 @@ family_p2.save()
 
 fp2q1 = Question.create({ name: 'A-Number', field_type: 'string', seq_no: 1, explanation: '' })
 fp2q2 = Question.create({ name: 'Passport/ID Card Number', field_type: 'string', seq_no: 2, explanation: '' })
-fp2q3 = Question.create({ name: 'Date of Birth', field_type: 'date', seq_no: 3, explanation: '' })
+fp2q3 = Question.create({ name: 'Date of Birth', field_type: 'date', seq_no: 3, explanation: '', form_id: 'form1[0].#subform[1].DateTimeField7[0]' })
 fp1q1 = Question.create({ name: 'First Name', field_type: 'string', seq_no: 1, explanation: '' })
 fp1q2 = Question.create({ name: 'Middle Name', field_type: 'string', seq_no: 2, explanation: '' })
 fp1q3 = Question.create({ name: 'Last Name', field_type: 'string', seq_no: 3, explanation: '' })

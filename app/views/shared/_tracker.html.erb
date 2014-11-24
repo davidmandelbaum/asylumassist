@@ -1,36 +1,17 @@
 <div class="row">
-    <div class="col-md-4">
-    </div>
-    <div class="col-md-6">
-        <!-- 
-        <ul class="nav nav-pills">
-            <% @sections.order('seq_no ASC').each do |s| %>
-                <% if @section and s.name == @section.name %>
-                    <% if @page %>
-                      <% link_string = s.name + ": " + @page.seq_no.to_s %>
-                    <% else %>
-                      <% link_string = s.name %>
-                    <% end %>
-                    <li class="active"><%= link_to( link_string, controller: 'sections', action: 'show', id: s.id ) %> </li>
-                <% else %>
-                    <li><%= link_to( s.name, controller: 'sections', action: 'show', id: s.id ) %></li>
-                <% end %>
-            <% end %>
-        </ul>
-        -->
-        <div class="ui steps">
-            <% @sections.order('seq_no ASC').each do |s| %>
-                <% if @section and s.name == @section.name %>
-                    <% if @page %>
-                      <% link_string = s.name + ": " + @page.seq_no.to_s %>
-                    <% else %>
-                      <% link_string = s.name %>
-                    <% end %>
-                    <div class="ui active step"><%= link_to( link_string, controller: 'sections', action: 'show', id: s.id ) %> </div>
-                <% else %>
-                  <div class="ui step"><%= link_to( s.name, controller: 'sections', action: 'show', id: s.id ) %></div>
-                <% end %>
-            <% end %>
-        </div>
-    </div>
-<br /><br />
+  <div class="ui steps">
+    <% @sections.order('seq_no ASC').each do |s| %>
+      <% if @section and s.name == @section.name %>
+      <% if @page %>
+      <% link_string = s.name + ": " + @page.seq_no.to_s %>
+  <% else %>
+      <% link_string = s.name %>
+  <% end %>
+    <div class="ui active step"><%= link_to( link_string, controller: 'sections', action: 'show', id: s.id ) %> </div>
+  <% else %>
+      <div class="ui step"><%= link_to( s.name, controller: 'sections', action: 'show', id: s.id ) %></div>
+  <% end %>
+  <% end %>
+    <div class="ui <% if request.env['PATH_INFO'] == "/home/review_answers" %>active <% end %>step"><%= link_to( "Review", controller: 'home', action: 'review_answers' ) %></div>
+  </div>
+  <br /><br />
