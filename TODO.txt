@@ -1,12 +1,31 @@
-- actually collect guidance
-- go right to field from answer review page
+## (B)UGS
 - translation of page name is saving for english when done in spanish
-- answer validation on back end (?)
+- review answers not working for p1
+- chevrons bunching at certain widths
+- pulling up answers from different user
+
+## FRONT-END (D)ESIGN
+- interface (changes from literature)
+- go right to field from answer review page
 - missing answers
-- pdftk on heroku buildpack
-- better handling of entries (probably should have names, etc.)
+
+## (F)RONT-END CODE
 - handling of phone numbers (when split on backend btw. zip and rest)
+- checkboxes and date selectors
+
+## BACK-(E)ND CODE
+- better handling of entries (probably should have names, etc.)
+
+## DE(P)LOYMENT
+- pdftk on heroku buildpack
+
+## (C)ONTENT
+- finish entering questions and guidance
+
+## (T)RANSLATION
 - modularize translations (yaml files)
 - parsley localizations
-- refactor seeds
+
+## (B)ONUS
 - responsive
+- refactor seeds

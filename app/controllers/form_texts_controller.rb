@@ -1,5 +1,6 @@
 class FormTextsController < ApplicationController
   before_action :set_form_text, only: [:show, :edit, :update, :destroy]
+  respond_to :html
 
   def index
     @form_texts = FormText.all

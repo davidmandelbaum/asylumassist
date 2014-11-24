@@ -42,9 +42,9 @@ question7e = Question.create({ name: 'Zip Code', form_id: 'form1[0].#subform[0].
 question7f = Question.create({ name: 'Phone (Area Code)', form_id: 'form1[0].#subform[0].TextField2[0]', explanation: '', field_type: 'string', seq_no: 6 })
 question7g = Question.create({ name: 'Phone', form_id: 'form1[0].#subform[0].TextField2[1]', explanation: '', field_type: 'string', seq_no: 7 })
 
-question3.validations = { :"parsley-required" => "", :"parsley-trigger" => "change" }
-question4.validations = { :"parsley-required" => "", :"parsley-trigger" => "change", :"allcaps" => "true"}
-question7e.validations = { :"parsley-required" => "", :"parsley-type" => "digits", :"parsley-trigger" => "keydown" }
+question3.validations = { }
+question4.validations = { :"allcaps" => "true"}
+question7e.validations = { :"parsley-type" => "digits", :"parsley-trigger" => "keydown" }
 question7g.validations = { :"parsley-type" => "digits", :"parsley-trigger" => "keydown", :"parsley-validation-threshold" => "1" }
 
 personal_p1.section = personal
@@ -52,9 +52,9 @@ personal_p1.save()
 personal_p2.section = personal
 personal_p2.save()
 
-form_text1 = FormText.create({ guidance: 'test guidance', seq_no: 3 })
-form_text1.page = personal_p1
-form_text1.save()
+# form_text1 = FormText.create({ guidance: 'test guidance', seq_no: 3 })
+# form_text1.page = personal_p1
+# form_text1.save()
 
 question1.page = personal_p1
 question2.page = personal_p1

@@ -2,7 +2,7 @@ class AddQuestionTranslation < ActiveRecord::Migration
   def up
     Question.create_translation_table!({
       name: :string, 
-      explanation: :string
+      explanation: :text
     }, {
       migrate_data: true
     })

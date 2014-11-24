@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 20141118025855) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
-    t.string   "explanation"
+    t.text     "explanation"
   end
 
   add_index "question_translations", ["locale"], name: "index_question_translations_on_locale", using: :btree
