@@ -20,7 +20,7 @@
           <% if q.field_type == "string" %>
               <%= text_field_tag "answer_" + q.id.to_s, q.answer_text, class: 'answer text_answer', data: q.validations, tabindex: (q.seq_no).to_s %>
           <% elsif q.field_type == "checkbox" %>
-            <%= check_box("answer_" + q.id.to_s, q.answer_text, :class => "answer", :data => q.validations) %>
+            <%= check_box("answer_" + q.id.to_s, q.answer_text, :data => q.validations) %>
           <% elsif q.field_type == "date" %>
             <%= date_field_tag "answer_" + q.id.to_s, q.answer_text, class: 'answer', data: q.validations %>
           <% elsif q.field_type == "text" %>

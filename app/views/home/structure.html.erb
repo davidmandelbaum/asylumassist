@@ -33,4 +33,4 @@
 </table>
 
 <br /><br />
-<button type="button" class="btn btn-success btn-lg"><%= link_to 'Begin Application', controller: 'sections', action: 'show_seqno', seq_no: 1 %></button>
+<%= link_to 'Begin Application', { controller: 'sections', action: 'show_seqno', seq_no: 1 }, type: 'button', :class => 'btn btn-success btn-lg' %>

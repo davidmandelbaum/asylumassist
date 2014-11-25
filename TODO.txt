@@ -30,3 +30,4 @@
 - refactor seeds
 - better handling of entries (names, etc.)
 - go right to field from answer review page
+- handle checkboxes as dropdowns?

@@ -25,8 +25,6 @@
   </div>
 </div>
 
-<button type="button" class="btn btn-success btn-lg">
-  <%= link_to('Submit application', controller: 'home', action: 'submit') %>
-</button>
+<%= link_to('Submit application', { controller: 'home', action: 'submit'}, type: 'button', class:' btn btn-lg btn-success') %>
 
 <br />

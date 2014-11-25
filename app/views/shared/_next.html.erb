@@ -1,12 +1,10 @@
-<button type="button" class="btn btn-success btn-lg">
     <% if @next_page and @page %>
-        <%= link_to( t('save_and_continue'), controller: 'pages', action: 'show', id: @next_page.id ) %>
+      <%= link_to( t('save_and_continue'), { controller: 'pages', action: 'show', id: @next_page.id  }, class: 'btn btn-success btn-lg', type: 'button') %>
     <% elsif @next_page %>
-        <%= link_to( t('continue') + @next_page.seq_no.to_s, controller: 'pages', action: 'show', id: @next_page.id ) %>
+      <%= link_to( t('continue') + @next_page.seq_no.to_s, { controller: 'pages', action: 'show', id: @next_page.id }, class: 'btn btn-success btn-lg', type: 'button') %>
     <% elsif @next_section %>
-        <%= link_to( t('proceed_to') + @next_section.name, controller: 'sections', action: 'show', id: @next_section.id ) %>
+      <%= link_to( t('proceed_to') + @next_section.name, { controller: 'sections', action: 'show', id: @next_section.id }, type: 'button', class: 'btn btn-success btn-lg' ) %>
     <% else %>
         <!-- TODO: check for missing answers and change button text to reflect this change -->
-        <%= link_to( 'Review answers', controller: 'home', action: 'review_answers' ) %>
+        <%= link_to( 'Review answers', { controller: 'home', action: 'review_answers' }, class: 'btn btn-success btn-lg', type: 'button' ) %>
     <% end %>
-</button>
