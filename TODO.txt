@@ -1,11 +1,8 @@
 ## BU(G)S
-- sort answers on review answers page
 
 ## FRONT-END (D)ESIGN
 - interface (changes from literature)
-- missing answers
-- switch to helvetica?
-- put a tag outside of UI step
+- general touchups
 
 ## (F)RONT-END CODE
 - handling of phone numbers (when split on backend btw. zip and rest)
@@ -16,7 +13,6 @@
 - skip kids if they don't exist
 
 ## DE(P)LOYMENT
-- pdftk on heroku buildpack
 
 ## (C)ONTENT
 - finish entering questions and guidance
@@ -29,6 +25,7 @@
 - translator view
 - responsive
 - refactor seeds
+- put a tag outside of UI step
 - better handling of entries (names, etc.)
 - go right to field from answer review page
 - handle checkboxes as dropdowns?

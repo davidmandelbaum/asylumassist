@@ -4,25 +4,38 @@
 <br /><br />
 
 <div class="row">
-  <div class="col-md-6">
-    <% @sections.order('seq_no ASC').each do |s| %>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title"><%= s.name %></h3>
-        </div>
-        <div class="panel-body">
-            <% s.pages.order('seq_no ASC').each do |p| %>
-              <h5>Page <%= p.seq_no %>: <%= p.name %></h5>
-              <hr>
-              <% @entry.get_page_answers(p).each do |a| %>
-                <strong><%= link_to a.question.name, p, :class => "review_answers_link" %></strong> <br />
-                  <%= a.text %><br />
-              <% end %>
+    <div class="col-md-6">
+        <% @sections.order('seq_no ASC').each do |s| %>
+            <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 class="panel-title"><%= s.name %></h2>
+            </div>
+            <div class="panel-body">
+                <% s.pages.order('seq_no ASC').each do |p| %>
+                    <h5><%= p.name %> <span class='label label-default'><%= p.seq_no %> of <%= s.pages.length %></span></h5>
+                <hr>
+                <% @entry.get_page_answers(p).each do |a| %>
+                    <% if !a.text or a.text == "" %>
+                        <%= link_to a.question.name, p, :class => "review_answer_missing" %>
+                    <% else %>
+                        <%= link_to a.question.name, p, :class => "review_answer" %><br />
+                    <% end %>
+                <% if a.question.field_type == 'checkbox' %>
+                    <% if a.text == "on" %>
+                        <%= check_box_tag "", "", true %><br />
+                    <% else %>
+                        <%= check_box_tag "", "", false %><br />
+                    <% end %>
+                <% else %>
+                    <%= a.text %><br />
+                <% end %>
             <% end %>
+            <br />
+            <% end %>
+            </div>
         </div>
-      </div>
     <% end %>
-  </div>
+    </div>
 </div>
 
 <%= link_to('Submit application', { controller: 'home', action: 'submit'}, type: 'button', class:' btn btn-lg btn-success') %>

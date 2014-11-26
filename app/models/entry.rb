@@ -20,6 +20,7 @@ class Entry < ActiveRecord::Base
         answers_out << a
       end
     end
+    answers_out = answers_out.sort_by { |a| a.question.seq_no }
     return answers_out
   end
 
