@@ -47,7 +47,7 @@ class HomeController < ApplicationController
   end
 
   def submit
-    pdftk = PdfForms.new('/usr/local/bin/pdftk')
+    pdftk = PdfForms.new(ENV["PDFTK_PATH"])
     @entry = Entry.find(current_user.curr_entry)
     @entry_answers = @entry.answers
     answers = {}
