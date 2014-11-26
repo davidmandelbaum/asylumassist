@@ -9,7 +9,7 @@
 
 ## (F)RONT-END CODE
 - handling of phone numbers (when split on backend btw. zip and rest)
-- show answers on 
+- format checkboxes on review answers page
 
 ## BACK-(E)ND CODE
 - skip spouse if not married
