@@ -5,10 +5,10 @@
 - interface (changes from literature)
 - missing answers
 - switch to helvetica?
+- put a tag outside of UI step
 
 ## (F)RONT-END CODE
 - handling of phone numbers (when split on backend btw. zip and rest)
-- put a tags outside of buttons
 
 ## BACK-(E)ND CODE
 - skip spouse if not married
@@ -31,3 +31,4 @@
 - better handling of entries (names, etc.)
 - go right to field from answer review page
 - handle checkboxes as dropdowns?
+- favicon

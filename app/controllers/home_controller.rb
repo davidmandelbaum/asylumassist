@@ -22,6 +22,13 @@ class HomeController < ApplicationController
       @entry = Entry.new
       @entry.user = current_user
       @entry.save()
+      questions = Question.all
+      questions.each do |q|
+        a = Answer.new
+        a.question = q
+        a.entry = @entry
+        a.save()
+      end
       current_user.curr_entry = @entry.id
       current_user.save()
     end
