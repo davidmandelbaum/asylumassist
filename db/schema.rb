@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20141118025855) do
   add_index "entries", ["user_id"], name: "index_entries_on_user_id", using: :btree
 
   create_table "form_texts", force: true do |t|
+    t.string   "title"
     t.text     "guidance"
     t.integer  "seq_no"
     t.integer  "page_id"

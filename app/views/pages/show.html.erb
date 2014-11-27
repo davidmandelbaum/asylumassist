@@ -14,7 +14,8 @@
       <div class="row question" id="q_<%= q.id %>">
       <div class="col-md-8">
         <% if q.class == FormText %>
-          <div class="form_text"><%= q.guidance %></div>
+          <div class="form_text"><% if q.title != "" %><h3><%= q.title %></h3><% end %>
+          <%= q.guidance %></div>
         <% else %>
           <div class="name"><%= q.name %></div>
           <% if q.field_type == "string" %>

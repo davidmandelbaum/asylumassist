@@ -6,16 +6,20 @@
 
 ## (F)RONT-END CODE
 - handling of phone numbers (when split on backend btw. zip and rest)
-- format checkboxes on review answers page
+- show formtext on review answers
 
 ## BACK-(E)ND CODE
+- CAT box
+- add another status (A.I.18)
 - skip spouse if not married
+- skip mailing address
 - skip kids if they don't exist
 
 ## DE(P)LOYMENT
 
 ## (C)ONTENT
-- finish entering questions and guidance
+- finish entering questions
+- finish entering guidance
 
 ## (T)RANSLATION
 - modularize translations (yaml files)
@@ -24,7 +28,6 @@
 ## (B)ONUS
 - translator view
 - responsive
-- refactor seeds
 - put a tag outside of UI step
 - better handling of entries (names, etc.)
 - go right to field from answer review page
