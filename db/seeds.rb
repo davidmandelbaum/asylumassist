@@ -441,7 +441,109 @@ end
 
 # ------------------------------------------------------
 
-family_p1 = Page.create({ seq_no: 1, name: 'Basic Spouse Information', guidance: 'This is for your most basic spousal information. Ensure that all names are spelled correctly, and that last names is filled out in ALL CAPS.' })
+personal_p7 = Page.create({
+  seq_no:             7,
+  name:               'Passport information'
+})
+
+personal_p7.section = personal
+personal_p7.save()
+
+personal_p7_questions = []
+
+personal_p7_questions << Question.create({
+  name:               'What country issued your last passport or travel document?',
+  form_id:            'form1[0].#subform[0].TextField5[0]',
+  field_type:         'string',
+  seq_no:             1,
+})
+
+personal_p7_questions << Question.create({
+  name:               'Passport Number',
+  form_id:            'form1[0].#subform[0].TextField5[1]',
+  field_type:         'string',
+  seq_no:             2,
+})
+
+personal_p7_questions << Question.create({
+  name:               'Travel Document Number',
+  form_id:            'form1[0].#subform[0].TextField5[2]',
+  field_type:         'string',
+  seq_no:             3,
+})
+
+personal_p7_questions << Question.create({
+  name:               'Expiration date',
+  form_id:            'form1[0].#subform[0].DateTimeField2[2]',
+  field_type:         'date',
+  seq_no:             4,
+})
+
+personal_p7_questions.each do |q|
+  q.page = personal_p7
+  q.save()
+end
+
+# ------------------------------------------------------
+
+personal_p8 = Page.create({
+  seq_no:             8,
+  name:               'Language information'
+})
+
+personal_p8.section = personal
+personal_p8.save()
+
+personal_p8_questions = []
+
+personal_p8_questions << Question.create({
+  name:               'What is your native language',
+  explanation:        'Include dialect, if applicable',
+  form_id:            'form1[0].#subform[0].TextField7[0]',
+  field_type:         'string',
+  seq_no:             1,
+})
+
+personal_p8_questions << FormText.create({
+  guidance:           'Are you fluent in English?',
+  seq_no:             2,
+})
+
+personal_p8_questions << Question.create({
+  name:               'Yes',
+  form_id:            'form1[0].#subform[0].CheckBox4[0]',
+  field_type:         'checkbox',
+  checkbox_value:     'Yes',
+  seq_no:             3,
+})
+
+personal_p8_questions << Question.create({
+  name:               'No',
+  form_id:            'form1[0].#subform[0].CheckBox4[1]',
+  field_type:         'checkbox',
+  checkbox_value:     'No',
+  seq_no:             4,
+})
+
+personal_p8_questions << Question.create({
+  name:               'What other languages do you speak fluently?',
+  form_id:            'form1[0].#subform[0].TextField7[1]',
+  field_type:         'string',
+  seq_no:             5,
+})
+
+personal_p8_questions.each do |q|
+  q.page = personal_p8
+  q.save()
+end
+
+# ------------------------------------------------------
+
+family_p1 = Page.create({
+  seq_no:             1,
+  name:               'Basic Spouse Information',
+  guidance:           ''
+})
 
 family_p1.section = family
 family_p1.save()
@@ -449,24 +551,59 @@ family_p1.save()
 family_p1_questions = []
 
 family_p1_questions << Question.create({
-  name:           'First Name',
+  name:           'Alien Registration Number',
   field_type:     'string',
   seq_no:         1,
-  explanation:    ''
+  form_id:        'form1[0].#subform[1].TextField10[0]'
+})
+
+family_p1_questions << Question.create({
+  name:           'Passport/ID Card Number',
+  field_type:     'string',
+  seq_no:         2,
+  form_id:        'form1[0].#subform[1].TextField10[6]'
+})
+
+family_p1_questions << Question.create({
+  name:           'Date of Birth',
+  field_type:     'date',
+  seq_no:         3,
+  form_id:        'form1[0].#subform[1].DateTimeField7[0]'
+})
+
+family_p1_questions << Question.create({
+  name:           'U.S. Social Security Number',
+  field_type:     'string',
+  seq_no:         4,
+  form_id:        'form1[0].#subform[1].TextField10[7]'
+})
+
+family_p1_questions << Question.create({
+  name:           'First Name',
+  field_type:     'string',
+  seq_no:         5,
+  form_id:        'form1[0].#subform[1].TextField10[8]'
 })
 
 family_p1_questions << Question.create({
   name:           'Middle Name',
   field_type:     'string',
-  seq_no:         2,
-  explanation:    ''
+  seq_no:         6,
+  form_id:        'form1[0].#subform[1].TextField10[9]'
 })
 
 family_p1_questions << Question.create({
-  name:           'Last Name',
+  name:           'Complete Last Name',
   field_type:     'string',
-  seq_no:         3,
-  explanation:    ''
+  seq_no:         7,
+  form_id:        'form1[0].#subform[1].TextField10[1]'
+})
+
+family_p1_questions << Question.create({
+  name:           'Maiden Name',
+  field_type:     'string',
+  seq_no:         8,
+  form_id:        'form1[0].#subform[1].TextField10[10]'
 })
 
 family_p1_questions.each do |q|
@@ -476,33 +613,57 @@ end
 
 # ------------------------------------------------------
 
-family_p2 = Page.create({ seq_no: 2, name: 'Basic Spouse Information 2', guidance: 'Basic spouse information guidance. page 2' })
+family_p2 = Page.create({
+  seq_no:             2,
+  name:               'More Spouse Information',
+  guidance:           ''
+})
 
 family_p2.section = family
 family_p2.save()
 
 family_p2_questions = []
 
-family_p2_questions << Question.create({ 
-  name:           'A-Number',
-  field_type:     'String',
+family_p2_questions << Question.create({
+  name:           'City and Country of Birth',
+  field_type:     'string',
   seq_no:         1,
-  explanation:    ''
+  form_id:        'form1[0].#subForm[1].TextField10[12]'
 })
 
 family_p2_questions << Question.create({
-  name:           'Passport/ID Card Number',
+  name:           'Nationality',
   field_type:     'string',
   seq_no:         2,
-  explanation:    ''
+  form_id:        'form1[0].#subForm[1].TextField10[2]'
 })
 
 family_p2_questions << Question.create({
-  name:           'Date of Birth',
-  field_type:     'date',
+  name:           'Race, Ethnic, or Tribal Group',
+  field_type:     'string',
   seq_no:         3,
-  explanation:    '',
-  form_id:        'form1[0].#subForm[1].DateTimeField7[0]' 
+  form_id:        'form1[0].#subForm[1].TextField10[13]'
+})
+
+family_p2_questions << FormText.create({
+  guidance:       'Gender',
+  seq_no:         4
+})
+
+family_p2_questions << Question.create({
+  name:           'Male',
+  field_type:     'checkbox',
+  seq_no:         5,
+  form_id:        'form1[0].#subForm[1].CheckBox6[0]',
+  checkbox_value: '1'
+})
+
+family_p2_questions << Question.create({
+  name:           'Female',
+  field_type:     'checkbox',
+  seq_no:         6,
+  form_id:        'form1[0].#subForm[1].CheckBox6[1]',
+  checkbox_value: '2'
 })
 
 family_p2_questions.each do |q|
@@ -510,7 +671,134 @@ family_p2_questions.each do |q|
   q.save()
 end
 
+# ------------------------------------------------------
 
-# CHECKBOX:
+family_p3 = Page.create({
+  seq_no:             3,
+  name:               'Marriage and U.S. Entry',
+  guidance:           ''
+})
 
+family_p3.section = family
+family_p3.save()
 
+family_p3_questions = []
+
+family_p3_questions << Question.create({ 
+  name:           'Date of Marriage',
+  field_type:     'date',
+  seq_no:         1,
+  form_id:        'form1[0].#subform[1].DateTimeField8[0]'
+})
+
+family_p3_questions << Question.create({
+  name:           'Place of Marriage',
+  field_type:     'string',
+  seq_no:         2,
+  explanation:    'form1[0].#subform[1].TextField10[11]'
+})
+
+family_p3_questions << FormText.create({
+  guidance:       'Is this person in the U.S.?',
+  seq_no:         3,
+})
+
+family_p3_questions << Question.create({
+  name:           'Yes',
+  form_id:        'form1[0].#subform[1].CheckBox7[0]',
+  field_type:     'checkbox', 
+  checkbox_value: '1',
+  seq_no:         4,
+})
+
+family_p3_questions << Question.create({
+  name:           'No',
+  form_id:        'form1[0].#subform[1].CheckBox7[1]',
+  field_type:     'checkbox', 
+  checkbox_value: '2',
+  seq_no:         4,
+})
+
+# TODO: only show this if no box is checked
+
+family_p3_questions << Question.create({
+  name:           'Specify location',
+  form_id:        'form1[0].#subform[1].TextField10[3]',
+  field_type:     'string', 
+  seq_no:         5,
+})
+
+family_p3_questions.each do |q|
+  q.page = family_p3
+  q.save()
+end
+
+# ------------------------------------------------------
+
+# TODO: contingent on yes answer to checkbox at bottom of p3
+
+family_p4 = Page.create({
+  seq_no:             4,
+  name:               'Spouse U.S. details',
+  guidance:           ''
+})
+
+family_p4.section = family
+family_p4.save()
+
+family_p4_questions = []
+
+family_p4_questions << Question.create({ 
+  name:           'Place of last entry into the U.S.',
+  field_type:     'string',
+  seq_no:         1,
+  form_id:        'form1[0].#subform[1].TextField10[4]'
+})
+
+family_p4_questions << Question.create({
+  name:           'Date of last entry into the U.S.',
+  field_type:     'date',
+  seq_no:         2,
+  explanation:    'form1[0].#subform[1].DateTimeField9[0]'
+})
+
+family_p4_questions << Question.create({
+  name:           'I-94 Number',
+  field_type:     'string',
+  seq_no:         3,
+  explanation:    'form1[0].#subform[1].TextField10[14]'
+})
+
+family_p4_questions << Question.create({
+  name:           'Status when last admitted',
+  explanation:    'Visa type, if any',
+  field_type:     'string',
+  seq_no:         4,
+  explanation:    'form1[0].#subform[1].TextField10[15]'
+})
+
+family_p4_questions << Question.create({
+  name:           'What is your spouse\'s current status?',
+  field_type:     'string',
+  seq_no:         5,
+  explanation:    'form1[0].#subform[1].TextField10[5]'
+})
+
+family_p4_questions << Question.create({
+  name:           'What is the expiration date of his/her authorized stay, if any?',
+  field_type:     'string',
+  seq_no:         6,
+  explanation:    'form1[0].#subform[1].TextField10[0]'
+})
+
+family_p4_questions << FormText.create({
+  guidance:       'Is your spouse in Immigration Court proceedings?',
+  seq_no:         7,
+})
+
+# TODO: finish this page
+
+family_p4_questions.each do |q|
+  q.page = family_p4
+  q.save()
+end

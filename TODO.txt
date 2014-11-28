@@ -1,4 +1,5 @@
 ## BU(G)S
+- fix family_p2 checkboxes (not filling on form)
 
 ## FRONT-END (D)ESIGN
 - interface (changes from literature)
@@ -14,15 +15,16 @@
 - skip spouse if not married
 - skip mailing address
 - skip kids if they don't exist
+- add pagination
 
 ## DE(P)LOYMENT
 
 ## (C)ONTENT
 - finish entering questions
 - finish entering guidance
+- guidance for sections on structure page
 
 ## (T)RANSLATION
-- modularize translations (yaml files)
 - parsley localizations
 
 ## (B)ONUS
