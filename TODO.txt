@@ -1,17 +1,15 @@
 ## BU(G)S
-- fix family_p2 checkboxes (not filling on form)
 
 ## FRONT-END (D)ESIGN
 - interface (changes from literature)
-- general touchups
 
 ## (F)RONT-END CODE
-- handling of phone numbers (when split on backend btw. zip and rest)
 - show formtext on review answers
 
 ## BACK-(E)ND CODE
 - CAT box
 - add another status (A.I.18)
+- add another child
 - skip spouse if not married
 - skip mailing address
 - skip kids if they don't exist
@@ -29,9 +27,9 @@
 
 ## (B)ONUS
 - translator view
+- handling of phone numbers (when split on backend btw. zip and rest)
 - responsive
 - put a tag outside of UI step
 - better handling of entries (names, etc.)
-- go right to field from answer review page
 - handle checkboxes as dropdowns?
 - favicon

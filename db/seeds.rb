@@ -695,7 +695,7 @@ family_p3_questions << Question.create({
   name:           'Place of Marriage',
   field_type:     'string',
   seq_no:         2,
-  explanation:    'form1[0].#subform[1].TextField10[11]'
+  form_id:    'form1[0].#subform[1].TextField10[11]'
 })
 
 family_p3_questions << FormText.create({
@@ -759,14 +759,14 @@ family_p4_questions << Question.create({
   name:           'Date of last entry into the U.S.',
   field_type:     'date',
   seq_no:         2,
-  explanation:    'form1[0].#subform[1].DateTimeField9[0]'
+  form_id:    'form1[0].#subform[1].DateTimeField9[0]'
 })
 
 family_p4_questions << Question.create({
   name:           'I-94 Number',
   field_type:     'string',
   seq_no:         3,
-  explanation:    'form1[0].#subform[1].TextField10[14]'
+  form_id:    'form1[0].#subform[1].TextField10[14]'
 })
 
 family_p4_questions << Question.create({
@@ -774,21 +774,21 @@ family_p4_questions << Question.create({
   explanation:    'Visa type, if any',
   field_type:     'string',
   seq_no:         4,
-  explanation:    'form1[0].#subform[1].TextField10[15]'
+  form_id:    'form1[0].#subform[1].TextField10[15]'
 })
 
 family_p4_questions << Question.create({
   name:           'What is your spouse\'s current status?',
   field_type:     'string',
   seq_no:         5,
-  explanation:    'form1[0].#subform[1].TextField10[5]'
+  form_id:    'form1[0].#subform[1].TextField10[5]'
 })
 
 family_p4_questions << Question.create({
   name:           'What is the expiration date of his/her authorized stay, if any?',
   field_type:     'string',
   seq_no:         6,
-  explanation:    'form1[0].#subform[1].TextField10[0]'
+  form_id:    'form1[0].#subform[1].TextField10[0]'
 })
 
 family_p4_questions << FormText.create({
@@ -800,5 +800,801 @@ family_p4_questions << FormText.create({
 
 family_p4_questions.each do |q|
   q.page = family_p4
+  q.save()
+end
+
+# ------------------------------------------------------
+
+# TODO: children checkboxes
+
+family_p5 = Page.create({
+  seq_no:             5,
+  name:               'Child 1 basic information',
+  guidance:           ''
+})
+
+family_p5.section = family
+family_p5.save()
+
+family_p5_questions = []
+
+family_p5_questions << Question.create({ 
+  name:           'Alien Registration Number',
+  field_type:     'string',
+  seq_no:         1,
+  form_id:        'form1[0].#subform[1].TextField12[6]'
+})
+
+family_p5_questions << Question.create({
+  name:           'Passport/ID Card Number',
+  field_type:     'string',
+  seq_no:         2,
+  form_id:    'form1[0].#subform[1].TextField12[7]'
+})
+
+family_p5_questions << Question.create({
+  name:           'Marital Status',
+  explanation:    'Married, Single, Divorced, Widowed',
+  field_type:     'string',
+  seq_no:         3,
+  form_id:    'form1[0].#subform[1].TextField12[8]'
+})
+
+family_p5_questions << Question.create({
+  name:           'U.S. Social Security Number',
+  explanation:    'if any',
+  field_type:     'string',
+  seq_no:         4,
+  form_id:    'form1[0].#subform[1].TextField12[9]'
+})
+
+family_p5_questions << Question.create({
+  name:           'First Name',
+  field_type:     'string',
+  seq_no:         5,
+  form_id:    'form1[0].#subform[1].TextField12[2]'
+})
+
+family_p5_questions << Question.create({
+  name:           'Middle Name',
+  field_type:     'string',
+  seq_no:         6,
+  form_id:    'form1[0].#subform[1].TextField12[3]'
+})
+
+family_p5_questions << Question.create({
+  name:           'Complete Last Name',
+  field_type:     'string',
+  seq_no:         7,
+  form_id:    'form1[0].#subform[1].TextField12[0]'
+})
+
+family_p5_questions.each do |q|
+  q.page = family_p5
+  q.save()
+end
+
+# ------------------------------------------------------
+
+family_p6 = Page.create({
+  seq_no:             6,
+  name:               'Child 1 birth information',
+  guidance:           ''
+})
+
+family_p6.section = family
+family_p6.save()
+
+family_p6_questions = []
+
+family_p6_questions << Question.create({ 
+  name:           'Date of Birth',
+  field_type:     'date',
+  seq_no:         1,
+  form_id:        'form1[0].#subform[1].DateTimeField14[0]'
+})
+
+family_p6_questions << Question.create({
+  name:           'City and Country of Birth',
+  field_type:     'string',
+  seq_no:         2,
+  form_id:    'form1[0].#subform[1].TextField12[1]'
+})
+
+family_p6_questions << Question.create({
+  name:           'Nationality (citizenship)',
+  field_type:     'string',
+  seq_no:         3,
+  form_id:    'form1[0].#subform[1].TextField12[8]'
+})
+
+family_p6_questions << Question.create({
+  name:           'U.S. Social Security Number',
+  explanation:    'if any',
+  field_type:     'string',
+  seq_no:         4,
+  form_id:    'form1[0].#subform[1].TextField12[4]'
+})
+
+family_p6_questions << Question.create({
+  name:           'Race, Ethnic, or Tribal Group',
+  field_type:     'string',
+  seq_no:         5,
+  form_id:    'form1[0].#subform[1].TextField12[5]'
+})
+
+family_p6_questions << FormText.create({
+  title:          'Gender',
+  seq_no:         6
+})
+
+family_p6_questions << Question.create({
+  name:           'Male',
+  field_type:     'checkbox',
+  seq_no:         7,
+  form_id:    'form1[0].#subform[1].CheckBox16[0]',
+  checkbox_value: '1'
+})
+
+family_p6_questions << Question.create({
+  name:           'Female',
+  field_type:     'checkbox',
+  seq_no:         8,
+  form_id:    'form1[0].#subform[1].CheckBox16[1]',
+  checkbox_value: '2'
+})
+
+family_p6_questions.each do |q|
+  q.page = family_p6
+  q.save()
+end
+
+# ------------------------------------------------------
+
+family_p7 = Page.create({
+  seq_no:             7,
+  name:               'Child 1 U.S. entry information',
+  guidance:           ''
+})
+
+family_p7.section = family
+family_p7.save()
+
+family_p7_questions = []
+
+family_p7_questions << FormText.create({ 
+  title:           'Is this child in the U.S.?',
+  seq_no:         1,
+})
+
+family_p7_questions << Question.create({
+  name:           'Yes',
+  field_type:     'checkbox',
+  seq_no:         2,
+  form_id:    'form1[0].#subform[1].CheckBox17[0]',
+  checkbox_value: '1'
+})
+
+family_p7_questions << Question.create({
+  name:           'No',
+  field_type:     'checkbox',
+  seq_no:         3,
+  form_id:    'form1[0].#subform[1].CheckBox17[1]',
+  checkbox_value: '2'
+})
+
+# TODO: only show following question if no box is checked?
+
+family_p7_questions << Question.create({
+  name:           'Specify Location',
+  field_type:     'string',
+  seq_no:         4,
+  form_id:       'form1[0].#subform[1].TextField10[20]'
+})
+
+family_p7_questions << Question.create({ 
+  name:           'Place of last entry into the U.S.',
+  field_type:     'string',
+  seq_no:         5,
+  form_id:        'form1[0].#subform[1].TextField10[16]'
+})
+
+family_p7_questions << Question.create({
+  name:           'Date of last entry into the U.S.',
+  field_type:     'date',
+  seq_no:         6,
+  form_id:        'form1[0].#subform[1].TextField15[0]'
+})
+
+family_p7_questions << Question.create({
+  name:           'I-94 Number',
+  explanation:    '(if any)',
+  field_type:     'string',
+  seq_no:         7,
+  form_id:       'form1[0].#subform[1].TextField10[17]'
+})
+
+family_p7_questions << Question.create({
+  name:           'Status when last admitted',
+  explanation:    '(Visa type, if any)',
+  field_type:     'string',
+  seq_no:         8,
+  form_id:       'form1[0].#subform[1].TextField10[18]'
+})
+
+family_p7_questions.each do |q|
+  q.page = family_p7
+  q.save()
+end
+
+# ------------------------------------------------------
+
+family_p8 = Page.create({
+  seq_no:             8,
+  name:               'Child 1 Current Status',
+  guidance:           ''
+})
+
+family_p8.section = family
+family_p8.save()
+
+family_p8_questions = []
+
+family_p8_questions << Question.create({
+  name:           'What is your child\'s current status?',
+  field_type:     'string',
+  seq_no:         1,
+  form_id:        'form1[0].#subform[1].TextField10[19]',
+})
+
+family_p8_questions << Question.create({
+  name:           'What is the expiration date of his/her authorized stay, if any?',
+  field_type:     'date',
+  seq_no:         2,
+  form_id:        'form1[0].#subform[1].DateTimeField16[0]'
+})
+
+family_p8_questions << FormText.create({
+  title:           'Is your child in Immigration Court proceedings?',
+  seq_no:         4,
+})
+
+family_p8_questions << Question.create({ 
+  name:           'Yes',
+  field_type:     'checkbox',
+  seq_no:         5,
+  form_id:        'form1[0].#subform[1].CheckBox18[0]',
+  checkbox_value: '1'
+})
+
+family_p8_questions << Question.create({ 
+  name:           'No',
+  field_type:     'checkbox',
+  seq_no:         6,
+  form_id:        'form1[0].#subform[1].CheckBox18[1]',
+  checkbox_value: '2'
+})
+
+family_p8_questions << FormText.create({
+  title:           'If in the U.S., is this child to be included in this application?',
+  seq_no:         7,
+})
+
+family_p8_questions << Question.create({ 
+  name:           'Yes',
+  field_type:     'checkbox',
+  seq_no:         8,
+  form_id:        'form1[0].#subform[1].CheckBox19[0]',
+  checkbox_value: '1'
+})
+
+family_p8_questions << Question.create({ 
+  name:           'No',
+  field_type:     'checkbox',
+  seq_no:         9,
+  form_id:        'form1[0].#subform[1].CheckBox19[1]',
+  checkbox_value: '2'
+})
+
+family_p8_questions.each do |q|
+  q.page = family_p8
+  q.save()
+end
+
+# TODO: insert other two children
+
+# ------------------------------------------------------
+
+background_p1 = Page.create({
+  seq_no:             1,
+  name:               'Last address before coming to the U.S.',
+  guidance:           'List your last address where you lived before coming to the United States. If this is not the country where you fear persecution, also list the last address in the country where you fear persecution.'
+})
+
+background_p1.section = background
+background_p1.save()
+
+background_p1_questions = []
+
+background_p1_questions << Question.create({
+  name:           'Number and Street',
+  field_type:     'string',
+  seq_no:         1,
+  form_id:        'form1[0].#subform[1].TextField13[0]',
+})
+
+background_p1_questions << Question.create({
+  name:           'City/Town',
+  field_type:     'string',
+  seq_no:         2,
+  form_id:        'form1[0].#subform[1].TextField13[2]',
+})
+
+background_p1_questions << Question.create({ 
+  name:           'Department, Province, or State',
+  field_type:     'string',
+  seq_no:         3,
+  form_id:        'form1[0].#subform[1].TextField13[4]',
+})
+
+background_p1_questions << Question.create({ 
+  name:           'Country',
+  field_type:     'string',
+  seq_no:         5,
+  form_id:        'form1[0].#subform[1].TextField13[6]',
+})
+
+background_p1_questions << Question.create({ 
+  name:           'Date From',
+  field_type:     'date',
+  seq_no:         6,
+  form_id:        'form1[0].#subform[1].DateTimeField21[0]',
+})
+
+background_p1_questions << Question.create({ 
+  name:           'Date To',
+  field_type:     'date',
+  seq_no:         7,
+  form_id:        'form1[0].#subform[1].DateTimeField20[0]',
+})
+
+# TODO: format dates without days (data-attributes)?
+
+background_p1_questions.each do |q|
+  q.page = background_p1
+  q.save()
+end
+
+# TODO: add next status line
+
+# ------------------------------------------------------
+
+background_p2 = Page.create({
+  seq_no:             2,
+  name:               'Residences during the past 5 years',
+  guidance:           'Provide the following information about your residences during the past 5 years. List your present address first.'
+})
+
+background_p2.section = background
+background_p2.save()
+
+background_p2_questions = []
+
+background_p2_questions << Question.create({
+  name:           'Number and Street',
+  field_type:     'string',
+  seq_no:         1,
+  form_id:        'form1[0].#subform[1].TextField13[8]',
+})
+
+background_p2_questions << Question.create({
+  name:           'City/Town',
+  field_type:     'string',
+  seq_no:         2,
+  form_id:        'form1[0].#subform[1].TextField13[10]',
+})
+
+background_p2_questions << Question.create({ 
+  name:           'Department, Province, or State',
+  field_type:     'string',
+  seq_no:         3,
+  form_id:        'form1[0].#subform[1].TextField13[12]',
+})
+
+background_p2_questions << Question.create({ 
+  name:           'Country',
+  field_type:     'string',
+  seq_no:         5,
+  form_id:        'form1[0].#subform[1].TextField13[14]',
+})
+
+background_p2_questions << Question.create({ 
+  name:           'Date From',
+  field_type:     'date',
+  seq_no:         6,
+  form_id:        'form1[0].#subform[1].DateTimeField24[0]',
+})
+
+background_p2_questions << Question.create({ 
+  name:           'Date To',
+  field_type:     'date',
+  seq_no:         7,
+  form_id:        'form1[0].#subform[1].DateTimeField26[0]',
+})
+
+background_p2_questions.each do |q|
+  q.page = background_p2
+  q.save()
+end
+
+# TODO: add next lines
+
+# ------------------------------------------------------
+
+background_p3 = Page.create({
+  seq_no:             3,
+  name:               'Education',
+  guidance:           'Provide the following information about your education, beginning with the most recent.'
+})
+
+background_p3.section = background
+background_p3.save()
+
+background_p3_questions = []
+
+background_p3_questions << Question.create({
+  name:           'Name of School',
+  field_type:     'string',
+  seq_no:         1,
+  form_id:        'form1[0].#subform[1].TextField13[28]',
+})
+
+background_p3_questions << Question.create({
+  name:           'Type of School',
+  field_type:     'string',
+  seq_no:         2,
+  form_id:        'form1[0].#subform[1].TextField13[30]',
+})
+
+background_p3_questions << Question.create({ 
+  name:           'Location',
+  explanation:    'Address',
+  field_type:     'string',
+  seq_no:         3,
+  form_id:        'form1[0].#subform[1].TextField13[32]',
+})
+
+background_p3_questions << Question.create({ 
+  name:           'Attended From',
+  field_type:     'string',
+  seq_no:         4,
+  form_id:        'form1[0].#subform[1].DateTimeField41[0]'
+})
+
+background_p3_questions << Question.create({ 
+  name:           'Date From',
+  field_type:     'date',
+  seq_no:         6,
+  form_id:        'form1[0].#subform[1].DateTimeField24[0]',
+})
+
+background_p3_questions << Question.create({ 
+  name:           'Date To',
+  field_type:     'date',
+  seq_no:         7,
+  form_id:        'form1[0].#subform[1].DateTimeField26[0]',
+})
+
+background_p3_questions.each do |q|
+  q.page = background_p3
+  q.save()
+end
+
+# TODO: add next few lines
+
+# ------------------------------------------------------
+
+background_p4 = Page.create({
+  seq_no:             4,
+  name:               'Employment',
+  guidance:           'Provide the following information about your employment during the past 5 years. List your present employment first.'
+})
+
+background_p4.section = background
+background_p4.save()
+
+background_p4_questions = []
+
+background_p4_questions << Question.create({
+  name:           'Name and Address of Employer',
+  field_type:     'string',
+  seq_no:         1,
+  form_id:        'form1[0].#subform[1].TextField13[40]',
+})
+
+background_p4_questions << Question.create({
+  name:           'Your Occupation',
+  field_type:     'string',
+  seq_no:         2,
+  form_id:        'form1[0].#subform[1].TextField13[42]',
+})
+
+background_p4_questions << Question.create({ 
+  name:           'Dates From',
+  field_type:     'date',
+  seq_no:         3,
+  form_id:        'form1[0].#subform[1].DateTimeField42[0]'
+})
+
+background_p4_questions << Question.create({ 
+  name:           'Attended To',
+  field_type:     'date',
+  seq_no:         4,
+  form_id:        'form1[0].#subform[1].DateTimeField44[0]',
+})
+
+background_p4_questions.each do |q|
+  q.page = background_p4
+  q.save()
+end
+
+# TODO: add next few lines
+
+# ------------------------------------------------------
+
+background_p5 = Page.create({
+  seq_no:             5,
+  name:               'Parents and Siblings',
+  guidance:           'Provide the following information about your parents and siblings (brothers and sisters). Check the box if the person is deceased.'
+})
+
+background_p5.section = background
+background_p5.save()
+
+background_p5_questions = []
+
+background_p5_questions << FormText.create({
+  title:          'Mother',
+  seq_no:         1,
+})
+
+background_p5_questions << Question.create({
+  name:           'Full Name',
+  field_type:     'string',
+  seq_no:         1,
+  form_id:        'form1[0].#subform[1].TextField13[46]',
+})
+
+background_p5_questions << Question.create({
+  name:           'City/Town and Country of Birth',
+  field_type:     'string',
+  seq_no:         2,
+  form_id:        'form1[0].#subform[1].TextField13[49]',
+})
+
+background_p5_questions << Question.create({ 
+  name:           'Deceased',
+  field_type:     'checkbox',
+  seq_no:         3,
+  form_id:        'form1[0].#subform[1].CheckBoxAIII%\.m[0]',
+  checkbox_value: '1'
+})
+
+# TODO: following question should disappear if prior box is checked
+
+background_p5_questions << Question.create({
+  name:           'Current Location',
+  field_type:     'string',
+  seq_no:         4,
+  form_id:        'form1[0].#subform[1].TextField35[0]',
+})
+
+background_p5_questions << FormText.create({
+  title:          'Father',
+  seq_no:         5,
+})
+
+background_p5_questions << Question.create({
+  name:           'Full Name',
+  field_type:     'string',
+  seq_no:         6,
+  form_id:        'form1[0].#subform[1].TextField13[47]',
+})
+
+background_p5_questions << Question.create({
+  name:           'City/Town and Country of Birth',
+  field_type:     'string',
+  seq_no:         7,
+  form_id:        'form1[0].#subform[1].TextField13[50]',
+})
+
+background_p5_questions << Question.create({ 
+  name:           'Deceased',
+  field_type:     'checkbox',
+  seq_no:         8,
+  form_id:        'form1[0].#subform[1].CheckBoxAIII5\.f[0]',
+  checkbox_value: '1'
+})
+
+# TODO: following question should disappear if prior box is checked
+
+background_p5_questions << Question.create({
+  name:           'Current Location',
+  field_type:     'string',
+  seq_no:         9,
+  form_id:        'form1[0].#subform[1].TextField35[1]',
+})
+
+# TODO: add siblings
+
+background_p5_questions.each do |q|
+  q.page = background_p5
+  q.save()
+end
+
+# ------------------------------------------------------
+
+asylum_application_p1 = Page.create({
+  seq_no:             1,
+  name:               'Why are you applying for asylum?',
+  guidance:           'Why are you applying for asylum or withholding of removal under section 241(b)(3) of the INA, or for withholding of removal under the Convention Against Torture? Check the appropriate box(es) below and then provide detailed answers to questions A and B below.'
+})
+
+asylum_application_p1.section = asylum_application
+asylum_application_p1.save()
+
+asylum_application_p1_questions = []
+
+asylum_application_p1_questions << FormText.create({
+  name:           'I am seeking asylum or withholding of removal based on:',
+  seq_no:         1,
+})
+
+asylum_application_p1_questions << Question.create({
+  name:           'Race',
+  field_type:     'checkbox',
+  seq_no:         2,
+  form_id:        'form1[0].#subform[4].#subform[5].CheckBoxrace[0]',
+  checkbox_value: '1'
+})
+
+asylum_application_p1_questions << Question.create({
+  name:           'Religion',
+  field_type:     'checkbox',
+  seq_no:         3,
+  form_id:        'form1[0].#subform[4].#subform[5].CheckBoxreligion[0]',
+  checkbox_value: '1'
+})
+
+asylum_application_p1_questions << Question.create({
+  name:           'Nationality',
+  field_type:     'checkbox',
+  seq_no:         4,
+  form_id:        'form1[0].#subform[4].#subform[5].CheckBoxnationality[0]',
+  checkbox_value: '1'
+})
+
+asylum_application_p1_questions << Question.create({
+  name:           'Political opinion',
+  field_type:     'checkbox',
+  seq_no:         5,
+  form_id:        'form1[0].#subform[4].#subform[5].CheckBoxpolitics[0]',
+  checkbox_value: '1'
+})
+
+asylum_application_p1_questions << Question.create({
+  name:           'Membership in a particular social group',
+  field_type:     'checkbox',
+  seq_no:         6,
+  form_id:        'form1[0].#subform[4].#subform[5].CheckBoxsocial[0]',
+  checkbox_value: '1'
+})
+
+asylum_application_p1_questions << Question.create({
+  name:           'Torture Convention',
+  field_type:     'checkbox',
+  seq_no:         7,
+  form_id:        'form1[0].#subform[4].#subform[5].CheckBoxtorture[0]',
+  checkbox_value: '1'
+})
+
+asylum_application_p1_questions.each do |q|
+  q.page = asylum_application_p1
+  q.save()
+end
+
+# ------------------------------------------------------
+
+asylum_application_p2 = Page.create({
+  seq_no:             2,
+  name:               'Harm/mistreatment/threats',
+  guidance:           ''
+})
+
+asylum_application_p2.section = asylum_application
+asylum_application_p2.save()
+
+asylum_application_p2_questions = []
+
+asylum_application_p2_questions << FormText.create({
+  name:           'Have you, your family, or close friends or colleagues ever experienced harm or mistreatment or threats in the past by anyone?',
+  seq_no:         1,
+})
+
+asylum_application_p2_questions << Question.create({
+  name:           'No',
+  field_type:     'checkbox',
+  seq_no:         2,
+  form_id:        'form1[0].#subform[4].#subform[5].ckboxyn1a[1]',
+  checkbox_value: '1'
+})
+
+asylum_application_p2_questions << Question.create({
+  name:           'Yes',
+  field_type:     'checkbox',
+  seq_no:         3,
+  form_id:        'form1[0].#subform[4].#subform[5].ckboxyn1a[0]',
+  checkbox_value: '2'
+})
+
+# TODO: only show following box if Yes is checked
+
+asylum_application_p2_questions << Question.create({
+  name:           'Yes',
+  field_type:     'text',
+  seq_no:         4,
+  form_id:        'form1[0].#subform[4].#subform[5].TextField14[0]',
+})
+
+asylum_application_p2_questions.each do |q|
+  q.page = asylum_application_p2
+  q.save()
+end
+
+# ------------------------------------------------------
+
+asylum_application_p3 = Page.create({
+  seq_no:             2,
+  name:               'Harm/mistreatment/threats',
+  guidance:           ''
+})
+
+asylum_application_p3.section = asylum_application
+asylum_application_p3.save()
+
+asylum_application_p3_questions = []
+
+asylum_application_p3_questions << FormText.create({
+  name:           'Have you, your family, or close friends or colleagues ever experienced harm or mistreatment or threats in the past by anyone?',
+  seq_no:         1,
+})
+
+asylum_application_p3_questions << Question.create({
+  name:           'No',
+  field_type:     'checkbox',
+  seq_no:         2,
+  form_id:        'form1[0].#subform[4].#subform[5].ckboxyn1a[1]',
+  checkbox_value: '1'
+})
+
+asylum_application_p3_questions << Question.create({
+  name:           'Yes',
+  field_type:     'checkbox',
+  seq_no:         3,
+  form_id:        'form1[0].#subform[4].#subform[5].ckboxyn1a[0]',
+  checkbox_value: '2'
+})
+
+# TODO: only show following box if Yes is checked
+
+asylum_application_p3_questions << Question.create({
+  name:           'Yes',
+  field_type:     'text',
+  seq_no:         4,
+  form_id:        'form1[0].#subform[4].#subform[5].TextField14[0]',
+})
+
+asylum_application_p3_questions.each do |q|
+  q.page = asylum_application_p3
   q.save()
 end
