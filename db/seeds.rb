@@ -1446,7 +1446,7 @@ asylum_application_p1.save()
 asylum_application_p1_questions = []
 
 asylum_application_p1_questions << FormText.create({
-  name:           'I am seeking asylum or withholding of removal based on:',
+  title:          'I am seeking asylum or withholding of removal based on:',
   seq_no:         1,
 })
 
@@ -1517,7 +1517,7 @@ asylum_application_p2.save()
 asylum_application_p2_questions = []
 
 asylum_application_p2_questions << FormText.create({
-  name:           'Have you, your family, or close friends or colleagues ever experienced harm or mistreatment or threats in the past by anyone?',
+  title:          'Have you, your family, or close friends or colleagues ever experienced harm or mistreatment or threats in the past by anyone?',
   seq_no:         1,
 })
 
@@ -1539,10 +1539,15 @@ asylum_application_p2_questions << Question.create({
 
 # TODO: only show following box if Yes is checked
 
+asylum_application_p2_questions << FormText.create({
+  guidance:       'If "Yes," explain in detail: <br />1. What happened;<br />2. When the harm or mistreatment or threats occurred;<br />Who caused the harm or mistreatment or threats; and<br />4. Why you believe the harm or mistreatment or threats occured.',
+  seq_no:         4
+})
+
 asylum_application_p2_questions << Question.create({
   name:           'Yes',
   field_type:     'text',
-  seq_no:         4,
+  seq_no:         5,
   form_id:        'form1[0].#subform[4].#subform[5].TextField14[0]',
 })
 
@@ -1554,8 +1559,8 @@ end
 # ------------------------------------------------------
 
 asylum_application_p3 = Page.create({
-  seq_no:             2,
-  name:               'Harm/mistreatment/threats',
+  seq_no:             3,
+  name:               'Fear upon return',
   guidance:           ''
 })
 
@@ -1565,7 +1570,7 @@ asylum_application_p3.save()
 asylum_application_p3_questions = []
 
 asylum_application_p3_questions << FormText.create({
-  name:           'Have you, your family, or close friends or colleagues ever experienced harm or mistreatment or threats in the past by anyone?',
+  name:           'Do you fear harm or mistreatment if you return to your home country?',
   seq_no:         1,
 })
 
@@ -1573,7 +1578,7 @@ asylum_application_p3_questions << Question.create({
   name:           'No',
   field_type:     'checkbox',
   seq_no:         2,
-  form_id:        'form1[0].#subform[4].#subform[5].ckboxyn1a[1]',
+  form_id:        'form1[0].#subform[4].#subform[5].ckboxyn1b[1]',
   checkbox_value: '1'
 })
 
@@ -1581,20 +1586,294 @@ asylum_application_p3_questions << Question.create({
   name:           'Yes',
   field_type:     'checkbox',
   seq_no:         3,
-  form_id:        'form1[0].#subform[4].#subform[5].ckboxyn1a[0]',
+  form_id:        'form1[0].#subform[4].#subform[5].ckboxyn1b[0]',
   checkbox_value: '2'
 })
 
 # TODO: only show following box if Yes is checked
 
+asylum_application_p3_questions << FormText.create({
+  guidance:       'If "Yes," explain in detail: <br />1. What harm or mistreatment you fear;<br />2. Who you believe would harm or mistreat you; and<br />3. Why you believe you would or could be harmed or mistreated.',
+  seq_no:         4
+})
+
 asylum_application_p3_questions << Question.create({
   name:           'Yes',
   field_type:     'text',
-  seq_no:         4,
+  seq_no:         5,
   form_id:        'form1[0].#subform[4].#subform[5].TextField14[0]',
 })
 
 asylum_application_p3_questions.each do |q|
   q.page = asylum_application_p3
+  q.save()
+end
+
+# ------------------------------------------------------
+
+asylum_application_p4 = Page.create({
+  seq_no:             4,
+  name:               'Arrests, interrogations, etc.',
+  guidance:           ''
+})
+
+asylum_application_p4.section = asylum_application
+asylum_application_p4.save()
+
+asylum_application_p4_questions = []
+
+asylum_application_p4_questions << FormText.create({
+  name:           'Have you or your family members ever been accused, charged, arrested, detained, interrogated, convicted and sentenced, or imprisoned in any country other than the United States?',
+  seq_no:         1,
+})
+
+asylum_application_p4_questions << Question.create({
+  name:           'No',
+  field_type:     'checkbox',
+  seq_no:         2,
+  form_id:        'form1[0].#subform[6].ckboxyn2[1]',
+  checkbox_value: '1'
+})
+
+asylum_application_p4_questions << Question.create({
+  name:           'Yes',
+  field_type:     'checkbox',
+  seq_no:         3,
+  form_id:        'form1[0].#subform[6].ckboxyn2[0]',
+  checkbox_value: '2'
+})
+
+# TODO: only show following box if Yes is checked
+
+asylum_application_p4_questions << FormText.create({
+  guidance:       'If "Yes," explain in detail: <br />1. What harm or mistreatment you fear;<br />2. Who you believe would harm or mistreat you; and<br />3. Why you believe you would or could be harmed or mistreated.',
+  seq_no:         4
+})
+
+asylum_application_p4_questions << Question.create({
+  name:           'If \'Yes\', explain the circumstances and reasons for the action.',
+  field_type:     'text',
+  seq_no:         5,
+  form_id:        'form1[0].#subform[6].TextField16[0]'
+})
+
+asylum_application_p4_questions.each do |q|
+  q.page = asylum_application_p4
+  q.save()
+end
+
+# ------------------------------------------------------
+
+asylum_application_p5 = Page.create({
+  seq_no:             5,
+  name:               'Associations with organizations or groups',
+  guidance:           ''
+})
+
+asylum_application_p5.section = asylum_application
+asylum_application_p5.save()
+
+asylum_application_p5_questions = []
+
+asylum_application_p5_questions << FormText.create({
+  name:           'Have you or your family members ever belonged to or been associated with any organizations or groups in your home country, such as, but not limited to, a political party, student group, labor union, religious organization, military or paramilitary group, civil patrol, guerrilla organization, ethnic group, human rights group, or the press or media?',
+  seq_no:         1,
+})
+
+asylum_application_p5_questions << Question.create({
+  name:           'No',
+  field_type:     'checkbox',
+  seq_no:         2,
+  form_id:        'form1[0].#subform[6].ckboxyn3a[1]',
+  checkbox_value: '1'
+})
+
+asylum_application_p5_questions << Question.create({
+  name:           'Yes',
+  field_type:     'checkbox',
+  seq_no:         3,
+  form_id:        'form1[0].#subform[6].ckboxyn3a[0]',
+  checkbox_value: '2'
+})
+
+# TODO: only show following box if Yes is checked
+
+asylum_application_p5_questions << FormText.create({
+  guidance:       'If "Yes", describe for each person the level of participation, any leadership or other positions held, and the length of time you or your family members were involved in each organization or activity.',
+  seq_no:         4
+})
+
+asylum_application_p5_questions << Question.create({
+  # TODO: fix this name
+  name:           'Yes',
+  field_type:     'text',
+  seq_no:         5,
+  form_id:        'form1[0].#subform[6].TextField16[1]'
+})
+
+asylum_application_p5_questions.each do |q|
+  q.page = asylum_application_p5
+  q.save()
+end
+
+# ------------------------------------------------------
+
+asylum_application_p6 = Page.create({
+  seq_no:             6,
+  name:               'Continued participation',
+  guidance:           ''
+})
+
+asylum_application_p6.section = asylum_application
+asylum_application_p6.save()
+
+asylum_application_p6_questions = []
+
+asylum_application_p6_questions << FormText.create({
+  name:           'Do you or your family members continue to participate in any way in these organizations or groups?',
+  seq_no:         1,
+})
+
+asylum_application_p6_questions << Question.create({
+  name:           'No',
+  field_type:     'checkbox',
+  seq_no:         2,
+  form_id:        'form1[0].#subform[6].ckboxyn3b[1]',
+  checkbox_value: '1'
+})
+
+asylum_application_p6_questions << Question.create({
+  name:           'Yes',
+  field_type:     'checkbox',
+  seq_no:         3,
+  form_id:        'form1[0].#subform[6].ckboxyn3b[0]',
+  checkbox_value: '2'
+})
+
+# TODO: only show following box if Yes is checked
+
+asylum_application_p6_questions << FormText.create({
+  guidance:       'If "Yes", describe for each person your or your family members\' current level of participation, any leadership or other positions currently held, and the length of time you or your family members have been involved in each organization or group.',
+  seq_no:         4
+})
+
+asylum_application_p6_questions << Question.create({
+  # TODO: fix this name
+  name:           'Yes',
+  field_type:     'text',
+  seq_no:         5,
+  form_id:        'form1[0].#subform[6].TextField16[2]'
+})
+
+asylum_application_p6_questions.each do |q|
+  q.page = asylum_application_p6
+  q.save()
+end
+
+# ------------------------------------------------------
+
+asylum_application_p7 = Page.create({
+  seq_no:             7,
+  name:               'Afraid of torture?',
+  guidance:           ''
+})
+
+asylum_application_p7.section = asylum_application
+asylum_application_p7.save()
+
+asylum_application_p7_questions = []
+
+asylum_application_p7_questions << FormText.create({
+  name:           'Are you afraid of being subjected to torture in your home country or any other country to which you may be returned?',
+  seq_no:         1,
+})
+
+asylum_application_p7_questions << Question.create({
+  name:           'No',
+  field_type:     'checkbox',
+  seq_no:         2,
+  form_id:        'form1[0].#subform[6].ckboxyn4[1]',
+  checkbox_value: '1'
+})
+
+asylum_application_p7_questions << Question.create({
+  name:           'Yes',
+  field_type:     'checkbox',
+  seq_no:         3,
+  form_id:        'form1[0].#subform[6].ckboxyn4[0]',
+  checkbox_value: '2'
+})
+
+# TODO: only show following box if Yes is checked
+
+asylum_application_p7_questions << FormText.create({
+  guidance:       'If "Yes," explain why you are afraid and describe the nature of torture you fear, by whom, and why it would be inflicted.',
+  seq_no:         4
+})
+
+asylum_application_p7_questions << Question.create({
+  # TODO: fix this name
+  name:           'Yes',
+  field_type:     'text',
+  seq_no:         5,
+  form_id:        'form1[0].#subform[6].TextField16[4]'
+})
+
+asylum_application_p7_questions.each do |q|
+  q.page = asylum_application_p7
+  q.save()
+end
+
+# ------------------------------------------------------
+
+asylum_application_p8 = Page.create({
+  seq_no:             8,
+  name:               'Past applications?',
+  guidance:           ''
+})
+
+asylum_application_p8.section = asylum_application
+asylum_application_p8.save()
+
+asylum_application_p8_questions = []
+
+asylum_application_p8_questions << FormText.create({
+  name:           'Have you, your spouse, your child(ren), your parents or your siblings ever applied to the U.S. Government for refugee status, asylum, or withholding of removal?',
+  seq_no:         1,
+})
+
+asylum_application_p8_questions << Question.create({
+  name:           'No',
+  field_type:     'checkbox',
+  seq_no:         2,
+  form_id:        'form1[0].#subform[6].ckboxync1[1]',
+  checkbox_value: '1'
+})
+
+asylum_application_p8_questions << Question.create({
+  name:           'Yes',
+  field_type:     'checkbox',
+  seq_no:         3,
+  form_id:        'form1[0].#subform[6].ckboxync1[0]',
+  checkbox_value: '2'
+})
+
+# TODO: only show following box if Yes is checked
+
+asylum_application_p8_questions << FormText.create({
+  guidance:       'If "Yes," explain the decision and what happened to any status you, your spouse, your child(ren), your parents, or your siblings received as a result of that decision. Indicate whether or not you were included in a parent or spouse\'s application. If so, include your parent or spouse\'s A-number in your response. If you have been denied asylum by an immigration judge or the Board of Immigration Appeals, describe any change(s) in conditions in your country or your own personal circumstances since the date of the denial that may affect your eligibility for asylum.',
+  seq_no:         4
+})
+
+asylum_application_p8_questions << Question.create({
+  # TODO: fix this name
+  name:           'Yes',
+  field_type:     'text',
+  seq_no:         5,
+  form_id:        'form1[0].#subform[7].TextField17[0]'
+})
+
+asylum_application_p8_questions.each do |q|
+  q.page = asylum_application_p8
   q.save()
 end

@@ -2090,6 +2090,102 @@ FieldStateOption: Off
 FieldType: Button
 FieldName: form1[0].#subform[4].#subform[5].ckboxyn1a[1]
 FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 1
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[4].#subform[5].ckboxyn1a[0]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 2
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[4].#subform[5].ckboxyn1b[1]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 1
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[4].#subform[5].ckboxyn1b[0]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 2
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[6].ckboxyn2[1]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 1
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[6].ckboxyn2[0]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 2
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[6].ckboxyn3a[1]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 1
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[6].ckboxyn3a[0]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 2
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[6].ckboxyn3b[1]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 1
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[6].ckboxyn3b[0]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 2
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[6].ckboxyn4[1]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 1
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[6].ckboxyn4[0]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 2
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[7].ckboxync1[1]
+FieldFlags: 0
 FieldValue: 1
 FieldJustification: Left
 FieldStateOption: 1
