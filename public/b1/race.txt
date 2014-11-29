@@ -1,0 +1,2056 @@
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField1[0]
+FieldFlags: 0
+FieldValue: A.I.1: Alien Registration Number(s) (A-Number) (if any)
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField1[1]
+FieldFlags: 0
+FieldValue: A.I.2: SSN
+FieldJustification: Left
+FieldMaxLength: 11
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField1[2]
+FieldFlags: 0
+FieldValue: A.I.3: Complete Last Name
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField1[3]
+FieldFlags: 0
+FieldValue: 6: What other names have you used (include maiden name and aliases)?
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField1[7]
+FieldFlags: 0
+FieldValue: A.I.4: First Name
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField1[8]
+FieldFlags: 0
+FieldValue: A.I.5: Middle Name
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField2[0]
+FieldFlags: 0
+FieldValue: AI7
+FieldJustification: Left
+FieldMaxLength: 3
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField1[4]
+FieldFlags: 0
+FieldValue: A.I.7: Street Number and Name
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField1[5]
+FieldFlags: 0
+FieldValue: A.I.7: City
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].DateTimeField1[0]
+FieldFlags: 0
+FieldValue: A.I.11: DOB
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField1[10]
+FieldFlags: 0
+FieldValue: A.I.7: State
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField1[11]
+FieldFlags: 0
+FieldValue: A.I.7: Zip
+FieldJustification: Left
+FieldMaxLength: 10
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField2[1]
+FieldFlags: 0
+FieldValue: A.I.7: #
+FieldJustification: Left
+FieldMaxLength: 8
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField1[9]
+FieldFlags: 0
+FieldValue: A.I.7: Apt. Number
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField34[0]
+FieldFlags: 0
+FieldValue: A.I.8: In Care Of (if applicable)
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField2[2]
+FieldFlags: 0
+FieldValue: AI8
+FieldJustification: Left
+FieldMaxLength: 3
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField2[3]
+FieldFlags: 0
+FieldValue: A.I.8: #
+FieldJustification: Left
+FieldMaxLength: 8
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].DateTimeField2[1]
+FieldFlags: 0
+FieldValue: A.I.18c: date status expires
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField1[13]
+FieldFlags: 0
+FieldValue: 8: Street Number and Name
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField1[14]
+FieldFlags: 0
+FieldValue: A.I.8: Zip
+FieldJustification: Left
+FieldMaxLength: 10
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField1[12]
+FieldFlags: 0
+FieldValue: A.I.8: Apt. Number
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField1[15]
+FieldFlags: 0
+FieldValue: A.I.8: City
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField1[16]
+FieldFlags: 0
+FieldValue: A.I.8: State
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: form1[0].#subform[0].PartALine9Gender[0]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: M
+FieldStateOption: Off
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField1[6]
+FieldFlags: 0
+FieldValue: A.I.13: Present Nationality (Citizenship)
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField1[17]
+FieldFlags: 0
+FieldValue: A.I.12: City and Country of Birth
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField1[18]
+FieldFlags: 0
+FieldValue: A.I.14: Nationality at Birth
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField1[19]
+FieldFlags: 0
+FieldValue: A.I.15: Race, Ethnic, or Tribal Group
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField1[20]
+FieldFlags: 0
+FieldValue: A.I.16: Religion
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].DateTimeField6[0]
+FieldFlags: 0
+FieldValue: A.I.18a: last leave country
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField3[0]
+FieldFlags: 0
+FieldValue: A.I.18b: I-94 #
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].DateTimeField2[0]
+FieldFlags: 0
+FieldValue: A.I.18c1: date
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField4[0]
+FieldFlags: 0
+FieldValue: A.I.18c1: place
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField4[1]
+FieldFlags: 0
+FieldValue: A.I.18c1: status
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].DateTimeField3[0]
+FieldFlags: 0
+FieldValue: A.I.18c2: date
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField4[2]
+FieldFlags: 0
+FieldValue: A.I.18c2: place
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField4[3]
+FieldFlags: 0
+FieldValue: A.I.18c2: status
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].DateTimeField4[0]
+FieldFlags: 0
+FieldValue: A.I.18c3: date
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField4[4]
+FieldFlags: 0
+FieldValue: A.I.18c3: place
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField4[5]
+FieldFlags: 0
+FieldValue: A.I.18c3: status
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField5[0]
+FieldFlags: 0
+FieldValue: A.I.19: country that issued last passport?
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField5[1]
+FieldFlags: 0
+FieldValue: A.I.20: passport number
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField5[2]
+FieldFlags: 0
+FieldValue: A.I.20: travel document number
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].DateTimeField2[2]
+FieldFlags: 0
+FieldValue: A.I.21: exp date
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField7[0]
+FieldFlags: 0
+FieldValue: A.I.22: native language
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[0].TextField7[1]
+FieldFlags: 0
+FieldValue: A.I.24: other languages spoken fluently
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: form1[0].#subform[0].CheckBox4[1]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: No
+FieldStateOption: Off
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField10[0]
+FieldFlags: 0
+FieldValue: A.II.1: A-Number
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField10[1]
+FieldFlags: 0
+FieldValue: A.II.5: Last Name
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField10[6]
+FieldFlags: 0
+FieldValue: A.II.2: Passport/ID Card #
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].DateTimeField7[0]
+FieldFlags: 0
+FieldValue: A.II.3: DOB
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField10[7]
+FieldFlags: 0
+FieldValue: A.II.4: SSN
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField10[8]
+FieldFlags: 0
+FieldValue: A.II.6: First Name
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField10[9]
+FieldFlags: 0
+FieldValue: A.II.7: Middle Name
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField10[10]
+FieldFlags: 0
+FieldValue: A.II.8: Maiden Name
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField10[11]
+FieldFlags: 0
+FieldValue: A.II.10: Place of Marriage
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField10[12]
+FieldFlags: 0
+FieldValue: A.II.11: City and Country of Birth
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField10[13]
+FieldFlags: 0
+FieldValue: A.II.II: Race, Ethnic, or Tribal Group
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].DateTimeField9[0]
+FieldFlags: 0
+FieldValue: A.II.17: DOB
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField10[14]
+FieldFlags: 0
+FieldValue: A.II.18: I-94
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField10[15]
+FieldFlags: 0
+FieldValue: A.II.19: Status when last admitted
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].DateTimeField10[0]
+FieldFlags: 0
+FieldValue: A.II.21: exp. date
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].DateTimeField11[0]
+FieldFlags: 0
+FieldValue: A.II.23: date of prior arrival
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField11[0]
+FieldFlags: 0
+FieldValue: #c
+FieldJustification: Left
+FieldMaxLength: 3
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField12[0]
+FieldFlags: 0
+FieldValue: child1:5
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField12[1]
+FieldFlags: 0
+FieldValue: child1:9
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField12[2]
+FieldFlags: 0
+FieldValue: child1:6
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField12[3]
+FieldFlags: 0
+FieldValue: child1:7
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].DateTimeField14[0]
+FieldFlags: 0
+FieldValue: child1:8
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField12[4]
+FieldFlags: 0
+FieldValue: child1:10
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField12[5]
+FieldFlags: 0
+FieldValue: child1:11
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField10[16]
+FieldFlags: 0
+FieldValue: child1:14
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].DateTimeField15[0]
+FieldFlags: 0
+FieldValue: child1:15
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField10[17]
+FieldFlags: 0
+FieldValue: child1:16
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField10[18]
+FieldFlags: 0
+FieldValue: child1:17
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField10[19]
+FieldFlags: 0
+FieldValue: child1:18
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].DateTimeField16[0]
+FieldFlags: 0
+FieldValue: child1:19
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField12[6]
+FieldFlags: 0
+FieldValue: child1:1
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField12[7]
+FieldFlags: 0
+FieldValue: child1:2
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField12[8]
+FieldFlags: 0
+FieldValue: child1:3
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField12[9]
+FieldFlags: 0
+FieldValue: child1:4
+FieldJustification: Left
+FieldMaxLength: 11
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField10[20]
+FieldFlags: 0
+FieldValue: child1:13
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].DateTimeField8[0]
+FieldFlags: 0
+FieldValue: A.II.9: Date of Marriage
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField10[2]
+FieldFlags: 0
+FieldValue: A.II.12: Nationality
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField10[3]
+FieldFlags: 0
+FieldValue: A.II.15: in US?
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField10[4]
+FieldFlags: 0
+FieldValue: A.II.16: Place of last entry
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[1].TextField10[5]
+FieldFlags: 0
+FieldValue: A.II.20: Spouse current status
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[16]
+FieldFlags: 0
+FieldValue: child2:1
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[17]
+FieldFlags: 0
+FieldValue: child2:2
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[18]
+FieldFlags: 0
+FieldValue: child2:3
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[19]
+FieldFlags: 0
+FieldValue: child2:4
+FieldJustification: Left
+FieldMaxLength: 11
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField10[25]
+FieldFlags: 0
+FieldValue: child2:13
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[20]
+FieldFlags: 0
+FieldValue: child2:5
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[21]
+FieldFlags: 0
+FieldValue: child2:9
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[22]
+FieldFlags: 0
+FieldValue: child2:6
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[23]
+FieldFlags: 0
+FieldValue: child2:7
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].DateTimeField14[2]
+FieldFlags: 0
+FieldValue: child2:8
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[24]
+FieldFlags: 0
+FieldValue: child2:10
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[25]
+FieldFlags: 0
+FieldValue: child2:11
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField10[26]
+FieldFlags: 0
+FieldValue: child2:14
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].DateTimeField15[2]
+FieldFlags: 0
+FieldValue: child2:15
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField10[27]
+FieldFlags: 0
+FieldValue: child2:16
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField10[28]
+FieldFlags: 0
+FieldValue: child2:17
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField10[29]
+FieldFlags: 0
+FieldValue: child2:18
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].DateTimeField16[2]
+FieldFlags: 0
+FieldValue: child2:19
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[26]
+FieldFlags: 0
+FieldValue: child2:1
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[27]
+FieldFlags: 0
+FieldValue: child2:2
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[28]
+FieldFlags: 0
+FieldValue: child2:3
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[29]
+FieldFlags: 0
+FieldValue: child2:4
+FieldJustification: Left
+FieldMaxLength: 11
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField10[30]
+FieldFlags: 0
+FieldValue: child2:13
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[30]
+FieldFlags: 0
+FieldValue: child3:5
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[31]
+FieldFlags: 0
+FieldValue: child3:9
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[32]
+FieldFlags: 0
+FieldValue: child3:6
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[33]
+FieldFlags: 0
+FieldValue: child3:7
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].DateTimeField14[3]
+FieldFlags: 0
+FieldValue: child3:8
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[34]
+FieldFlags: 0
+FieldValue: child3:10
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[35]
+FieldFlags: 0
+FieldValue: child3:11
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField10[31]
+FieldFlags: 0
+FieldValue: child3:14
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].DateTimeField15[3]
+FieldFlags: 0
+FieldValue: child3:15
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField10[32]
+FieldFlags: 0
+FieldValue: child3:16
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField10[33]
+FieldFlags: 0
+FieldValue: child3:17
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField10[34]
+FieldFlags: 0
+FieldValue: child3:18
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].DateTimeField16[3]
+FieldFlags: 0
+FieldValue: child3:19
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[36]
+FieldFlags: 0
+FieldValue: child3:1
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[37]
+FieldFlags: 0
+FieldValue: child3:2
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[38]
+FieldFlags: 0
+FieldValue: child3:3
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[39]
+FieldFlags: 0
+FieldValue: child3:4
+FieldJustification: Left
+FieldMaxLength: 11
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField10[35]
+FieldFlags: 0
+FieldValue: child3:13
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[10]
+FieldFlags: 0
+FieldValue: child3:5
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[11]
+FieldFlags: 0
+FieldValue: child3:9
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[12]
+FieldFlags: 0
+FieldValue: child3:6
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[13]
+FieldFlags: 0
+FieldValue: child3:7
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].DateTimeField14[1]
+FieldFlags: 0
+FieldValue: child3:8
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[14]
+FieldFlags: 0
+FieldValue: child3:10
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField12[15]
+FieldFlags: 0
+FieldValue: child3:11
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField10[21]
+FieldFlags: 0
+FieldValue: child3:14
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].DateTimeField15[1]
+FieldFlags: 0
+FieldValue: child3:15
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField10[22]
+FieldFlags: 0
+FieldValue: child3:16
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField10[23]
+FieldFlags: 0
+FieldValue: child3:17
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].TextField10[24]
+FieldFlags: 0
+FieldValue: child3:18
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[2].DateTimeField16[1]
+FieldFlags: 0
+FieldValue: child3:19
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[0]
+FieldFlags: 0
+FieldValue: A.III.1: num and street 1
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[1]
+FieldFlags: 0
+FieldValue: A.III.1: num and street 2
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[2]
+FieldFlags: 0
+FieldValue: A.III.1: city/town 1
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[3]
+FieldFlags: 0
+FieldValue: A.III.1: city/town 2
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[4]
+FieldFlags: 0
+FieldValue: A.III.1: department 1
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[5]
+FieldFlags: 0
+FieldValue: A.III.1: department province 2
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[6]
+FieldFlags: 0
+FieldValue: A.III.1: country 1
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[7]
+FieldFlags: 0
+FieldValue: A.III.1: country 2
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].DateTimeField21[0]
+FieldFlags: 0
+FieldValue: A.III.1: from 1
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].DateTimeField22[0]
+FieldFlags: 0
+FieldValue: A.III.1: from 2
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].DateTimeField20[0]
+FieldFlags: 0
+FieldValue: A.III.1: to 1
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].DateTimeField23[0]
+FieldFlags: 0
+FieldValue: A.III.1: to 2
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[8]
+FieldFlags: 0
+FieldValue: A.III.2: num and street 1
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[9]
+FieldFlags: 0
+FieldValue: A.III.2: num and street 2
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[10]
+FieldFlags: 0
+FieldValue: A.III.2: city/town 1
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[11]
+FieldFlags: 0
+FieldValue: A.III.2: city/town 2
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[12]
+FieldFlags: 0
+FieldValue: A.III.2: department province 1
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[13]
+FieldFlags: 0
+FieldValue: A.III.2: department province 2
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[14]
+FieldFlags: 0
+FieldValue: A.III.2: country 1
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[15]
+FieldFlags: 0
+FieldValue: A.III.2: country 2
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].DateTimeField24[0]
+FieldFlags: 0
+FieldValue: A.III.2: from 1
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].DateTimeField25[0]
+FieldFlags: 0
+FieldValue: A.III.2: from 2
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].DateTimeField26[0]
+FieldFlags: 0
+FieldValue: A.III.2: to 1
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].DateTimeField27[0]
+FieldFlags: 0
+FieldValue: A.III.2: to 2
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[16]
+FieldFlags: 0
+FieldValue: A.III.2: num and street 3
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[17]
+FieldFlags: 0
+FieldValue: A.III.2: city/to 3
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[18]
+FieldFlags: 0
+FieldValue: A.III.2: department province 3
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[19]
+FieldFlags: 0
+FieldValue: A.III.2: country 3
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].DateTimeField28[0]
+FieldFlags: 0
+FieldValue: A.III.2: from 3
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].DateTimeField29[0]
+FieldFlags: 0
+FieldValue: A.III.2: to 3
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[20]
+FieldFlags: 0
+FieldValue: A.III.2: num and street 4
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[21]
+FieldFlags: 0
+FieldValue: A.III.2: city/town 4
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[22]
+FieldFlags: 0
+FieldValue: A.III.2: department province 4
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[23]
+FieldFlags: 0
+FieldValue: A.III.2: country 4
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].DateTimeField30[0]
+FieldFlags: 0
+FieldValue: A.III.2: from 4
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].DateTimeField31[0]
+FieldFlags: 0
+FieldValue: A.III.2: to 4
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[24]
+FieldFlags: 0
+FieldValue: A.III.2: num and street 5
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[25]
+FieldFlags: 0
+FieldValue: A.III.2: city/town 5
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[26]
+FieldFlags: 0
+FieldValue: A.III.2: department province 5
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[27]
+FieldFlags: 0
+FieldValue: A.III.2: country 5
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].DateTimeField32[0]
+FieldFlags: 0
+FieldValue: A.III.2: from 5
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].DateTimeField33[0]
+FieldFlags: 0
+FieldValue: A.III.2: to 5
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[28]
+FieldFlags: 0
+FieldValue: A.III.3: school name 1
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[29]
+FieldFlags: 0
+FieldValue: A.III.3: school name 2
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[30]
+FieldFlags: 0
+FieldValue: A.III.3: school type 1
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[31]
+FieldFlags: 0
+FieldValue: A.III.3: school type 2
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[32]
+FieldFlags: 0
+FieldValue: A.III.3: location 1
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[33]
+FieldFlags: 0
+FieldValue: A.III.3: location 2
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].DateTimeField41[0]
+FieldFlags: 0
+FieldValue: A.III.3: from 1
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].DateTimeField38[0]
+FieldFlags: 0
+FieldValue: A.III.3: from 2
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].DateTimeField40[0]
+FieldFlags: 0
+FieldValue: A.III.3: to 1
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].DateTimeField39[0]
+FieldFlags: 0
+FieldValue: A.III.3: to 2
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[34]
+FieldFlags: 0
+FieldValue: A.III.3: school name 3
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[35]
+FieldFlags: 0
+FieldValue: A.III.3: school type 3
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[36]
+FieldFlags: 0
+FieldValue: A.III.3: location 3
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].DateTimeField37[0]
+FieldFlags: 0
+FieldValue: A.III.3: from 3
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].DateTimeField36[0]
+FieldFlags: 0
+FieldValue: A.III.3: to 3
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[37]
+FieldFlags: 0
+FieldValue: A.III.3: school name 4
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[38]
+FieldFlags: 0
+FieldValue: A.III.3: school type 4
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[39]
+FieldFlags: 0
+FieldValue: A.III.3: location 4
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].DateTimeField34[0]
+FieldFlags: 0
+FieldValue: A.III.3: from 4
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].DateTimeField35[0]
+FieldFlags: 0
+FieldValue: A.III.3: to 4
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[40]
+FieldFlags: 0
+FieldValue: A.III.4: name 1
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[41]
+FieldFlags: 0
+FieldValue: A.III.4: name 2
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[42]
+FieldFlags: 0
+FieldValue: A.III.4: occupation 1
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[43]
+FieldFlags: 0
+FieldValue: A.III.4: occupation 2
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].DateTimeField42[0]
+FieldFlags: 0
+FieldValue: A.III.4: from 1
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].DateTimeField43[0]
+FieldFlags: 0
+FieldValue: A.III.4: from 2
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].DateTimeField44[0]
+FieldFlags: 0
+FieldValue: A.III.4: to 1
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].DateTimeField45[0]
+FieldFlags: 0
+FieldValue: A.III.4: to 2
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[44]
+FieldFlags: 0
+FieldValue: A.III.4: name 3
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[45]
+FieldFlags: 0
+FieldValue: A.III.4: occupation 3
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].DateTimeField46[0]
+FieldFlags: 0
+FieldValue: A.III.4: from 3
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].DateTimeField47[0]
+FieldFlags: 0
+FieldValue: A.III.4: to 3
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[46]
+FieldFlags: 0
+FieldValue: A.III.5: mother name
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[47]
+FieldFlags: 0
+FieldValue: A.III.5: father name
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[48]
+FieldFlags: 0
+FieldValue: A.III.5: sibling 1 name
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[49]
+FieldFlags: 0
+FieldValue: A.III.5: mother city
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[50]
+FieldFlags: 0
+FieldValue: A.III.5: father city
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[51]
+FieldFlags: 0
+FieldValue: A.III.5: sibling 1 city
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[52]
+FieldFlags: 0
+FieldValue: A.III.5: sibling 2 name
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[53]
+FieldFlags: 0
+FieldValue: A.III.5: sibling 2 city
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[54]
+FieldFlags: 0
+FieldValue: A.III.5: sibling 3 name
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[55]
+FieldFlags: 0
+FieldValue: A.III.5: sibling 3 city
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[56]
+FieldFlags: 0
+FieldValue: A.III.5: sibling 4 name
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField13[57]
+FieldFlags: 0
+FieldValue: A.III.5: sibling 4 city
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField35[0]
+FieldFlags: 0
+FieldValue: A.III.5: mother location
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField35[1]
+FieldFlags: 0
+FieldValue: A.III.5: father location
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField35[2]
+FieldFlags: 0
+FieldValue: A.III.5: sibling 1 location
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField35[3]
+FieldFlags: 0
+FieldValue: A.III.5: sibling 2 location
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField35[4]
+FieldFlags: 0
+FieldValue: A.III.5: sibling 3 location
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[3].TextField35[5]
+FieldFlags: 0
+FieldValue: A.III.5: sibling 4 location
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[4].#subform[5].TextField14[0]
+FieldFlags: 4096
+FieldValue: B.1.A
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[4].#subform[5].TextField15[0]
+FieldFlags: 4096
+FieldValue: B.1.B
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[6].TextField16[0]
+FieldFlags: 4096
+FieldValue: B.2
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[6].TextField16[1]
+FieldFlags: 4096
+FieldValue: B.3.A
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[6].TextField16[2]
+FieldFlags: 4096
+FieldValue: B.3.B
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[6].TextField16[3]
+FieldFlags: 4096
+FieldValue: B.4
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[7].TextField17[0]
+FieldFlags: 4096
+FieldValue: C.1
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[7].TextField18[0]
+FieldFlags: 4096
+FieldValue: C.2
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[7].TextField18[1]
+FieldFlags: 4096
+FieldValue: C.3
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[8].TextField19[0]
+FieldFlags: 4096
+FieldValue: C.4
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[8].TextField19[1]
+FieldFlags: 4096
+FieldValue: C.5
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[8].TextField19[2]
+FieldFlags: 4096
+FieldValue: C.6
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[9].TextField20[0]
+FieldFlags: 0
+FieldValue: D name print
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[9].TextField20[1]
+FieldFlags: 0
+FieldValue: D name native alphabet
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[9].TextField21[0]
+FieldFlags: 0
+FieldValue: D assist name
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[9].TextField21[1]
+FieldFlags: 0
+FieldValue: D assist relationship
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[9].TextField21[2]
+FieldFlags: 0
+FieldValue: D assist 2 name
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[9].TextField21[3]
+FieldFlags: 0
+FieldValue: D assist 2 relationship
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[9].DateTimeField48[0]
+FieldFlags: 0
+FieldValue: D date
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[9].TextField24[1]
+FieldFlags: 0
+FieldValue: E Complete Name
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[9].TextField24[2]
+FieldFlags: 0
+FieldValue: E Apt. Num
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[9].TextField24[3]
+FieldFlags: 0
+FieldValue: E City
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[9].TextField24[4]
+FieldFlags: 0
+FieldValue: E State
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[9].TextField24[5]
+FieldFlags: 0
+FieldValue: E Zip
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[9].TextField24[6]
+FieldFlags: 0
+FieldValue: E Address
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[9].TextField25[0]
+FieldFlags: 0
+FieldValue: E Phone
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[9].TextField25[1]
+FieldFlags: 0
+FieldValue: E#
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: form1[0].#subform[10].CheckBox32[3]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 1
+FieldStateOption: Off
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField28[0]
+FieldFlags: 0
+FieldValue: Sup: A-Number
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField28[1]
+FieldFlags: 0
+FieldValue: Sup: Name
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].DateTimeField57[0]
+FieldFlags: 0
+FieldValue: Sup: Date
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField12[40]
+FieldFlags: 0
+FieldValue: Sup1.5
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField12[46]
+FieldFlags: 0
+FieldValue: Sup1.1: A-Number
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField12[47]
+FieldFlags: 0
+FieldValue: Sup1.2: Passport
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField12[48]
+FieldFlags: 0
+FieldValue: Sup1.3: Marital Status
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField12[49]
+FieldFlags: 0
+FieldValue: Sup1.4: SSN
+FieldJustification: Left
+FieldMaxLength: 11
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField10[40]
+FieldFlags: 0
+FieldValue: Sup1.13
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField12[50]
+FieldFlags: 0
+FieldValue: Sup2.5
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField12[51]
+FieldFlags: 0
+FieldValue: Sup2.9
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField12[52]
+FieldFlags: 0
+FieldValue: Sup2.6
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField12[53]
+FieldFlags: 0
+FieldValue: Sup2.7
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].DateTimeField14[5]
+FieldFlags: 0
+FieldValue: Sup2.8
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField12[54]
+FieldFlags: 0
+FieldValue: Sup2.10
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField12[55]
+FieldFlags: 0
+FieldValue: Sup2.11
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField10[41]
+FieldFlags: 0
+FieldValue: Sup2.14
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].DateTimeField15[5]
+FieldFlags: 0
+FieldValue: Sup2.15
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField10[42]
+FieldFlags: 0
+FieldValue: Sup2.16
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField10[43]
+FieldFlags: 0
+FieldValue: Sup2.17
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField10[44]
+FieldFlags: 0
+FieldValue: Sup2.18
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].DateTimeField16[5]
+FieldFlags: 0
+FieldValue: Sup2.19
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField12[56]
+FieldFlags: 0
+FieldValue: Sup2.1
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField12[57]
+FieldFlags: 0
+FieldValue: Sup2.2
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField12[58]
+FieldFlags: 0
+FieldValue: Sup2.3
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField12[59]
+FieldFlags: 0
+FieldValue: Sup2.4
+FieldJustification: Left
+FieldMaxLength: 11
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField10[45]
+FieldFlags: 0
+FieldValue: Sup2.13
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField12[41]
+FieldFlags: 0
+FieldValue: Sup1.9
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField12[42]
+FieldFlags: 0
+FieldValue: Sup1.6
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField12[43]
+FieldFlags: 0
+FieldValue: Sup1.7
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].DateTimeField14[4]
+FieldFlags: 0
+FieldValue: Sup1.8
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField12[44]
+FieldFlags: 0
+FieldValue: Sup1.10
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField12[45]
+FieldFlags: 0
+FieldValue: Sup1.11
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField10[36]
+FieldFlags: 0
+FieldValue: Sup1.14
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].DateTimeField15[4]
+FieldFlags: 0
+FieldValue: Sup1.15
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField10[37]
+FieldFlags: 0
+FieldValue: Sup1.16
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField10[38]
+FieldFlags: 0
+FieldValue: Sup1.17
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].TextField10[39]
+FieldFlags: 0
+FieldValue: Sup1.18
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[11].DateTimeField16[4]
+FieldFlags: 0
+FieldValue: Sup1.19
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: form1[0].#subform[12].TextField30[1]
+FieldFlags: 0
+FieldValue: Addl: A-Number
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[12].TextField30[2]
+FieldFlags: 0
+FieldValue: Addl: Name
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[12].TextField31[0]
+FieldFlags: 0
+FieldValue: Addl: Part
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[12].TextField31[1]
+FieldFlags: 0
+FieldValue: Addl: Question
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[12].TextField32[0]
+FieldFlags: 4096
+FieldValue: 
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: form1[0].#subform[12].DateTimeField58[0]
+FieldFlags: 0
+FieldValue: Addl: Date
+FieldJustification: Center
+---
+FieldType: Button
+FieldName: form1[0].#subform[0].PartALine9Gender[1]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: F
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[0].Marital[0]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: S
+---
+FieldType: Button
+FieldName: form1[0].#subform[0].Marital[1]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: M
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[0].Marital[2]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: D
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[0].Marital[3]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: W
+---
+FieldType: Button
+FieldName: form1[0].#subform[0].CheckBox3[0]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: A
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[0].CheckBox3[2]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: B
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[0].CheckBox3[1]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: C
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[0].CheckBox4[0]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: form1[0].#subform[1].CheckBox6[0]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 1
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[1].CheckBox6[1]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 2
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[1].CheckBox7[0]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 1
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[1].CheckBox7[1]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 2
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[1].CheckBox16[0]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 1
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[1].CheckBox16[1]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 2
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[4].#subform[5].CheckBoxpolitics[0]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 1
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[1].CheckBox17[0]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 1
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[1].CheckBox17[1]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 2
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[1].CheckBox18[0]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 1
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[1].CheckBox18[1]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 2
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[1].CheckBox19[0]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 1
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[1].CheckBox19[1]
+FieldFlags: 0
+FieldValue: 2
+FieldJustification: Left
+FieldStateOption: 2
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[3].CheckBoxAIII5\.m[0]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 1
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[3].CheckBoxAIII5\.f[0]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 1
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[4].#subform[5].CheckBoxrace[0]
+FieldFlags: 0
+FieldValue: 1
+FieldJustification: Left
+FieldStateOption: 1
+FieldStateOption: Off
