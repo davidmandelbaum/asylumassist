@@ -10,8 +10,6 @@
 
 ## (F)RONT-END CODE
 - show guidance differently than title?
-- format textareas larger
-- give validations to formtext
 
 ## BACK-(E)ND CODE
 - CAT box
@@ -20,7 +18,6 @@
 - skip spouse if not married
 - skip mailing address
 - skip kids if they don't exist
-- add pagination to skip ahead?
 - signature page
 
 ## DE(P)LOYMENT
