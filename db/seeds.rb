@@ -734,8 +734,6 @@ end
 
 # ------------------------------------------------------
 
-# TODO: page contingent on yes answer to checkbox at bottom of p3
-
 family_p4 = Page.create({
   seq_no:             4,
   name:               'Spouse U.S. details',
@@ -1031,13 +1029,12 @@ family_p7_questions << Question.create({
   checkbox_value: '2'
 })
 
-# TODO: only show following question if no box is checked?
-
 family_p7_questions << Question.create({
   name:           'Specify Location',
   field_type:     'string',
   seq_no:         4,
-  form_id:       'form1[0].#subform[1].TextField10[20]'
+  form_id:       'form1[0].#subform[1].TextField10[20]',
+  validations:    { :"show_dep" => "p7_3" }
 })
 
 family_p7_questions << Question.create({ 
@@ -1436,13 +1433,12 @@ background_p5_questions << Question.create({
   checkbox_value: '1'
 })
 
-# TODO: following question should disappear if prior box is checked
-
 background_p5_questions << Question.create({
   name:           'Current Location',
   field_type:     'string',
   seq_no:         4,
   form_id:        'form1[0].#subform[1].TextField35[0]',
+  validations:    { :"hide_dep" => "p5_3" }
 })
 
 background_p5_questions << FormText.create({
@@ -1472,13 +1468,12 @@ background_p5_questions << Question.create({
   checkbox_value: '1'
 })
 
-# TODO: following question should disappear if prior box is checked
-
 background_p5_questions << Question.create({
   name:           'Current Location',
   field_type:     'string',
   seq_no:         9,
   form_id:        'form1[0].#subform[1].TextField35[1]',
+  validations:    { :"hide_dep" => "p5_8" }
 })
 
 # TODO: add siblings

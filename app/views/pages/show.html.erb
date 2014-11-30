@@ -107,7 +107,7 @@
         $(this).val($(this).val().toUpperCase()); 
     });
 
-    // SHOW/HIDE BASED ON DEPENDENCIES
+    // SHOW BASED ON DEPENDENCIES
     var to_hide = $(".ans[data-show-dep], .form_text[data-show-dep]");
     to_hide.each(function() {
       var hide = this;
@@ -115,6 +115,17 @@
       var dep = $(this).data("show-dep");
       $("#" + dep).change(function() {
         $(hide).parent().parent().fadeToggle();
+      });
+    });
+
+    // HIDE BASED ON DEPENDENCIES
+    var to_show = $(".ans[data-hide-dep], .form_text[data-hide-dep]");
+    to_show.each(function() {
+      var show = this;
+      // $(this).parent().parent().show();
+      var dep = $(this).data("hide-dep");
+      $("#" + dep).change(function() {
+        $(show).parent().parent().fadeToggle();
       });
     });
 
