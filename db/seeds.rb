@@ -1517,7 +1517,7 @@ asylum_application_p2.save()
 asylum_application_p2_questions = []
 
 asylum_application_p2_questions << FormText.create({
-  title:          'Have you, your family, or close friends or colleagues ever experienced harm or mistreatment or threats in the past by anyone?',
+  guidance:          'Have you, your family, or close friends or colleagues ever experienced harm or mistreatment or threats in the past by anyone?',
   seq_no:         1,
 })
 
@@ -1570,7 +1570,7 @@ asylum_application_p3.save()
 asylum_application_p3_questions = []
 
 asylum_application_p3_questions << FormText.create({
-  name:           'Do you fear harm or mistreatment if you return to your home country?',
+  guidance:           'Do you fear harm or mistreatment if you return to your home country?',
   seq_no:         1,
 })
 
@@ -1623,7 +1623,7 @@ asylum_application_p4.save()
 asylum_application_p4_questions = []
 
 asylum_application_p4_questions << FormText.create({
-  name:           'Have you or your family members ever been accused, charged, arrested, detained, interrogated, convicted and sentenced, or imprisoned in any country other than the United States?',
+  guidance:           'Have you or your family members ever been accused, charged, arrested, detained, interrogated, convicted and sentenced, or imprisoned in any country other than the United States?',
   seq_no:         1,
 })
 
@@ -1676,7 +1676,7 @@ asylum_application_p5.save()
 asylum_application_p5_questions = []
 
 asylum_application_p5_questions << FormText.create({
-  name:           'Have you or your family members ever belonged to or been associated with any organizations or groups in your home country, such as, but not limited to, a political party, student group, labor union, religious organization, military or paramilitary group, civil patrol, guerrilla organization, ethnic group, human rights group, or the press or media?',
+  guidance:           'Have you or your family members ever belonged to or been associated with any organizations or groups in your home country, such as, but not limited to, a political party, student group, labor union, religious organization, military or paramilitary group, civil patrol, guerrilla organization, ethnic group, human rights group, or the press or media?',
   seq_no:         1,
 })
 
@@ -1730,7 +1730,7 @@ asylum_application_p6.save()
 asylum_application_p6_questions = []
 
 asylum_application_p6_questions << FormText.create({
-  name:           'Do you or your family members continue to participate in any way in these organizations or groups?',
+  guidance:           'Do you or your family members continue to participate in any way in these organizations or groups?',
   seq_no:         1,
 })
 
@@ -1784,7 +1784,7 @@ asylum_application_p7.save()
 asylum_application_p7_questions = []
 
 asylum_application_p7_questions << FormText.create({
-  name:           'Are you afraid of being subjected to torture in your home country or any other country to which you may be returned?',
+  guidance:           'Are you afraid of being subjected to torture in your home country or any other country to which you may be returned?',
   seq_no:         1,
 })
 
@@ -1838,7 +1838,7 @@ asylum_application_p8.save()
 asylum_application_p8_questions = []
 
 asylum_application_p8_questions << FormText.create({
-  name:           'Have you, your spouse, your child(ren), your parents or your siblings ever applied to the U.S. Government for refugee status, asylum, or withholding of removal?',
+  guidance:           'Have you, your spouse, your child(ren), your parents or your siblings ever applied to the U.S. Government for refugee status, asylum, or withholding of removal?',
   seq_no:         1,
 })
 
@@ -1892,7 +1892,7 @@ asylum_application_p9.save()
 asylum_application_p9_questions = []
 
 asylum_application_p9_questions << FormText.create({
-  name:           'After leaving the country from which you are claiming asylum, did you or your spouse or child(ren) who are now in the United States travel through or reside in any other country before entering the United States?',
+  guidance:           'After leaving the country from which you are claiming asylum, did you or your spouse or child(ren) who are now in the United States travel through or reside in any other country before entering the United States?',
   seq_no:         1,
 })
 
@@ -1913,7 +1913,7 @@ asylum_application_p9_questions << Question.create({
 })
 
 asylum_application_p9_questions << FormText.create({
-  name:           'Have you, your spouse, your child(ren), or other family members, such as your parents or siblings, ever applied for or received any lawful status in any country other than the one from which you are now claiming asylum?',
+  guidance:           'Have you, your spouse, your child(ren), or other family members, such as your parents or siblings, ever applied for or received any lawful status in any country other than the one from which you are now claiming asylum?',
   seq_no:         4,
 })
 
@@ -1967,7 +1967,7 @@ asylum_application_p10.save()
 asylum_application_p10_questions = []
 
 asylum_application_p10_questions << FormText.create({
-  name:           'Have you, your spouse or your child(ren) ever ordered, incited, assisted or otherwise participated in causing harm or suffering to any person because of his or her race, religion, nationality, membership in a particular social group or belief in a particular political opinion?',
+  guidance:           'Have you, your spouse or your child(ren) ever ordered, incited, assisted or otherwise participated in causing harm or suffering to any person because of his or her race, religion, nationality, membership in a particular social group or belief in a particular political opinion?',
   seq_no:         1,
 })
 
@@ -2021,7 +2021,7 @@ asylum_application_p11.save()
 asylum_application_p11_questions = []
 
 asylum_application_p11_questions << FormText.create({
-  name:           'After you left the country where you were harmed or fear harm, did you return to that country?',
+  guidance:           'After you left the country where you were harmed or fear harm, did you return to that country?',
   seq_no:         1,
 })
 
@@ -2075,7 +2075,7 @@ asylum_application_p12.save()
 asylum_application_p12_questions = []
 
 asylum_application_p12_questions << FormText.create({
-  name:           'Are you filing this application more than 1 year after your last arrival in the United States?',
+  guidance:           'Are you filing this application more than 1 year after your last arrival in the United States?',
   seq_no:         1,
 })
 
@@ -2129,7 +2129,7 @@ asylum_application_p13.save()
 asylum_application_p13_questions = []
 
 asylum_application_p13_questions << FormText.create({
-  name:           'Have you or any member of your family included in the application ever committed any crime and/or been arrested, charged, convicted, or sentenced for any crimes in the United States?',
+  guidance:           'Have you or any member of your family included in the application ever committed any crime and/or been arrested, charged, convicted, or sentenced for any crimes in the United States?',
   seq_no:         1,
 })
 
