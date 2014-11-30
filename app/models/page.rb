@@ -3,6 +3,8 @@ class Page < ActiveRecord::Base
   has_many :questions
   has_many :form_texts
 
+  serialize :validations
+
   def elements
     elements = []
     self.questions.each do |q|

@@ -716,16 +716,15 @@ family_p3_questions << Question.create({
   form_id:        'form1[0].#subform[1].CheckBox7[1]',
   field_type:     'checkbox', 
   checkbox_value: '2',
-  seq_no:         4,
+  seq_no:         5,
 })
-
-# TODO: only show this if no box is checked
 
 family_p3_questions << Question.create({
   name:           'Specify location',
   form_id:        'form1[0].#subform[1].TextField10[3]',
   field_type:     'string', 
-  seq_no:         5,
+  seq_no:         6,
+  validations:    { :"show_dep" => "p3_5" }
 })
 
 family_p3_questions.each do |q|
@@ -735,12 +734,13 @@ end
 
 # ------------------------------------------------------
 
-# TODO: contingent on yes answer to checkbox at bottom of p3
+# TODO: page contingent on yes answer to checkbox at bottom of p3
 
 family_p4 = Page.create({
   seq_no:             4,
   name:               'Spouse U.S. details',
-  guidance:           ''
+  guidance:           '',
+  validations:        { :"show_dep" => "2_p3_4" }
 })
 
 family_p4.section = family
@@ -796,7 +796,55 @@ family_p4_questions << FormText.create({
   seq_no:         7,
 })
 
-# TODO: finish this page
+family_p4_questions << Question.create({
+  name:           'Yes',
+  field_type:     'checkbox',
+  seq_no:         8,
+  form_id:       'form1[0].#subform[1].CheckBox8[0]',
+  checkbox_value: '1'
+})
+
+family_p4_questions << Question.create({
+  name:           'No',
+  field_type:     'checkbox',
+  seq_no:         9,
+  form_id:       'form1[0].#subform[1].CheckBox8[1]',
+  checkbox_value: '2'
+})
+
+family_p4_questions << Question.create({
+  name:           'If previously in the U.S., date of previous arrival',
+  field_type:     'date',
+  seq_no:         10,
+  form_id:        'form1[0].#subform[1].DateTimeField11[0]'
+})
+
+family_p4_questions << FormText.create({
+  guidance:       'If in the U.S., is your spouse to be included in this application?',
+  seq_no:         11,
+})
+
+family_p4_questions << Question.create({
+  name:           'Yes',
+  field_type:     'checkbox',
+  seq_no:         12,
+  form_id:       'form1[0].#subform[1].CheckBox9[0]',
+  checkbox_value: '1'
+})
+
+family_p4_questions << FormText.create({
+  guidance:       'Attach one photograph of your spouse in the upper right corner of Page 9 on the extra copy of the application submitted for this person.',
+  seq_no:         13,
+  validations:    { :"show_dep" => "p4_12" }
+})
+
+family_p4_questions << Question.create({
+  name:           'No',
+  field_type:     'checkbox',
+  seq_no:         13,
+  form_id:       'form1[0].#subform[1].CheckBox9[1]',
+  checkbox_value: '2'
+})
 
 family_p4_questions.each do |q|
   q.page = family_p4
@@ -1088,10 +1136,18 @@ family_p8_questions << Question.create({
   checkbox_value: '1'
 })
 
+# TODO: figure out if the spouse reference in the following text is a typo (should be child?)
+
+family_p8_questions << FormText.create({
+  guidance:       'Attach one photograph of your spouse in the upper right corner of Page 9 on the extra copy of the application submitted for this person.',
+  seq_no:         9,
+  validations:    { :"show_dep" => "p8_8" }
+})
+
 family_p8_questions << Question.create({ 
   name:           'No',
   field_type:     'checkbox',
-  seq_no:         9,
+  seq_no:         10,
   form_id:        'form1[0].#subform[1].CheckBox19[1]',
   checkbox_value: '2'
 })

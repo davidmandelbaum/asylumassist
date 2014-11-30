@@ -4,6 +4,7 @@ class CreatePages < ActiveRecord::Migration
       t.integer :seq_no
       t.string :name
       t.text :guidance
+      t.text :validations
       t.belongs_to :section, index: true
 
       t.timestamps

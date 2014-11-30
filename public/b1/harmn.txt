@@ -2282,6 +2282,38 @@ FieldStateOption: Off
 FieldType: Button
 FieldName: form1[0].#subform[8].ckboxync6[1]
 FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 1
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[8].ckboxync6[0]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 2
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[1].CheckBox8[0]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 1
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[1].CheckBox8[1]
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: 2
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: form1[0].#subform[1].CheckBox9[0]
+FieldFlags: 0
 FieldValue: 1
 FieldJustification: Left
 FieldStateOption: 1

@@ -57,7 +57,22 @@ class PagesController < ApplicationController
       end
     end
     curr_seq_no = Page.find(params[:page]).seq_no
+    curr_page_string = curr_page.section.seq_no.to_s + "_p" + curr_page.seq_no.to_s
+
     next_page = Page.find_by(section: curr_page.section, seq_no: curr_seq_no+1)
+   
+    # calculate dependencies from following page
+    if next_page.validations and next_page.validations[:"show_dep"]
+      dep = next_page.validations[:"show_dep"]
+
+      # calculate if dependency is on this page
+      if dep.include? curr_page_string
+        q = Question.find_by(page: curr_page, seq_no: dep.split("_")[2])
+        if q.answer.text == q.checkbox_value
+          next_page = Page.find_by(section: curr_page.section, seq_no: curr_seq_no+2) 
+        end
+      end
+    end
     if next_page
       redirect_to :controller => 'pages', :action => 'show', :id => next_page.id
     else
