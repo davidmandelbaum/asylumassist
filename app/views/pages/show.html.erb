@@ -32,7 +32,7 @@
             <%= date_field_tag "answer_" + q.id.to_s, q.answer_text, class: 'answer ans', data: q.validations %>
           <% elsif q.field_type == "text" %>
             <div class="name"><%= q.name %></div>
-            <%= text_area_tag "answer" + q.id.to_s, q.answer_text, class: 'text_answer ans', data: q.validations, tabindex: (q.seq_no).to_s %>
+            <%= text_area_tag "answer_" + q.id.to_s, q.answer_text, class: 'text_answer ans', data: q.validations, tabindex: (q.seq_no).to_s, rows: "10", cols: "60" %>
           <% else %>
             Unknown type for question id = <%= q.id %>
         <% end %>

@@ -44,6 +44,7 @@ class PagesController < ApplicationController
             answer.save()
           end
         else
+          throw
           answer = Answer.find_by(question: q)
           if answer
             answer.text = v
@@ -62,7 +63,7 @@ class PagesController < ApplicationController
     next_page = Page.find_by(section: curr_page.section, seq_no: curr_seq_no+1)
    
     # calculate dependencies from following page
-    if next_page.validations and next_page.validations[:"show_dep"]
+    if next_page and next_page.validations and next_page.validations[:"show_dep"]
       dep = next_page.validations[:"show_dep"]
 
       # calculate if dependency is on this page
@@ -81,7 +82,7 @@ class PagesController < ApplicationController
       if next_section
         redirect_to :controller => 'sections', :action => 'show', :id => next_section.id
       else
-        redirect_to :controller => 'home', :action => 'review answers'
+        redirect_to :controller => 'home', :action => 'review_answers'
       end
     end
   end

@@ -1,12 +1,12 @@
 ## BU(G)S
-- fix application_p4
-- fix issues with review answers page
-- double-check that checkboxes are working
+- fix review answers showing guidance when questions aren't filled out
 - edge case with dependencies on p9
+- add bootstrap pagination
+- can only fill out one of yes or no (parsley?)
+- show dependencies when they're filled in and box is checked from entry
 
 ## FRONT-END (D)ESIGN
 - interface (changes from literature)
-- change how blank names are displayed
 
 ## (F)RONT-END CODE
 - show guidance differently than title?

@@ -757,14 +757,14 @@ family_p4_questions << Question.create({
   name:           'Date of last entry into the U.S.',
   field_type:     'date',
   seq_no:         2,
-  form_id:    'form1[0].#subform[1].DateTimeField9[0]'
+  form_id:        'form1[0].#subform[1].DateTimeField9[0]'
 })
 
 family_p4_questions << Question.create({
   name:           'I-94 Number',
   field_type:     'string',
   seq_no:         3,
-  form_id:    'form1[0].#subform[1].TextField10[14]'
+  form_id:       'form1[0].#subform[1].TextField10[14]'
 })
 
 family_p4_questions << Question.create({
@@ -772,21 +772,21 @@ family_p4_questions << Question.create({
   explanation:    'Visa type, if any',
   field_type:     'string',
   seq_no:         4,
-  form_id:    'form1[0].#subform[1].TextField10[15]'
+  form_id:       'form1[0].#subform[1].TextField10[15]'
 })
 
 family_p4_questions << Question.create({
   name:           'What is your spouse\'s current status?',
   field_type:     'string',
   seq_no:         5,
-  form_id:    'form1[0].#subform[1].TextField10[5]'
+  form_id:       'form1[0].#subform[1].TextField10[5]'
 })
 
 family_p4_questions << Question.create({
   name:           'What is the expiration date of his/her authorized stay, if any?',
   field_type:     'string',
   seq_no:         6,
-  form_id:    'form1[0].#subform[1].TextField10[0]'
+  form_id:       'form1[0].#subform[1].TextField10[0]'
 })
 
 family_p4_questions << FormText.create({
@@ -1589,7 +1589,7 @@ asylum_application_p2_questions << Question.create({
 })
 
 asylum_application_p2_questions << FormText.create({
-  guidance:       'If "Yes," explain in detail: <br />1. What happened;<br />2. When the harm or mistreatment or threats occurred;<br />Who caused the harm or mistreatment or threats; and<br />4. Why you believe the harm or mistreatment or threats occured.',
+  guidance:       'Explain in detail: <br />1. What happened;<br />2. When the harm or mistreatment or threats occurred;<br />Who caused the harm or mistreatment or threats; and<br />4. Why you believe the harm or mistreatment or threats occured.',
   seq_no:         4,
   validations:    { :"show_dep" => "p2_3" }
 })
@@ -1648,7 +1648,7 @@ asylum_application_p3_questions << FormText.create({
 })
 
 asylum_application_p3_questions << Question.create({
-  name:           'Yes',
+  name:           '',
   field_type:     'text',
   seq_no:         5,
   form_id:        'form1[0].#subform[4].#subform[5].TextField14[0]',
@@ -1803,6 +1803,7 @@ asylum_application_p6_questions << Question.create({
 asylum_application_p6_questions << FormText.create({
   guidance:       'Describe for each person your or your family members\' current level of participation, any leadership or other positions currently held, and the length of time you or your family members have been involved in each organization or group.',
   seq_no:         4
+  validations:    { :"show_dep" => "p6_3" }
 })
 
 asylum_application_p6_questions << Question.create({
@@ -2139,7 +2140,7 @@ asylum_application_p12_questions << Question.create({
 })
 
 asylum_application_p12_questions << FormText.create({
-  guidance:       'If "Yes," explain why you did not file within the first year after you arrived. You must be prepared to explain at your interview or hearing why you did not file your asylum application within the first year after you arrived. For guidance in answering this question, see Instructions, Part I: Filing Instructions, Section V. "Copmleting the Form", Part C',
+  guidance:       'Explain why you did not file within the first year after you arrived. You must be prepared to explain at your interview or hearing why you did not file your asylum application within the first year after you arrived. For guidance in answering this question, see Instructions, Part I: Filing Instructions, Section V. "Completing the Form", Part C',
   seq_no:         4,
   validations:    { :"show_dep" => "p12_3" }
 })

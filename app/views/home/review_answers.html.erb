@@ -15,7 +15,7 @@
                     <h4><%= p.name %> <span class='label label-default'><%= p.seq_no %> of <%= s.pages.length %></span></h4>
                 <% @entry.get_page_answers(p).each do |a| %>
                   <% if a.class == FormText %>
-                    <%= a.title %><br /><%= a.guidance %><br />
+                    <%= a.title %><br /><% if a.guidance %><%= a.guidance.html_safe %><br /><% end %>
                   <% else %>
                     <% if a.question.field_type != "checkbox" %>
                       <% if !a.text or a.text == "" %>
@@ -26,9 +26,9 @@
                     <% end %>
                     <% if a.question.field_type == 'checkbox' %>
                       <% if a.text == a.question.checkbox_value %>
-                        <%= check_box_tag a.question.name, a.question.name, true, data: { "completed" => "" } %><%= a.question.name %><br />
+                        <%= check_box_tag a.question.name, a.question.name, true, data: { "completed" => "" } %>&nbsp;&nbsp;<%= a.question.name %><br />
                       <% else %>
-                        <%= check_box_tag a.question.name, a.question.name, false %><%= a.question.name %><br />
+                        <%= check_box_tag a.question.name, a.question.name, false %>&nbsp;&nbsp;<%= a.question.name %><br />
                       <% end %>
                     <% else %>
                         <%= a.text %><br />
