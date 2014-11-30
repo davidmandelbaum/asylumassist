@@ -20,7 +20,13 @@ class Entry < ActiveRecord::Base
         answers_out << a
       end
     end
-    answers_out = answers_out.sort_by { |a| a.question.seq_no }
+    form_text_in = FormText.all
+    form_text_in.each do |f|
+      if f.page == page
+        answers_out << f
+      end
+    end
+    answers_out = answers_out.sort_by { |a| a.seq_no }
     return answers_out
   end
 

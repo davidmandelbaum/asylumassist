@@ -6,6 +6,10 @@ class Answer < ActiveRecord::Base
     question.page.section
   end
 
+  def seq_no
+    question.seq_no
+  end
+
   def page
     question.page
   end

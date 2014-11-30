@@ -11,21 +11,26 @@
 
 <%= form_tag("/pages/submit", method: "post", id: 'form') do %>
   <% @page.elements.each do |q| %>
-      <div class="row question" id="q_<%= q.id %>">
+    <div class="row question" id="p<%= @page.seq_no %>_<%= q.seq_no %>">
       <div class="col-md-8">
         <% if q.class == FormText %>
-          <div class="form_text"><% if q.title != "" %><h3><%= q.title %></h3><% end %>
-          <%= q.guidance %></div>
+          <%= tag("div", { data: q.validations, class: 'form_text' }, nil) %>
+          <% if q.title != "" %><h3><%= q.title %></h3><% end %>
+          <% if q.guidance %><%= q.guidance.html_safe %><% end %></div>
         <% else %>
           <div class="name"><%= q.name %></div>
           <% if q.field_type == "string" %>
-              <%= text_field_tag "answer_" + q.id.to_s, q.answer_text, class: 'answer text_answer', data: q.validations, tabindex: (q.seq_no).to_s %>
+              <%= text_field_tag "answer_" + q.id.to_s, q.answer_text, class: 'answer text_answer ans', data: q.validations, tabindex: (q.seq_no).to_s %>
           <% elsif q.field_type == "checkbox" %>
-            <%= check_box("answer_" + q.id.to_s, q.answer_text, :data => q.validations) %>
+            <% if q.answer_text == q.checkbox_value %>
+              <%= check_box("answer_" + q.id.to_s, q.answer_text, class: 'ans', :data => q.validations, :checked => true) %>
+            <% else %>
+              <%= check_box("answer_" + q.id.to_s, q.answer_text, class: 'ans', :data => q.validations) %>
+            <% end %>
           <% elsif q.field_type == "date" %>
-            <%= date_field_tag "answer_" + q.id.to_s, q.answer_text, class: 'answer', data: q.validations %>
+            <%= date_field_tag "answer_" + q.id.to_s, q.answer_text, class: 'answer ans', data: q.validations %>
           <% elsif q.field_type == "text" %>
-            <%= text_area_tag "answer" + q.id.to_s, q.answer_text, class: 'text_answer', data: q.validations, tabindex: (q.seq_no).to_s %>
+            <%= text_area_tag "answer" + q.id.to_s, q.answer_text, class: 'text_answer ans', data: q.validations, tabindex: (q.seq_no).to_s %>
           <% else %>
             Unknown type for question id = <%= q.id %>
         <% end %>
@@ -100,6 +105,18 @@
     var all_caps = $('.answer[data-allcaps="true"]').blur(function() {
         $(this).val($(this).val().toUpperCase()); 
     });
+
+    // SHOW/HIDE BASED ON DEPENDENCIES
+    var to_hide = $(".ans[data-show-dep], .form_text[data-show-dep]");
+    to_hide.each(function() {
+      var hide = this;
+      $(this).parent().parent().hide();
+      var dep = $(this).data("show-dep");
+      $("#" + dep).change(function() {
+        $(hide).parent().parent().fadeToggle();
+      });
+    });
+
 </script>
 
 <br /><br />

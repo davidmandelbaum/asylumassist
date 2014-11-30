@@ -31,9 +31,9 @@ class PagesController < ApplicationController
         if q.field_type == 'checkbox'
           answer = Answer.find_by(question: q)
           if v.include? "1"
-            text = "on"
+            text = q.checkbox_value
           else
-            text = "off"
+            text = nil
           end
           if answer
             answer.text = text

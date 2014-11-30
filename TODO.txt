@@ -1,10 +1,17 @@
 ## BU(G)S
+- fix application_p4
+- fix issues with review answers page
+- double-check that checkboxes are working
 
 ## FRONT-END (D)ESIGN
 - interface (changes from literature)
 
 ## (F)RONT-END CODE
+- add dependencies
 - show formtext on review answers
+- show guidance differently than title?
+- format textareas larger
+- give validations to formtext
 
 ## BACK-(E)ND CODE
 - CAT box
@@ -13,12 +20,12 @@
 - skip spouse if not married
 - skip mailing address
 - skip kids if they don't exist
-- add pagination
+- add pagination to skip ahead?
+- signature page
 
 ## DE(P)LOYMENT
 
 ## (C)ONTENT
-- finish entering questions
 - finish entering guidance
 - guidance for sections on structure page
 

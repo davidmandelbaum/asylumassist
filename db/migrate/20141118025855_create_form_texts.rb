@@ -4,6 +4,7 @@ class CreateFormTexts < ActiveRecord::Migration
       t.string :title
       t.text :guidance
       t.integer :seq_no
+      t.text :validations
       t.belongs_to :page, index: true
 
       t.timestamps
