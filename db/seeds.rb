@@ -1537,18 +1537,18 @@ asylum_application_p2_questions << Question.create({
   checkbox_value: '2'
 })
 
-# TODO: only show following box if Yes is checked
-
 asylum_application_p2_questions << FormText.create({
   guidance:       'If "Yes," explain in detail: <br />1. What happened;<br />2. When the harm or mistreatment or threats occurred;<br />Who caused the harm or mistreatment or threats; and<br />4. Why you believe the harm or mistreatment or threats occured.',
-  seq_no:         4
+  seq_no:         4,
+  validations:    { :"show_dep" => "p2_3" }
 })
 
 asylum_application_p2_questions << Question.create({
-  name:           'Yes',
+  name:           '',
   field_type:     'text',
   seq_no:         5,
   form_id:        'form1[0].#subform[4].#subform[5].TextField14[0]',
+  validations:    { :"show_dep" => "p2_3" }
 })
 
 asylum_application_p2_questions.each do |q|
@@ -1590,10 +1590,8 @@ asylum_application_p3_questions << Question.create({
   checkbox_value: '2'
 })
 
-# TODO: only show following box if Yes is checked
-
 asylum_application_p3_questions << FormText.create({
-  guidance:       'If "Yes," explain in detail: <br />1. What harm or mistreatment you fear;<br />2. Who you believe would harm or mistreat you; and<br />3. Why you believe you would or could be harmed or mistreated.',
+  guidance:       'Explain in detail: <br />1. What harm or mistreatment you fear;<br />2. Who you believe would harm or mistreat you; and<br />3. Why you believe you would or could be harmed or mistreated.',
   seq_no:         4,
   validations:    { :"show_dep" => "p3_3" }
 })
@@ -1645,18 +1643,18 @@ asylum_application_p4_questions << Question.create({
   checkbox_value: '2'
 })
 
-# TODO: only show following box if Yes is checked
-
 asylum_application_p4_questions << FormText.create({
-  guidance:       'If "Yes," explain in detail: <br />1. What harm or mistreatment you fear;<br />2. Who you believe would harm or mistreat you; and<br />3. Why you believe you would or could be harmed or mistreated.',
-  seq_no:         4
+  guidance:       'Explain in detail: <br />1. What harm or mistreatment you fear;<br />2. Who you believe would harm or mistreat you; and<br />3. Why you believe you would or could be harmed or mistreated.',
+  seq_no:         4,
+  validations:    { :"show_dep" => "p4_3" }
 })
 
 asylum_application_p4_questions << Question.create({
-  name:           'If \'Yes\', explain the circumstances and reasons for the action.',
+  name:           '',
   field_type:     'text',
   seq_no:         5,
-  form_id:        'form1[0].#subform[6].TextField16[0]'
+  form_id:        'form1[0].#subform[6].TextField16[0]',
+  validations:    { :"show_dep" => "p4_3" }
 })
 
 asylum_application_p4_questions.each do |q|
@@ -1698,19 +1696,18 @@ asylum_application_p5_questions << Question.create({
   checkbox_value: '2'
 })
 
-# TODO: only show following box if Yes is checked
-
 asylum_application_p5_questions << FormText.create({
-  guidance:       'If "Yes", describe for each person the level of participation, any leadership or other positions held, and the length of time you or your family members were involved in each organization or activity.',
-  seq_no:         4
+  guidance:       'Describe for each person the level of participation, any leadership or other positions held, and the length of time you or your family members were involved in each organization or activity.',
+  seq_no:         4,
+  validations:    { :"show_dep" => "p5_3" }
 })
 
 asylum_application_p5_questions << Question.create({
-  # TODO: fix this name
-  name:           'Yes',
+  name:           '',
   field_type:     'text',
   seq_no:         5,
-  form_id:        'form1[0].#subform[6].TextField16[1]'
+  form_id:        'form1[0].#subform[6].TextField16[1]',
+  validations:    { :"show_dep" => "p5_3" }
 })
 
 asylum_application_p5_questions.each do |q|
@@ -1752,19 +1749,17 @@ asylum_application_p6_questions << Question.create({
   checkbox_value: '2'
 })
 
-# TODO: only show following box if Yes is checked
-
 asylum_application_p6_questions << FormText.create({
-  guidance:       'If "Yes", describe for each person your or your family members\' current level of participation, any leadership or other positions currently held, and the length of time you or your family members have been involved in each organization or group.',
+  guidance:       'Describe for each person your or your family members\' current level of participation, any leadership or other positions currently held, and the length of time you or your family members have been involved in each organization or group.',
   seq_no:         4
 })
 
 asylum_application_p6_questions << Question.create({
-  # TODO: fix this name
-  name:           'Yes',
+  name:           '',
   field_type:     'text',
   seq_no:         5,
-  form_id:        'form1[0].#subform[6].TextField16[2]'
+  form_id:        'form1[0].#subform[6].TextField16[2]',
+  validations:    { :"show_dep" => "p6_3" }
 })
 
 asylum_application_p6_questions.each do |q|
@@ -1806,19 +1801,18 @@ asylum_application_p7_questions << Question.create({
   checkbox_value: '2'
 })
 
-# TODO: only show following box if Yes is checked
-
 asylum_application_p7_questions << FormText.create({
   guidance:       'If "Yes," explain why you are afraid and describe the nature of torture you fear, by whom, and why it would be inflicted.',
-  seq_no:         4
+  seq_no:         4,
+  validations:    { :"show_dep" => "p7_3" }
 })
 
 asylum_application_p7_questions << Question.create({
-  # TODO: fix this name
-  name:           'Yes',
+  name:           '',
   field_type:     'text',
   seq_no:         5,
-  form_id:        'form1[0].#subform[6].TextField16[4]'
+  form_id:        'form1[0].#subform[6].TextField16[4]',
+  validations:    { :"show_dep" => "p7_3" }
 })
 
 asylum_application_p7_questions.each do |q|
@@ -1860,19 +1854,18 @@ asylum_application_p8_questions << Question.create({
   checkbox_value: '2'
 })
 
-# TODO: only show following box if Yes is checked
-
 asylum_application_p8_questions << FormText.create({
-  guidance:       'If "Yes," explain the decision and what happened to any status you, your spouse, your child(ren), your parents, or your siblings received as a result of that decision. Indicate whether or not you were included in a parent or spouse\'s application. If so, include your parent or spouse\'s A-number in your response. If you have been denied asylum by an immigration judge or the Board of Immigration Appeals, describe any change(s) in conditions in your country or your own personal circumstances since the date of the denial that may affect your eligibility for asylum.',
-  seq_no:         4
+  guidance:       'Explain the decision and what happened to any status you, your spouse, your child(ren), your parents, or your siblings received as a result of that decision. Indicate whether or not you were included in a parent or spouse\'s application. If so, include your parent or spouse\'s A-number in your response. If you have been denied asylum by an immigration judge or the Board of Immigration Appeals, describe any change(s) in conditions in your country or your own personal circumstances since the date of the denial that may affect your eligibility for asylum.',
+  seq_no:         4,
+  validations:    { :"show_dep" => "p8_3" }
 })
 
 asylum_application_p8_questions << Question.create({
-  # TODO: fix this name
-  name:           'Yes',
+  name:           '',
   field_type:     'text',
   seq_no:         5,
-  form_id:        'form1[0].#subform[7].TextField17[0]'
+  form_id:        'form1[0].#subform[7].TextField17[0]',
+  validations:    { :"show_dep" => "p8_3" }
 })
 
 asylum_application_p8_questions.each do |q|
@@ -1935,7 +1928,7 @@ asylum_application_p9_questions << Question.create({
   checkbox_value: '2'
 })
 
-# TODO: only show following box if Yes is checked
+# TODO: only show following box if Yes is checked on either question
 
 asylum_application_p9_questions << FormText.create({
   guidance:       'If "Yes" to either or both questions (2A and/or 2B), provide for each person the following: the name of each country and the length of stay, the person\'s status while there, the reasons for leaving, whether or not the person is entitled to return for lawful residence purposes, and whether the person applied for refugee status or for asylum while there, and if not, why he or she did not do so.',
@@ -1943,8 +1936,7 @@ asylum_application_p9_questions << FormText.create({
 })
 
 asylum_application_p9_questions << Question.create({
-  # TODO: fix this name
-  name:           'Yes',
+  name:           '',
   field_type:     'text',
   seq_no:         8,
   form_id:        'form1[0].#subform[7].TextField18[0]'
@@ -1989,19 +1981,18 @@ asylum_application_p10_questions << Question.create({
   checkbox_value: '2'
 })
 
-# TODO: only show following box if Yes is checked
-
 asylum_application_p10_questions << FormText.create({
-  guidance:       'If "Yes," describe in detail each such incident and your own, your spouse\'s, or your child(ren)\'s involvement',
-  seq_no:         4
+  guidance:       'Describe in detail each such incident and your own, your spouse\'s, or your child(ren)\'s involvement',
+  seq_no:         4,
+  validations:    { :"show_dep" => "p10_3" }
 })
 
 asylum_application_p10_questions << Question.create({
-  # TODO: fix this name
-  name:           'Yes',
+  name:           '',
   field_type:     'text',
   seq_no:         5,
-  form_id:        'form1[0].#subform[7].TextField18[1]'
+  form_id:        'form1[0].#subform[7].TextField18[1]',
+  validations:    { :"show_dep" => "p10_3" }
 })
 
 asylum_application_p10_questions.each do |q|
@@ -2043,19 +2034,18 @@ asylum_application_p11_questions << Question.create({
   checkbox_value: '2'
 })
 
-# TODO: only show following box if Yes is checked
-
 asylum_application_p11_questions << FormText.create({
-  guidance:       'If "Yes,", describe in detail the circumstances of your visit(s) (for example, the date(s) of the trip(s), the purpose(s) of the trip(s), and the length of time you remained in that country for the visit(s).',
-  seq_no:         4
+  guidance:       'Describe in detail the circumstances of your visit(s) (for example, the date(s) of the trip(s), the purpose(s) of the trip(s), and the length of time you remained in that country for the visit(s).',
+  seq_no:         4,
+  validations:    { :"show_dep" => "p11_3" }
 })
 
 asylum_application_p11_questions << Question.create({
-  # TODO: fix this name
-  name:           'Yes',
+  name:           '',
   field_type:     'text',
   seq_no:         5,
-  form_id:        'form1[0].#subform[8].TextField19[0]'
+  form_id:        'form1[0].#subform[8].TextField19[0]',
+  validations:    { :"show_dep" => "p11_3" }
 })
 
 asylum_application_p11_questions.each do |q|
@@ -2097,19 +2087,18 @@ asylum_application_p12_questions << Question.create({
   checkbox_value: '2'
 })
 
-# TODO: only show following box if Yes is checked
-
 asylum_application_p12_questions << FormText.create({
   guidance:       'If "Yes," explain why you did not file within the first year after you arrived. You must be prepared to explain at your interview or hearing why you did not file your asylum application within the first year after you arrived. For guidance in answering this question, see Instructions, Part I: Filing Instructions, Section V. "Copmleting the Form", Part C',
-  seq_no:         4
+  seq_no:         4,
+  validations:    { :"show_dep" => "p12_3" }
 })
 
 asylum_application_p12_questions << Question.create({
-  # TODO: fix this name
-  name:           'Yes',
+  name:           '',
   field_type:     'text',
   seq_no:         5,
-  form_id:        'form1[0].#subform[8].TextField19[1]'
+  form_id:        'form1[0].#subform[8].TextField19[1]',
+  validations:    { :"show_dep" => "p12_3" }
 })
 
 asylum_application_p12_questions.each do |q|
@@ -2151,19 +2140,18 @@ asylum_application_p13_questions << Question.create({
   checkbox_value: '2'
 })
 
-# TODO: only show following box if Yes is checked
-
 asylum_application_p13_questions << FormText.create({
-  guidance:       'If "Yes," for each instance, specify in your response: what occurred and the circumstances, dates, length of sentence received, location, the duration of the detention or imprisonment, reason(s) for the detention or conviction, any formal charges that were lodged against you or your relatives included in your application, and the reason(s) for release. Attach documents referring to those incidents, if they are available, or an explanation of why documents are not available.',
-  seq_no:         4
+  guidance:       'For each instance, specify in your response: what occurred and the circumstances, dates, length of sentence received, location, the duration of the detention or imprisonment, reason(s) for the detention or conviction, any formal charges that were lodged against you or your relatives included in your application, and the reason(s) for release. Attach documents referring to those incidents, if they are available, or an explanation of why documents are not available.',
+  seq_no:         4,
+  validations:    { :"show_dep" => "p13_3" }
 })
 
 asylum_application_p13_questions << Question.create({
-  # TODO: fix this name
-  name:           'Yes',
+  name:           '',
   field_type:     'text',
   seq_no:         5,
-  form_id:        'form1[0].#subform[8].TextField19[2]'
+  form_id:        'form1[0].#subform[8].TextField19[2]',
+  validations:    { :"show_dep" => "p13_3" }
 })
 
 asylum_application_p13_questions.each do |q|

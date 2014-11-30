@@ -2,13 +2,13 @@
 - fix application_p4
 - fix issues with review answers page
 - double-check that checkboxes are working
+- edge case with dependencies on p9
 
 ## FRONT-END (D)ESIGN
 - interface (changes from literature)
+- change how blank names are displayed
 
 ## (F)RONT-END CODE
-- add dependencies
-- show formtext on review answers
 - show guidance differently than title?
 - format textareas larger
 - give validations to formtext
