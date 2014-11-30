@@ -18,18 +18,20 @@
           <% if q.title != "" %><h3><%= q.title %></h3><% end %>
           <% if q.guidance %><%= q.guidance.html_safe %><% end %></div>
         <% else %>
-          <div class="name"><%= q.name %></div>
           <% if q.field_type == "string" %>
+            <div class="name"><%= q.name %></div>
               <%= text_field_tag "answer_" + q.id.to_s, q.answer_text, class: 'answer text_answer ans', data: q.validations, tabindex: (q.seq_no).to_s %>
           <% elsif q.field_type == "checkbox" %>
             <% if q.answer_text == q.checkbox_value %>
               <%= check_box("answer_" + q.id.to_s, q.answer_text, class: 'ans', :data => q.validations, :checked => true) %>
             <% else %>
               <%= check_box("answer_" + q.id.to_s, q.answer_text, class: 'ans', :data => q.validations) %>
-            <% end %>
+            <% end %><span class="check_name"><%= q.name %></span>
           <% elsif q.field_type == "date" %>
+            <div class="name"><%= q.name %></div>
             <%= date_field_tag "answer_" + q.id.to_s, q.answer_text, class: 'answer ans', data: q.validations %>
           <% elsif q.field_type == "text" %>
+            <div class="name"><%= q.name %></div>
             <%= text_area_tag "answer" + q.id.to_s, q.answer_text, class: 'text_answer ans', data: q.validations, tabindex: (q.seq_no).to_s %>
           <% else %>
             Unknown type for question id = <%= q.id %>
@@ -39,7 +41,6 @@
         <div class="explanation <% if q.field_type != "string" and q.field_type != "text" %>show<% end %>" id="exp_<%= q.id.to_s %>"><%=raw q.explanation %></div>
     <% end %>
       </div>
-    <br /><br />
     </div>
   <% end %>
   <%= hidden_field_tag 'page', @page.id %>
