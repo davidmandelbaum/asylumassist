@@ -53,10 +53,12 @@ class HomeController < ApplicationController
     answers = {}
 
     @entry_answers.each do |a|
-      if a.question.field_type == 'string' or a.question.field_type == 'date'
+      if a.question.field_type == 'string' or
+         a.question.field_type == 'date' or
+         a.question.field_type == 'text'
         answers[a.question.form_id] = a.text
       elsif a.question.field_type == 'checkbox'
-        if a.text == "on"
+        if a.text == a.question.checkbox_value
           answers[a.question.form_id] = a.question.checkbox_value
         end
       end

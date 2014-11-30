@@ -44,7 +44,6 @@ class PagesController < ApplicationController
             answer.save()
           end
         else
-          throw
           answer = Answer.find_by(question: q)
           if answer
             answer.text = v

@@ -1651,7 +1651,7 @@ asylum_application_p3_questions << Question.create({
   name:           '',
   field_type:     'text',
   seq_no:         5,
-  form_id:        'form1[0].#subform[4].#subform[5].TextField14[0]',
+  form_id:        'form1[0].#subform[4].#subform[5].TextField15[0]',
   validations:    { :"show_dep" => "p3_3" }
 })
 
@@ -1695,7 +1695,7 @@ asylum_application_p4_questions << Question.create({
 })
 
 asylum_application_p4_questions << FormText.create({
-  guidance:       'Explain in detail: <br />1. What harm or mistreatment you fear;<br />2. Who you believe would harm or mistreat you; and<br />3. Why you believe you would or could be harmed or mistreated.',
+  guidance:       'Explain the circumstances and reasons for the action.',
   seq_no:         4,
   validations:    { :"show_dep" => "p4_3" }
 })
@@ -1802,7 +1802,7 @@ asylum_application_p6_questions << Question.create({
 
 asylum_application_p6_questions << FormText.create({
   guidance:       'Describe for each person your or your family members\' current level of participation, any leadership or other positions currently held, and the length of time you or your family members have been involved in each organization or group.',
-  seq_no:         4
+  seq_no:         4,
   validations:    { :"show_dep" => "p6_3" }
 })
 
