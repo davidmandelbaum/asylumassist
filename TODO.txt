@@ -6,7 +6,6 @@
 - show dependencies when they're filled in and box is checked from entry
 
 ## FRONT-END (D)ESIGN
-- interface (changes from literature)
 
 ## (F)RONT-END CODE
 - show guidance differently than title?
@@ -32,8 +31,8 @@
 ## (B)ONUS
 - translator view
 - handling of phone numbers (when split on backend btw. zip and rest)
-- responsive
-- put a tag outside of UI step
 - better handling of entries (names, etc.)
+- put a tag outside of UI step
 - handle checkboxes as dropdowns?
+- responsive
 - favicon

@@ -110,9 +110,14 @@
     // SHOW BASED ON DEPENDENCIES
     var to_hide = $(".ans[data-show-dep], .form_text[data-show-dep]");
     to_hide.each(function() {
+      // CHECK CURRENT STATUS OF CHECKBOX
       var hide = this;
-      $(this).parent().parent().hide();
       var dep = $(this).data("show-dep");
+      var box = $("#" + dep).children("div").children("input")[1];
+      console.log(box);
+      // only hide if box is unchecked
+      if (!box.hasAttribute("checked"))
+        $(this).parent().parent().hide();
       $("#" + dep).change(function() {
         $(hide).parent().parent().fadeToggle();
       });
