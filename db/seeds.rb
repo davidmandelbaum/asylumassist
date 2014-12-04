@@ -1577,7 +1577,8 @@ asylum_application_p2_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         2,
   form_id:        'form1[0].#subform[4].#subform[5].ckboxyn1a[1]',
-  checkbox_value: '1'
+  checkbox_value: '1',
+  validations:    { :"mutex" => [ "p2_3" ] }
 })
 
 asylum_application_p2_questions << Question.create({
@@ -1585,7 +1586,8 @@ asylum_application_p2_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         3,
   form_id:        'form1[0].#subform[4].#subform[5].ckboxyn1a[0]',
-  checkbox_value: '2'
+  checkbox_value: '2',
+  validations:    { :"mutex" => [ "p2_2" ] }
 })
 
 asylum_application_p2_questions << FormText.create({
@@ -1630,7 +1632,8 @@ asylum_application_p3_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         2,
   form_id:        'form1[0].#subform[4].#subform[5].ckboxyn1b[1]',
-  checkbox_value: '1'
+  checkbox_value: '1',
+  validations:    { :"mutex" => [ "p3_3" ] }
 })
 
 asylum_application_p3_questions << Question.create({
@@ -1638,7 +1641,8 @@ asylum_application_p3_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         3,
   form_id:        'form1[0].#subform[4].#subform[5].ckboxyn1b[0]',
-  checkbox_value: '2'
+  checkbox_value: '2',
+  validations:    { :"mutex" => [ "p3_2" ] }
 })
 
 asylum_application_p3_questions << FormText.create({
@@ -1738,7 +1742,8 @@ asylum_application_p5_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         2,
   form_id:        'form1[0].#subform[6].ckboxyn3a[1]',
-  checkbox_value: '1'
+  checkbox_value: '1',
+  validations:    { :"mutex" => [ "p5_3" ] }
 })
 
 asylum_application_p5_questions << Question.create({
@@ -1746,7 +1751,8 @@ asylum_application_p5_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         3,
   form_id:        'form1[0].#subform[6].ckboxyn3a[0]',
-  checkbox_value: '2'
+  checkbox_value: '2',
+  validations:    { :"mutex" => [ "p5_2" ] }
 })
 
 asylum_application_p5_questions << FormText.create({
@@ -1791,7 +1797,8 @@ asylum_application_p6_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         2,
   form_id:        'form1[0].#subform[6].ckboxyn3b[1]',
-  checkbox_value: '1'
+  checkbox_value: '1',
+  validations:    { :"mutex" => [ "p6_3" ] }
 })
 
 asylum_application_p6_questions << Question.create({
@@ -1799,7 +1806,8 @@ asylum_application_p6_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         3,
   form_id:        'form1[0].#subform[6].ckboxyn3b[0]',
-  checkbox_value: '2'
+  checkbox_value: '2',
+  validations:    { :"mutex" => [ "p6_2" ] }
 })
 
 asylum_application_p6_questions << FormText.create({
@@ -1844,7 +1852,8 @@ asylum_application_p7_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         2,
   form_id:        'form1[0].#subform[6].ckboxyn4[1]',
-  checkbox_value: '1'
+  checkbox_value: '1',
+  validations:    { :"mutex" => [ "p7_3" ] }
 })
 
 asylum_application_p7_questions << Question.create({
@@ -1852,7 +1861,8 @@ asylum_application_p7_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         3,
   form_id:        'form1[0].#subform[6].ckboxyn4[0]',
-  checkbox_value: '2'
+  checkbox_value: '2',
+  validations:    { :"mutex" => [ "p7_2" ] }
 })
 
 asylum_application_p7_questions << FormText.create({
@@ -1897,7 +1907,8 @@ asylum_application_p8_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         2,
   form_id:        'form1[0].#subform[7].ckboxync1[1]',
-  checkbox_value: '1'
+  checkbox_value: '1',
+  validations:    { :"mutex" => [ "p8_3" ] }
 })
 
 asylum_application_p8_questions << Question.create({
@@ -1905,7 +1916,8 @@ asylum_application_p8_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         3,
   form_id:        'form1[0].#subform[7].ckboxync1[0]',
-  checkbox_value: '2'
+  checkbox_value: '2',
+  validations:    { :"mutex" => [ "p8_2" ] }
 })
 
 asylum_application_p8_questions << FormText.create({
@@ -1950,7 +1962,8 @@ asylum_application_p9_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         2,
   form_id:        'form1[0].#subform[7].ckboxync2a[1]',
-  checkbox_value: '1'
+  checkbox_value: '1',
+  validations:    { :"mutex" => [ "p9_3" ] }
 })
 
 asylum_application_p9_questions << Question.create({
@@ -1958,7 +1971,8 @@ asylum_application_p9_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         3,
   form_id:        'form1[0].#subform[7].ckboxync2a[0]',
-  checkbox_value: '2'
+  checkbox_value: '2',
+  validations:    { :"mutex" => [ "p9_2" ] }
 })
 
 asylum_application_p9_questions << FormText.create({
@@ -1971,7 +1985,8 @@ asylum_application_p9_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         5,
   form_id:        'form1[0].#subform[6].ckboxync2b[1]',
-  checkbox_value: '1'
+  checkbox_value: '1',
+  validations:    { :"mutex" => [ "p9_6" ] }
 })
 
 asylum_application_p9_questions << Question.create({
@@ -1979,7 +1994,8 @@ asylum_application_p9_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         6,
   form_id:        'form1[0].#subform[6].ckboxync2b[0]',
-  checkbox_value: '2'
+  checkbox_value: '2',
+  validations:    { :"mutex" => [ "p9_5" ] }
 })
 
 # TODO: only show following box if Yes is checked on either question
@@ -2024,7 +2040,8 @@ asylum_application_p10_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         2,
   form_id:        'form1[0].#subform[7].ckboxync3[1]',
-  checkbox_value: '1'
+  checkbox_value: '1',
+  validations:    { :"mutex" => [ "p10_3" ] }
 })
 
 asylum_application_p10_questions << Question.create({
@@ -2032,7 +2049,8 @@ asylum_application_p10_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         3,
   form_id:        'form1[0].#subform[7].ckboxync3[0]',
-  checkbox_value: '2'
+  checkbox_value: '2',
+  validations:    { :"mutex" => [ "p10_2" ] }
 })
 
 asylum_application_p10_questions << FormText.create({
@@ -2077,7 +2095,8 @@ asylum_application_p11_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         2,
   form_id:        'form1[0].#subform[8].ckboxync1a[3]',
-  checkbox_value: '1'
+  checkbox_value: '1',
+  validations:    { :"mutex" => [ "p11_3" ] }
 })
 
 asylum_application_p11_questions << Question.create({
@@ -2085,7 +2104,8 @@ asylum_application_p11_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         3,
   form_id:        'form1[0].#subform[8].ckboxync1a[2]',
-  checkbox_value: '2'
+  checkbox_value: '2',
+  validations:    { :"mutex" => [ "p11_2" ] }
 })
 
 asylum_application_p11_questions << FormText.create({
@@ -2130,7 +2150,8 @@ asylum_application_p12_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         2,
   form_id:        'form1[0].#subform[8].ckboxync5[1]',
-  checkbox_value: '1'
+  checkbox_value: '1',
+  validations:    { :"mutex" => [ "p12_3" ] }
 })
 
 asylum_application_p12_questions << Question.create({
@@ -2138,7 +2159,8 @@ asylum_application_p12_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         3,
   form_id:        'form1[0].#subform[8].ckboxync5[0]',
-  checkbox_value: '2'
+  checkbox_value: '2',
+  validations:    { :"mutex" => [ "p12_2" ] }
 })
 
 asylum_application_p12_questions << FormText.create({
@@ -2183,7 +2205,8 @@ asylum_application_p13_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         2,
   form_id:        'form1[0].#subform[8].ckboxync6[1]',
-  checkbox_value: '1'
+  checkbox_value: '1',
+  validations:    { :"mutex" => [ "p13_3" ] }
 })
 
 asylum_application_p13_questions << Question.create({
@@ -2191,7 +2214,8 @@ asylum_application_p13_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         3,
   form_id:        'form1[0].#subform[8].ckboxync6[0]',
-  checkbox_value: '2'
+  checkbox_value: '2',
+  validations:    { :"mutex" => [ "p13_2" ] }
 })
 
 asylum_application_p13_questions << FormText.create({

@@ -138,6 +138,7 @@
     mutexes.each(function() {
       var others = $(this).data("mutex");
       // on change, uncheck all others
+      // issue with multiple change event handlers
       $(this).change(function() {
         var i = 0;
         for (i = 0; i < others.length; i++){
