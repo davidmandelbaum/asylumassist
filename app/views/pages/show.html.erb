@@ -114,11 +114,10 @@
       var hide = this;
       var dep = $(this).data("show-dep");
       var box = $("#" + dep).children("div").children("input")[1];
-      console.log(box);
       // only hide if box is unchecked
       if (!box.hasAttribute("checked"))
         $(this).parent().parent().hide();
-      $("#" + dep).change(function() {
+      $("#" + dep + " input").change(function() {
         $(hide).parent().parent().fadeToggle();
       });
     });
@@ -131,6 +130,20 @@
       var dep = $(this).data("hide-dep");
       $("#" + dep).change(function() {
         $(show).parent().parent().fadeToggle();
+      });
+    });
+
+    // MUTUALLY EXCLUSIVE CHECKBOXES
+    var mutexes = $("input[data-mutex]");
+    mutexes.each(function() {
+      var others = $(this).data("mutex");
+      // on change, uncheck all others
+      $(this).change(function() {
+        var i = 0;
+        for (i = 0; i < others.length; i++){
+          var other = $("#" + others[i] + " input");
+          other.prop('checked', false);
+        }
       });
     });
 

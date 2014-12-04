@@ -2,8 +2,7 @@
 - fix review answers showing guidance when questions aren't filled out
 - edge case with dependencies on p9
 - add bootstrap pagination
-- can only fill out one of yes or no (parsley?)
-- show dependencies when they're filled in and box is checked from entry
+- fix mutex checkboxes with show deps
 
 ## FRONT-END (D)ESIGN
 
@@ -11,6 +10,7 @@
 - show guidance differently than title?
 
 ## BACK-(E)ND CODE
+- add in all mutex checkbox dependencies
 - CAT box
 - add another status (A.I.18)
 - add another child

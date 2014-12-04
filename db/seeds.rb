@@ -1683,7 +1683,8 @@ asylum_application_p4_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         2,
   form_id:        'form1[0].#subform[6].ckboxyn2[1]',
-  checkbox_value: '1'
+  checkbox_value: '1',
+  validations:    { :"mutex" => ["p4_3"] }
 })
 
 asylum_application_p4_questions << Question.create({
@@ -1691,7 +1692,8 @@ asylum_application_p4_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         3,
   form_id:        'form1[0].#subform[6].ckboxyn2[0]',
-  checkbox_value: '2'
+  checkbox_value: '2',
+  validations:    { :"mutex" => ["p4_2"] }
 })
 
 asylum_application_p4_questions << FormText.create({
