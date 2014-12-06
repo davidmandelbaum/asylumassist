@@ -230,7 +230,7 @@ personal_p4_questions = []
 
 personal_p4_questions << FormText.create({
   title:              'Gender',
-  guidance:           'gender guidance here',
+  guidance:           '',
   seq_no:             1
 })
 
@@ -252,7 +252,7 @@ personal_p4_questions << Question.create({
 
 personal_p4_questions << FormText.create({
   title:              'Marital Status',
-  guidance:           'marital status guidance here',
+  guidance:           '',
   seq_no:             4
 })
 

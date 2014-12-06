@@ -15,7 +15,9 @@ class TranslationEditorController < ApplicationController
       if k.include? "text_"
         form_text_id = k[5..-1].to_i
         form_text = FormText.find(form_text_id)
+        I18n.locale = params['locale']
         form_text.guidance = v
+        form_text.save()
       end
       if k.include? "sect_"
         sect_id = k[10..-1].to_i

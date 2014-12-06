@@ -1,4 +1,5 @@
 ## BU(G)S
+- fix translation editor submission (saving into English)
 - fix review answers showing guidance when questions aren't filled out
 - edge case with dependencies on p9
 - add bootstrap pagination
