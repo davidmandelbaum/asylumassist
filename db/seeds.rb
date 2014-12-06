@@ -2002,14 +2002,16 @@ asylum_application_p9_questions << Question.create({
 
 asylum_application_p9_questions << FormText.create({
   guidance:       'If "Yes" to either or both questions (2A and/or 2B), provide for each person the following: the name of each country and the length of stay, the person\'s status while there, the reasons for leaving, whether or not the person is entitled to return for lawful residence purposes, and whether the person applied for refugee status or for asylum while there, and if not, why he or she did not do so.',
-  seq_no:         7
+  seq_no:         7,
+  validations:    { :"show_dep" => [ "p9_6", "p9_3" ] }
 })
 
 asylum_application_p9_questions << Question.create({
   name:           '',
   field_type:     'text',
   seq_no:         8,
-  form_id:        'form1[0].#subform[7].TextField18[0]'
+  form_id:        'form1[0].#subform[7].TextField18[0]',
+  validations:    { :"show_dep" => [ "p9_6", "p9_3" ] }
 })
 
 asylum_application_p9_questions.each do |q|

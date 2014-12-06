@@ -113,13 +113,20 @@
       // CHECK CURRENT STATUS OF CHECKBOX
       var hide = this;
       var dep = $(this).data("show-dep");
-      var box = $("#" + dep).children("div").children("input")[1];
-      // only hide if box is unchecked
-      if (!box.hasAttribute("checked"))
-        $(this).parent().parent().hide();
-      $("#" + dep + " input").change(function() {
-        $(hide).parent().parent().fadeToggle();
-      });
+      console.log(dep);
+      if (dep.typeof != Array){
+        var box = $("#" + dep).children("div").children("input")[1];
+        // only hide if box is unchecked
+        if (!box.hasAttribute("checked"))
+          $(this).parent().parent().hide();
+        $("#" + dep + " input").change(function() {
+          $(hide).parent().parent().fadeToggle();
+        });
+      }
+      // else, multiple dependencies
+      else {
+        // handle multiple dependencies
+      }
     });
 
     // HIDE BASED ON DEPENDENCIES
