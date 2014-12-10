@@ -24,6 +24,8 @@ Rails.application.routes.draw do
 
   get 'home/show_submission'
 
+  get 'home/submit_to_translator'
+
   resources :questions
 
   resources :pages

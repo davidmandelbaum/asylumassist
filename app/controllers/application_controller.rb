@@ -6,17 +6,16 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
 
   def set_locale
-    if params[:locale]
+    if params[:locale] || session[:locale]
       if current_user
-        if params[:locale]
-          current_user.locale = params[:locale]
+        if params[:locale] || session[:locale]
+          current_user.locale = params[:locale] || session[:locale]
           current_user.save
         end
         case current_user.locale
         when "en"
           I18n.locale = :en
         when "es"
-          puts "setting locale to es"
           I18n.locale = :es
         when "zh"
           I18n.locale = :zh

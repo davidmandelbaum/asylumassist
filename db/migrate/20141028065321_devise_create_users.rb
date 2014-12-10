@@ -12,7 +12,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       ## Custom
       t.integer :curr_page
       t.integer :curr_entry
-      t.string :locale
+      t.string  :locale
       t.integer :admin
 
       ## Rememberable

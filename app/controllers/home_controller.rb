@@ -75,6 +75,12 @@ class HomeController < ApplicationController
   end
 
   def submit_to_translator
+    @entry = Entry.find(current_user.curr_entry)
+
+    @entry.needs_translation = true
+    @entry.locale = current_user.locale
+
+    @entry.save()
   end
 
   def show_submission
@@ -83,8 +89,14 @@ class HomeController < ApplicationController
   end
 
   def set_locale
-    I18n.locale = params[:locale] || I18n.default_locale
-    session[:locale] = params[:locale]
+    if !session[:locale]
+      I18n.locale = params[:locale] || I18n.default_locale
+      session[:locale] = params[:locale]
+    else
+      I18n.locale = session[:locale]
+    end
+    current_user.locale = I18n.locale
+    current_user.save()
   end
 
 end

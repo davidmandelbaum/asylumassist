@@ -31,6 +31,9 @@ ActiveRecord::Schema.define(version: 20141118025855) do
     t.integer  "user_id"
     t.text     "note"
     t.datetime "completed_at"
+    t.boolean  "needs_translation"
+    t.datetime "translated_at"
+    t.text     "locale"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
