@@ -14,6 +14,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.integer :curr_entry
       t.string  :locale
       t.integer :admin
+      t.boolean :translator
 
       ## Rememberable
       t.datetime :remember_created_at

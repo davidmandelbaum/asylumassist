@@ -95,8 +95,10 @@ class HomeController < ApplicationController
     else
       I18n.locale = session[:locale]
     end
-    current_user.locale = I18n.locale
-    current_user.save()
+    if current_user
+      current_user.locale = I18n.locale
+      current_user.save()
+    end
   end
 
 end

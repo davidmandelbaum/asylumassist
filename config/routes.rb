@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   post 'pages/submit' => 'pages#submit'
 
-  devise_for :users
+  devise_for :users, :controllers => { registrations: 'registrations' }
 
   get 'home/index'
 

@@ -1,7 +1,5 @@
 ## BU(G)S
-- mutex checkboxes on personal p6
 - fix review answers showing guidance when questions aren't filled out
-- add bootstrap pagination
 - edge case with dependencies on p9
 - fix mutex checkboxes with show deps
 
