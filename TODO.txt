@@ -10,6 +10,9 @@
 ## (F)RONT-END CODE
 
 ## BACK-(E)ND CODE
+- translator view
+
+## DATA ENT(R)Y
 - CAT box
 - add another status (A.I.18)
 - add another child
@@ -17,6 +20,7 @@
 - skip mailing address
 - skip kids if they don't exist
 - signature page
+- add translations for submitted_to_translator text
 
 ## DE(P)LOYMENT
 
@@ -28,7 +32,6 @@
 - parsley localizations
 
 ## (B)ONUS
-- translator view
 - handling of phone numbers (when split on backend btw. zip and rest)
 - better handling of entries (names, etc.)
 - put a tag outside of UI step

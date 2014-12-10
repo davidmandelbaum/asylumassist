@@ -367,6 +367,7 @@ personal_p6_questions << Question.create({
   field_type:         'checkbox',
   checkbox_value:     'A',
   seq_no:             2,
+  validations:        { :"mutex" => [ "p6_3", "p6_4" ] }
 })
 
 personal_p6_questions << Question.create({
@@ -375,6 +376,7 @@ personal_p6_questions << Question.create({
   field_type:         'checkbox',
   checkbox_value:     'B',
   seq_no:             3,
+  validations:        { :"mutex" => [ "p6_2", "p6_4" ] }
 })
 
 personal_p6_questions << Question.create({
@@ -382,47 +384,48 @@ personal_p6_questions << Question.create({
   form_id:            'form1[0].#subform[0].CheckBox3[1]',
   field_type:         'checkbox',
   checkbox_value:     'C',
-  seq_no:             3,
+  seq_no:             4,
+  validations:        { :"mutex" => [ "p6_2", "p6_3" ] }
 })
 
 personal_p6_questions << Question.create({
   name:               'When did you last leave your country?',
   form_id:            'form1[0].#subform[0].DateTimeField6[0]',
   field_type:         'date',
-  seq_no:             4,
+  seq_no:             5,
 })
 
 personal_p6_questions << Question.create({
   name:               'What is your current I-94 Number, if any?',
   form_id:            'form1[0].#subform[0].TextField3[0]',
   field_type:         'string',
-  seq_no:             5,
+  seq_no:             6,
 })
 
 personal_p6_questions << FormText.create({
   guidance:           'List each entry into the U.S. beginning with your most recent entry.',
-  seq_no:             6,
+  seq_no:             7,
 })
 
 personal_p6_questions << Question.create({
   name:               'Date',
   form_id:            'form1[0].#subform[0].DateTimeField2[0]',
   field_type:         'date',
-  seq_no:             7,
+  seq_no:             8,
 })
 
 personal_p6_questions << Question.create({
   name:               'Place',
   form_id:            'form1[0].#subform[0].TextField4[0]',
   field_type:         'string',
-  seq_no:             8,
+  seq_no:             9,
 })
 
 personal_p6_questions << Question.create({
   name:               'Status',
   form_id:            'form1[0].#subform[0].TextField4[1]',
   field_type:         'string',
-  seq_no:             9,
+  seq_no:             10,
 })
 
 # TODO: insert extra two date/place/status tuples

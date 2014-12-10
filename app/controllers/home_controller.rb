@@ -74,6 +74,9 @@ class HomeController < ApplicationController
     send_file(tmp_path, :filename => 'i589.pdf', :type => "application/pdf", :disposition => 'inline')
   end
 
+  def submit_to_translator
+  end
+
   def show_submission
     @message = 'Submitted form stub'
     @tmp_path
