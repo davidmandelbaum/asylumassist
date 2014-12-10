@@ -20,19 +20,19 @@
         <% else %>
           <% if q.field_type == "string" %>
             <div class="name"><%= q.name %></div>
-              <%= text_field_tag "answer_" + q.id.to_s, q.answer_text, class: 'answer text_answer ans', data: q.validations, tabindex: (q.seq_no).to_s %>
+              <%= text_field_tag "answer_" + q.id.to_s, q.answer_text(@entry_id), class: 'answer text_answer ans', data: q.validations, tabindex: (q.seq_no).to_s %>
           <% elsif q.field_type == "checkbox" %>
-            <% if q.answer_text == q.checkbox_value %>
-              <%= check_box("answer_" + q.id.to_s, q.answer_text, class: 'ans', :data => q.validations, :checked => true) %>
+            <% if q.answer_text(@entry_id) == q.checkbox_value %>
+              <%= check_box("answer_" + q.id.to_s, q.answer_text(@entry_id), class: 'ans', :data => q.validations, :checked => true) %>
             <% else %>
-              <%= check_box("answer_" + q.id.to_s, q.answer_text, class: 'ans', :data => q.validations) %>
+              <%= check_box("answer_" + q.id.to_s, q.answer_text(@entry_id), class: 'ans', :data => q.validations) %>
             <% end %><span class="check_name"><%= q.name %></span>
           <% elsif q.field_type == "date" %>
             <div class="name"><%= q.name %></div>
-            <%= date_field_tag "answer_" + q.id.to_s, q.answer_text, class: 'answer ans', data: q.validations %>
+            <%= date_field_tag "answer_" + q.id.to_s, q.answer_text(@entry_id), class: 'answer ans', data: q.validations %>
           <% elsif q.field_type == "text" %>
             <div class="name"><%= q.name %></div>
-            <%= text_area_tag "answer_" + q.id.to_s, q.answer_text, class: 'text_answer ans', data: q.validations, tabindex: (q.seq_no).to_s, rows: "10", cols: "60" %>
+            <%= text_area_tag "answer_" + q.id.to_s, q.answer_text(@entry_id), class: 'text_answer ans', data: q.validations, tabindex: (q.seq_no).to_s, rows: "10", cols: "60" %>
           <% else %>
             Unknown type for question id = <%= q.id %>
         <% end %>

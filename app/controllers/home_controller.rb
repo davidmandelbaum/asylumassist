@@ -79,6 +79,7 @@ class HomeController < ApplicationController
 
     @entry.needs_translation = true
     @entry.locale = current_user.locale
+    @entry.completed_at = Time.now()
 
     @entry.save()
   end

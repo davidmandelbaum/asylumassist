@@ -19,17 +19,19 @@ class PagesController < ApplicationController
     @section = @page.section
     @next_section = Section.find_by_id(@page.section.id+1)
     @next_page = Page.find_by(seq_no: @page.seq_no+1)
+    @entry_id = current_user.curr_entry
     @page_responses
   end
 
   def submit
     curr_page = Page.find(params[:page])
+    curr_entry = current_user.curr_entry
     params.each do |k, v|
       if k.include? "answer"
         q_id = k[7..-1].to_i
         q = Question.find(q_id)
         if q.field_type == 'checkbox'
-          answer = Answer.find_by(question: q)
+          answer = Answer.find_by(question: q, entry: curr_entry)
           if v.include? "1"
             text = q.checkbox_value
           else
@@ -44,7 +46,7 @@ class PagesController < ApplicationController
             answer.save()
           end
         else
-          answer = Answer.find_by(question: q)
+          answer = Answer.find_by(question: q, entry: curr_entry)
           if answer
             answer.text = v
             answer.save()

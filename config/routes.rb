@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   get 'home/index'
 
+  get 'translator/list'
+
   get 'home/structure'
 
   get 'home/review_answers'

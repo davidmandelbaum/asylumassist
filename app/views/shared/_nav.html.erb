@@ -12,6 +12,11 @@
           <%= link_to t('translation_editor'), :controller => "translation_editor", :action => "show", :locale => I18n.locale %>
         </button>
       <% end %>
+      <% if current_user.translator %>
+        <button type="button" class="btn btn-default navbar-btn">
+          <%= link_to "Translate Entries", :controller => "translator", :action => "list" %>
+        </button>
+      <% end %>
       <button type="button" class="btn btn-default navbar-btn">
         <%= link_to t('logout'), destroy_user_session_path, method: :delete %>
       </button>
