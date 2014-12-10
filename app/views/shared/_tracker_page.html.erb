@@ -2,7 +2,7 @@
   <% @sections.order('seq_no ASC').each do |s| %>
     <% if @section and s.name == @section.name %>
       <% if @page %>
-        <% link_string = s.name + " (" + @page.seq_no.to_s + " of " + s.pages.length.to_s + ")" %>
+        <% link_string = s.name %>
       <% else %>
       <% link_string = s.name %>
   <% end %>
@@ -13,3 +13,15 @@
 <% end %>
 <div class="ui <% if request.env['PATH_INFO'] == "/home/review_answers" %>active <% end %>step"><%= link_to( "Review", controller: 'home', action: 'review_answers' ) %></div>
 </div>
+
+<nav>
+  <ul class="pagination pagination-lg">
+    <% @section.pages.each do |p| %>
+      <% if @page and @page.seq_no == p.seq_no %>
+        <li class="active"><%= link_to( p.seq_no, controller: 'pages', action: 'show', id: p.id ) %></li>
+      <% else %>
+        <li><%= link_to( p.seq_no, controller: 'pages', action: 'show', id: p.id ) %></li>
+      <% end %>
+    <% end %>
+  </ul>
+</nav>

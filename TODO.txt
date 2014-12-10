@@ -1,17 +1,15 @@
 ## BU(G)S
-- fix translation editor submission (saving into English)
+- mutex checkboxes on personal p6
 - fix review answers showing guidance when questions aren't filled out
-- edge case with dependencies on p9
 - add bootstrap pagination
+- edge case with dependencies on p9
 - fix mutex checkboxes with show deps
 
 ## FRONT-END (D)ESIGN
 
 ## (F)RONT-END CODE
-- show guidance differently than title?
 
 ## BACK-(E)ND CODE
-- add in all mutex checkbox dependencies
 - CAT box
 - add another status (A.I.18)
 - add another child
@@ -35,5 +33,4 @@
 - better handling of entries (names, etc.)
 - put a tag outside of UI step
 - handle checkboxes as dropdowns?
-- responsive
 - favicon
