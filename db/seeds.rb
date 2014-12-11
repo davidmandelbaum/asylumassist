@@ -1917,7 +1917,8 @@ asylum_application_p7_questions << Question.create({
   field_type:     'text',
   seq_no:         5,
   form_id:        'form1[0].#subform[6].TextField16[4]',
-  validations:    { :"show_dep" => "p7_3" }
+  validations:    { :"show_dep" => "p7_3" },
+  translate:      true
 })
 
 asylum_application_p7_questions.each do |q|
@@ -1930,7 +1931,13 @@ end
 asylum_application_p8 = Page.create({
   seq_no:             8,
   name:               'Past applications?',
-  guidance:           ''
+  guidance:           'The response to the question of whether an applicant has previously applied for asylum or withholding of removal may be extremely important in the adjudication of this application. If the applicant has never before filed such an application, then the obvious correct answer is simply to check the "no" box.
+  
+  In some cases, an applicant is filing an application because he has been previously included in an application by a parent, but no longer qualifies as an unmarried child under twenty-one and must now file a separate application.
+  
+  In other cases, however, the applicant has previously filed an application (yes). This application may still be pending with the Immigration Service or may have been denied administratively (denial by the Asylum Office.) In either case, a subsequent application for asylum must fully explain the circumstances surrounding the previous application and the disposition or status of the previous application. This explanation may be incorporated in the applicant’s affidavit, particularly if it is a lengthy explanation and if it helps explain other parts of the case such as the applicant’s fear of return to his country.
+  
+  It is worth noting here that some individuals with true LGBT/H based asylum claims may previously have had weak, frivolous or fraudulent asylum applications filed on their behalf on other grounds. These previous applications may have been filed by an attorney or non-attorney (such as a “notario”) in order to obtain employment authorization for the applicant without fully explaining the nature of the documents being filed. It is, therefore, vital that an applicant fully explain the reasoning behind the previous application.'
 })
 
 asylum_application_p8.section = asylum_application
@@ -1972,7 +1979,8 @@ asylum_application_p8_questions << Question.create({
   field_type:     'text',
   seq_no:         5,
   form_id:        'form1[0].#subform[7].TextField17[0]',
-  validations:    { :"show_dep" => "p8_3" }
+  validations:    { :"show_dep" => "p8_3" },
+  translate:      true
 })
 
 asylum_application_p8_questions.each do |q|
@@ -1985,7 +1993,9 @@ end
 asylum_application_p9 = Page.create({
   seq_no:             9,
   name:               'Other countries',
-  guidance:           ''
+  guidance:           'The purpose of these questions is to determine whether the applicant could have sought or could currently seek asylum or other lawful immigration status in a country other than the United States. Asylum is meant to be an application of last resort; if the applicant had or has a reasonable opportunity to safely relocate elsewhere, that is a ground for the United States to deny the asylum application.
+  
+  Note that question 2. A. inquires both as to whether the applicant resided in another country and as to whether the applicant traveled through another country. If the applicant traveled briefly through another country (for example a Guatemalan traveled overland across Mexico), it is unlikely that the Asylum Officer would question why he did not seek asylum there. If, however, the applicant traveled through another country which grants asylum to LGBT/H individuals, he should be prepared to explain why he did not seek asylum in that country. Likewise, if an applicant actually resided in another country before fleeing to the United States, he should explain why he did not seek asylum there. For example, if an Egyptian lived in Qatar before coming to the United States and applying for asylum, he could explain that sexual minorities are mistreated in Qatar as well.'
 })
 
 asylum_application_p9.section = asylum_application
@@ -2052,7 +2062,8 @@ asylum_application_p9_questions << Question.create({
   field_type:     'text',
   seq_no:         8,
   form_id:        'form1[0].#subform[7].TextField18[0]',
-  validations:    { :"show_dep" => [ "p9_6", "p9_3" ] }
+  validations:    { :"show_dep" => [ "p9_6", "p9_3" ] },
+  translate:      true
 })
 
 asylum_application_p9_questions.each do |q|
@@ -2065,7 +2076,7 @@ end
 asylum_application_p10 = Page.create({
   seq_no:             10,
   name:               'Participated in causing harm?',
-  guidance:           ''
+  guidance:           'This question again addresses mandatory bars to asylum. In the vast majority of cases, the answer to this question will be “no.” If the applicant did participate in persecuting others, for example, during mandatory military service or forced guerilla service, he should explain in detail why he was forced to carry out the actions which he did.'
 })
 
 asylum_application_p10.section = asylum_application
@@ -2107,7 +2118,8 @@ asylum_application_p10_questions << Question.create({
   field_type:     'text',
   seq_no:         5,
   form_id:        'form1[0].#subform[7].TextField18[1]',
-  validations:    { :"show_dep" => "p10_3" }
+  validations:    { :"show_dep" => "p10_3" },
+  translate:      true
 })
 
 asylum_application_p10_questions.each do |q|
@@ -2120,7 +2132,9 @@ end
 asylum_application_p11 = Page.create({
   seq_no:             11,
   name:               'Return to country where harmed?',
-  guidance:           ''
+  guidance:           'There are many situations which might lead to an asylum applicant returning to her home country after having left it. Because many LGBT/H asylum applicants don’t know that their sexual minority or HIV status can be the basis of an asylum claim, many individuals return to their countries to comply with the terms of their visas. Some applicants make regular trips to and from the United States to receive HIV medical treatment here. Other applicants, such as students, may not have experienced persecution in their countries until they’ve had the chance to live in the United States and “come out.”
+  
+  The applicant must anticipate that the Asylum Officer will question why she is afraid to return to her country now if she willingly returned in the past. She should address this anticipated question in this answer on the form.'
 })
 
 asylum_application_p11.section = asylum_application
@@ -2162,7 +2176,8 @@ asylum_application_p11_questions << Question.create({
   field_type:     'text',
   seq_no:         5,
   form_id:        'form1[0].#subform[8].TextField19[0]',
-  validations:    { :"show_dep" => "p11_3" }
+  validations:    { :"show_dep" => "p11_3" },
+  translate:      true
 })
 
 asylum_application_p11_questions.each do |q|
@@ -2175,7 +2190,9 @@ end
 asylum_application_p12 = Page.create({
   seq_no:             12,
   name:               'Filing deadline',
-  guidance:           ''
+  guidance:           'If the answer to this question is “yes,” you should explain in detail why the applicant did not file within the one year filing deadline. Missing the deadline means the asylum application will be denied unless the applicant can demonstrate an exception to the one year filing deadline. It is important to state succinctly but with some detail the applicant’s claimed exception to the one year filing deadline in this section. The two categories of filing deadline exceptions are for “changed circumstances” and/or “extraordinary circumstances.” If the applicant has missed the one year filing deadline, please See Section # 5 for a detailed discussion of the one year filing deadline and possible exceptions. It is also important to understand that even if the applicant meets an exception to the one year deadline, he must file “within a reasonable period of time” after the exception. The answer to this question should therefore also briefly address the reasonableness of the period of time.
+  
+  In general, an applicant should not file for asylum affirmatively if he or she has missed the one year filing deadline, unless he or she has a strong argument for a filing deadline exception.'
 })
 
 asylum_application_p12.section = asylum_application
@@ -2217,7 +2234,8 @@ asylum_application_p12_questions << Question.create({
   field_type:     'text',
   seq_no:         5,
   form_id:        'form1[0].#subform[8].TextField19[1]',
-  validations:    { :"show_dep" => "p12_3" }
+  validations:    { :"show_dep" => "p12_3" },
+  translate:      true
 })
 
 asylum_application_p12_questions.each do |q|
@@ -2230,7 +2248,9 @@ end
 asylum_application_p13 = Page.create({
   seq_no:             13,
   name:               'Crimes committed',
-  guidance:           ''
+  guidance:           'It is very important that the applicant answer this question truthfully. The applicant must answer “yes” if she was ever arrested, even if she was never charged or convicted. Thus, even if a criminal case was dismissed and sealed, the applicant must answer “yes.”
+  
+  If an applicant was convicted of a “particularly serious crime” she will not eligible for asylum or withholding of removal. If you are not certain whether a crime that the applicant committed would affect her asylum eligibility, research this issue thoroughly before filing the application. For more information on criminal bars to asylum eligibility see Section # 6.2.'
 })
 
 asylum_application_p13.section = asylum_application
@@ -2272,7 +2292,8 @@ asylum_application_p13_questions << Question.create({
   field_type:     'text',
   seq_no:         5,
   form_id:        'form1[0].#subform[8].TextField19[2]',
-  validations:    { :"show_dep" => "p13_3" }
+  validations:    { :"show_dep" => "p13_3" },
+  translate:      true
 })
 
 asylum_application_p13_questions.each do |q|
