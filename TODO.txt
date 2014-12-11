@@ -2,6 +2,7 @@
 - fix review answers showing guidance when questions aren't filled out
 - edge case with dependencies on p9
 - fix mutex checkboxes with show deps
+- move devise checkboxes
 
 ## FRONT-END (D)ESIGN
 
