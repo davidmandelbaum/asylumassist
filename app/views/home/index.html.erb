@@ -4,7 +4,7 @@
 <div class="row">
   <div class="col-md-4">
     <br />
-    <%= t 'welcome_text' %>
+    <%=raw t 'welcome_text' %>
 
     <br /><br />
     <%= link_to t('start'), { controller: 'home', action: 'structure', locale: params[:locale] }, class: 'btn btn-lg btn-success', type: 'button' %>

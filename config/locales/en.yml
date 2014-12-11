@@ -25,7 +25,7 @@ en:
   sign_up: "Sign up"
   translation_editor: 'Translation Editor'
   logged_in_as: "Logged in as "
-  welcome_text: "Welcome to Asylum Assist!"
+  welcome_text: "Welcome to Asylum Assist!<br /><br />This site is designed to help you fill out the I-589 form to start the asylum process. Press the button below to begin."
   start: 'Get Started'
   continue: 'Continue to page '
   save_and_continue: 'Save and Continue'

@@ -1,8 +1,7 @@
 ## BU(G)S
-- titles?
-- make user accounts and email rushmeier
 - welcome text on index page
 - edge case with dependencies on p9
+- make user accounts and email rushmeier
 
 ## FRONT-END (D)ESIGN
 
