@@ -56,3 +56,5 @@ gem 'binding_of_caller'
 gem 'devise'
 
 gem 'pdf-forms'
+
+gem 'bing_translator'

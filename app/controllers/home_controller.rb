@@ -83,6 +83,48 @@ class HomeController < ApplicationController
     @entry.save()
   end
 
+  def submit_to_machine_translator
+    translator = BingTranslator.new(ENV["BING_CLIENT_ID"], ENV["BING_CLIENT_SECRET"])
+    @entry = Entry.find(current_user.curr_entry)
+
+    if @entry.locale == 'zh'
+      @entry.locale == 'zh-CHS'
+    end
+
+    @entry.answers.each do |a|
+      if a.question.translate
+        a.text = translator.translate a.text, :from => @entry.locale, :to => 'en'
+      end
+    end
+
+    pdftk = PdfForms.new(ENV["PDFTK_PATH"])
+    @entry = Entry.find(current_user.curr_entry)
+    @entry_answers = @entry.answers
+    answers = {}
+
+    @entry_answers.each do |a|
+      if a.question.field_type == 'string' or
+         a.question.field_type == 'date' or
+         a.question.field_type == 'text'
+        answers[a.question.form_id] = a.text
+      elsif a.question.field_type == 'checkbox'
+        if a.text == a.question.checkbox_value
+          answers[a.question.form_id] = a.question.checkbox_value
+        end
+      end
+    end
+
+    @entry.completed_at = Time.now()
+    @entry.save()
+
+    form_path = Rails.public_path.to_s + '/i589.pdf'
+    tmp_path = "#{Rails.root.to_s}/tmp/" + @entry.id.to_s
+
+    pdftk.fill_form form_path, tmp_path, answers
+    send_file(tmp_path, :filename => 'i589.pdf', :type => "application/pdf", :disposition => 'inline')
+
+  end
+
   def show_submission
     @message = 'Submitted form stub'
     @tmp_path

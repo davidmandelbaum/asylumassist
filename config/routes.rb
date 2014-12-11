@@ -28,6 +28,8 @@ Rails.application.routes.draw do
 
   get 'home/submit_to_translator'
 
+  get 'home/submit_to_machine_translator'
+
   resources :questions
 
   resources :pages

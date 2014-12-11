@@ -85,6 +85,7 @@ ActiveRecord::Schema.define(version: 20141118025855) do
     t.integer  "page_id"
     t.integer  "seq_no"
     t.text     "validations"
+    t.boolean  "translate"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

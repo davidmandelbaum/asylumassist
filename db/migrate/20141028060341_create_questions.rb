@@ -9,6 +9,7 @@ class CreateQuestions < ActiveRecord::Migration
       t.belongs_to :page, index: true
       t.integer :seq_no
       t.text :validations
+      t.boolean :translate
 
       t.timestamps
     end

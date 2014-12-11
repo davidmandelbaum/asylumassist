@@ -1613,7 +1613,8 @@ asylum_application_p2_questions << Question.create({
   field_type:     'text',
   seq_no:         5,
   form_id:        'form1[0].#subform[4].#subform[5].TextField14[0]',
-  validations:    { :"show_dep" => "p2_3" }
+  validations:    { :"show_dep" => "p2_3" },
+  translate:      true
 })
 
 asylum_application_p2_questions.each do |q|
