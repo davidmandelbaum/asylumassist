@@ -1,6 +1,9 @@
-<% @entries.each do |e| %>
-  <div class="entry">
-    <%= e.completed_at %><br />
-    <%= e.locale %><br />
-  </div>
+<h3>Applications needing translation</h3>
+
+<ul>
+  <% @entries.each do |e| %>
+    <li>
+    <%= link_to 'Application in ' + e.locale + ' (' + e.completed_at.to_s + ')', controller: 'translator', action: 'show', id: e.id %>
+    </li>
 <% end %>
+</ul>

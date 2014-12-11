@@ -11,12 +11,6 @@
   </div>
 
   <div class="col-md-4">
-    <ul class="nav nav-pills">
-      <li <% if I18n.locale == :en %>class="active"<% end %>><%= link_to 'English', url_for( :locale => 'en' ) %></li>
-      <li <% if I18n.locale == :es %>class="active"<% end %>><%= link_to 'Español', url_for( :locale => 'es' ) %></li>
-      <li <% if I18n.locale == :zh %>class="active"<% end %>><%= link_to '官话', url_for( :locale => 'zh' ) %></li>
-    </ul>
-    <br />
     <%= image_tag("i589.png", width: "400") %>
   </div>
 </div>

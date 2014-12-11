@@ -18,6 +18,10 @@ Rails.application.routes.draw do
 
   get 'translator/list'
 
+  get 'translator/show'
+
+  get 'translator/submit'
+
   get 'home/structure'
 
   get 'home/review_answers'

@@ -30,4 +30,15 @@ class Entry < ActiveRecord::Base
     return answers_out
   end
 
+  def get_translate_answers
+    answers_out = []
+
+    answers.each do |a|
+      if a.question.translate
+        answers_out << a
+      end
+    end
+    return answers_out
+  end
+
 end

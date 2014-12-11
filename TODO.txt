@@ -1,6 +1,8 @@
 ## BU(G)S
+- titles?
+- make user accounts and email rushmeier
+- welcome text on index page
 - edge case with dependencies on p9
-- localize button text at bottom of review answers
 
 ## FRONT-END (D)ESIGN
 
@@ -26,6 +28,7 @@
 - parsley localizations
 
 ## (B)ONUS
+- localize button text at bottom of review answers
 - add another status (A.I.18)
 - add another child
 - fix mutex checkboxes with show deps
