@@ -58,3 +58,5 @@ gem 'devise'
 gem 'pdf-forms'
 
 gem 'bing_translator'
+
+gem 'postmark-rails'

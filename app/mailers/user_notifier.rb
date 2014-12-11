@@ -1,3 +1,12 @@
 class UserNotifier < ActionMailer::Base
-  default from: "from@example.com"
+  default from: "david.mandelbaum@yale.edu",
+          content_type: "multipart/alternative",
+          parts_order: [ "text/html", "text/enriched", "text/plain", "application/pdf" ]
+
+  def translation_ready_email(entry, path)
+    @user = User.find(entry.user_id)
+    @email = @user.email
+    attachments["I-589"] = File.read(path)
+    mail(to: @email, subject: 'Your translated application is available')
+  end
 end

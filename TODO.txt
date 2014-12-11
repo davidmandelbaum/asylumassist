@@ -9,7 +9,7 @@
 ## (F)RONT-END CODE
 
 ## BACK-(E)ND CODE
-- translator view
+- save information about translator into entry
 
 ## DATA ENT(R)Y
 - skip spouse if not married

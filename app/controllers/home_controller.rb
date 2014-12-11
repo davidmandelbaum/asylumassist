@@ -93,7 +93,7 @@ class HomeController < ApplicationController
 
     @entry.answers.each do |a|
       if a.question.translate
-        a.text = translator.translate a.text, :from => @entry.locale, :to => 'en'
+        a.translated_text = translator.translate a.text, :from => @entry.locale, :to => 'en'
       end
     end
 
@@ -107,7 +107,11 @@ class HomeController < ApplicationController
       if a.question.field_type == 'string' or
          a.question.field_type == 'date' or
          a.question.field_type == 'text'
-        answers[a.question.form_id] = a.text
+        if a.translated_text
+          answers[a.question.form_id] = a.translated_text
+        else
+          answers[a.question.form_id] = a.text
+        end
       elsif a.question.field_type == 'checkbox'
         if a.text == a.question.checkbox_value
           answers[a.question.form_id] = a.question.checkbox_value

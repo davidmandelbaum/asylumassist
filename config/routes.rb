@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
   get 'translator/show'
 
-  get 'translator/submit'
+  post 'translator/submit'
 
   get 'home/structure'
 

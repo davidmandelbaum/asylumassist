@@ -1,15 +1,46 @@
-<h3>Translate</h3>
+<h3>Translate<%= @locale %></h3>
 
 <div class="row">
   <div class="col-md-8">
 
+    <div class="row">
+      <div class="col-md-6" style="text-align: center; font-size: 16px;">
+        ANSWERS IN <%= @locale.upcase %>
+      </div>
+      <div class="col-md-6" style="text-align: center; font-size: 16px;">
+        TRANSLATED ANSWERS
+      </div>
+    </div>
+    <br />
+
     <%= form_tag("/translator/submit", method: "post", id: 'translation_form', :class => 'form-inline', :role => 'form') do %>
 
-        <% I18n.locale = @locale %>
-        <%= text_area_tag "sect_guid_" + s.id.to_s, s.guidance, :cols => 80, :rows => 3, :class => 'form-control' %> <br />
+        <% @answers.each do |a| %>
 
-      <%= submit_tag 'Submit translation', class: "btn btn-lg btn-success" %>
+          <div class="row">
+            <div class="col-md-6">
+              <%= text_area_tag "answer_untranslated_" + a.id.to_s, a.text, :cols => 50, :rows => 8, :class => 'form-control', :disabled => :true %>
+            </div>
+            <div class="col-md-6">
+              <%= text_area_tag "answer_" + a.id.to_s, "", :cols => 50, :rows => 8, :class => 'form-control' %>
+            </div>
+          </div>
+
+          <br />
+        <% end %>
+
+        <%= hidden_field_tag 'entry', @entry.id %>
+        <%= submit_tag 'Submit translation', class: "btn btn-lg btn-success", id: "submit_translation_button" %>
+
     <% end %>
 
   </div>
 </div>
+
+<script type="text/javascript">
+
+$("#submit_translation_button").click(function() {
+  $("#submit_translation_button").html("SUBMITTING TRANSLATION&nbsp;&nbsp; <img src='/assets/bar.svg' width='20' />");
+});
+
+</script>

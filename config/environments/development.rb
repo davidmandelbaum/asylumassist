@@ -9,6 +9,18 @@ Rails.application.configure do
   # for devise
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
+  POSTMARK_API_KEY = "571f8cc4-832a-448c-9fef-8b94d301dfb2"
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address => "smtp.postmarkapp.com",
+    :port => 25,
+    :domain => 'abcd',
+    :user_name => POSTMARK_API_KEY,
+    :password => POSTMARK_API_KEY,
+    :authentication => 'plain',
+    :enable_starttls_auto => true }
+
   # Do not eager load code on boot.
   config.eager_load = false
 
