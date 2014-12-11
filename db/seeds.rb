@@ -545,7 +545,8 @@ end
 family_p1 = Page.create({
   seq_no:             1,
   name:               'Basic Spouse Information',
-  guidance:           ''
+  guidance:           '',
+  validations:        { :"show_dep" => "p3_5" }
 })
 
 family_p1.section = family
@@ -1549,6 +1550,14 @@ asylum_application_p1_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         7,
   form_id:        'form1[0].#subform[4].#subform[5].CheckBoxtorture[0]',
+  checkbox_value: '1'
+})
+
+asylum_application_p1_questions << Question.create({
+  name:           'Do you also want to apply for withholding of removal under the Convention Against Torture?',
+  field_type:     'checkbox',
+  seq_no:         8,
+  form_id:        'form1[0].#subform[0].CheckBox31[0]',
   checkbox_value: '1'
 })
 

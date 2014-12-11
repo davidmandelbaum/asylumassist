@@ -15,8 +15,8 @@ class HomeController < ApplicationController
 
   def structure
     # set locale
-    u = current_user
-    u.locale = params[:locale] || session[:locale]
+    current_user.locale = params[:locale] || session[:locale]
+    current_user.save()
 
     if !current_user.curr_entry
       @entry = Entry.new
@@ -41,7 +41,6 @@ class HomeController < ApplicationController
       @answers = @entry.answers
     else
       section = Section.find_by(seq_no: 4)
-      # TODO: fix flash below (showing in params)
       redirect_to :controller => 'sections', :action => 'show', :id => section.id, :flash => { :notice => "No current form entry in progress" }
     end
   end
@@ -89,17 +88,17 @@ class HomeController < ApplicationController
     @tmp_path
   end
 
-  def set_locale
-    if !session[:locale]
-      I18n.locale = params[:locale] || I18n.default_locale
-      session[:locale] = params[:locale]
-    else
-      I18n.locale = session[:locale]
-    end
-    if current_user
-      current_user.locale = I18n.locale
-      current_user.save()
-    end
-  end
+  # def set_locale
+  #   if !session[:locale]
+  #     I18n.locale = current_user.locale
+  #     session[:locale] = I18n.locale
+  #   else
+  #     I18n.locale = session[:locale]
+  #   end
+  #   if current_user
+  #     current_user.locale = I18n.locale
+  #     current_user.save()
+  #   end
+  # end
 
 end
