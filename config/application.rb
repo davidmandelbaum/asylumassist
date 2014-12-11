@@ -21,9 +21,8 @@ module App
     config.i18n.default_locale = :en
     config.i18n.fallbacks = [:en]
 
-    POSTMARK_API_KEY = "571f8cc4-832a-448c-9fef-8b94d301dfb2"
     config.action_mailer.delivery_method = :postmark
-    config.action_mailer.postmark_settings = { :api_key => POSTMARK_API_KEY }
+    config.action_mailer.postmark_settings = { :api_key => ENV["POSTMARK_API_KEY"] }
 
     config.before_configuration do
       env_file = File.join(Rails.root, 'config', 'local_env.yml')
