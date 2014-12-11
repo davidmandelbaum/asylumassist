@@ -16,7 +16,7 @@
 
 <nav>
   <ul class="pagination pagination-lg">
-    <% @section.pages.each do |p| %>
+    <% @section.pages.order('seq_no ASC').each do |p| %>
       <% if @page and @page.seq_no == p.seq_no %>
         <li class="active"><%= link_to( p.seq_no, controller: 'pages', action: 'show', id: p.id ) %></li>
       <% else %>
