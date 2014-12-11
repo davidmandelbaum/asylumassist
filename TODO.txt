@@ -1,8 +1,10 @@
 ## BU(G)S
-- fix review answers showing guidance when questions aren't filled out
 - edge case with dependencies on p9
-- fix mutex checkboxes with show deps
+- differentiate between guidance and answers on review answers page
+- fix review answers showing guidance when questions aren't filled out
 - move devise checkboxes
+- link to page on review answers
+- waiting indicator on review answers page (machine translator)
 
 ## FRONT-END (D)ESIGN
 
@@ -12,10 +14,6 @@
 - translator view
 
 ## DATA ENT(R)Y
-- add translate to fields that require it
-- CAT box
-- add another status (A.I.18)
-- add another child
 - skip spouse if not married
 - skip mailing address
 - skip kids if they don't exist
@@ -26,13 +24,15 @@
 ## DE(P)LOYMENT
 
 ## (C)ONTENT
-- finish entering guidance
 - guidance for sections on structure page
 
 ## (T)RANSLATION
 - parsley localizations
 
 ## (B)ONUS
+- add another status (A.I.18)
+- add another child
+- fix mutex checkboxes with show deps
 - handling of phone numbers (when split on backend btw. zip and rest)
 - better handling of entries (names, etc.)
 - put a tag outside of UI step

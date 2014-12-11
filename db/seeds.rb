@@ -244,7 +244,7 @@ personal_p4_questions << Question.create({
   field_type:         'checkbox',
   seq_no:             2,
   checkbox_value:     'M', 
-  validations:        { :"mutex" => [ "p4_2" ] }
+  validations:        { :"mutex" => [ "p4_3" ] }
 })
 
 personal_p4_questions << Question.create({
@@ -528,6 +528,7 @@ personal_p8_questions << Question.create({
   field_type:         'checkbox',
   checkbox_value:     'Yes',
   seq_no:             3,
+  validations:        { :"mutex" => [ "p8_4" ] }
 })
 
 personal_p8_questions << Question.create({
@@ -536,12 +537,13 @@ personal_p8_questions << Question.create({
   field_type:         'checkbox',
   checkbox_value:     'No',
   seq_no:             4,
+  validations:        { :"mutex" => [ "p8_3" ] }
 })
 
 personal_p8_questions << Question.create({
   name:               'What other languages do you speak fluently?',
   form_id:            'form1[0].#subform[0].TextField7[1]',
-  field_type:         'string',
+  field_type:         'text',
   seq_no:             5,
 })
 
@@ -669,7 +671,8 @@ family_p2_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         5,
   form_id:        'form1[0].#subForm[1].CheckBox6[0]',
-  checkbox_value: '1'
+  checkbox_value: '1',
+  validations:    { :"mutex" => [ "p2_6" ] }
 })
 
 family_p2_questions << Question.create({
@@ -677,7 +680,8 @@ family_p2_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         6,
   form_id:        'form1[0].#subForm[1].CheckBox6[1]',
-  checkbox_value: '2'
+  checkbox_value: '2',
+  validations:    { :"mutex" => [ "p2_5" ] }
 })
 
 family_p2_questions.each do |q|
@@ -723,6 +727,7 @@ family_p3_questions << Question.create({
   field_type:     'checkbox', 
   checkbox_value: '1',
   seq_no:         4,
+  validations:    { :"mutex" => [ "p3_5" ] }
 })
 
 family_p3_questions << Question.create({
@@ -731,6 +736,7 @@ family_p3_questions << Question.create({
   field_type:     'checkbox', 
   checkbox_value: '2',
   seq_no:         5,
+  validations:    { :"mutex" => [ "p3_4" ] }
 })
 
 family_p3_questions << Question.create({
@@ -813,7 +819,8 @@ family_p4_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         8,
   form_id:       'form1[0].#subform[1].CheckBox8[0]',
-  checkbox_value: '1'
+  checkbox_value: '1',
+  validations:    { :"mutex" => [ "p4_9" ] }
 })
 
 family_p4_questions << Question.create({
@@ -821,7 +828,8 @@ family_p4_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         9,
   form_id:       'form1[0].#subform[1].CheckBox8[1]',
-  checkbox_value: '2'
+  checkbox_value: '2',
+  validations:    { :"mutex" => [ "p4_8" ] }
 })
 
 family_p4_questions << Question.create({
@@ -841,7 +849,8 @@ family_p4_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         12,
   form_id:       'form1[0].#subform[1].CheckBox9[0]',
-  checkbox_value: '1'
+  checkbox_value: '1',
+  validations:    { :"mutex" => [ "p4_14" ] }
 })
 
 family_p4_questions << FormText.create({
@@ -853,9 +862,10 @@ family_p4_questions << FormText.create({
 family_p4_questions << Question.create({
   name:           'No',
   field_type:     'checkbox',
-  seq_no:         13,
+  seq_no:         14,
   form_id:       'form1[0].#subform[1].CheckBox9[1]',
-  checkbox_value: '2'
+  checkbox_value: '2',
+  validations:    { :"mutex" => [ "p4_12" ] }
 })
 
 family_p4_questions.each do |q|
@@ -993,7 +1003,8 @@ family_p6_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         7,
   form_id:    'form1[0].#subform[1].CheckBox16[0]',
-  checkbox_value: '1'
+  checkbox_value: '1',
+  validations:    { :"mutex" => [ "p6_8" ] }
 })
 
 family_p6_questions << Question.create({
@@ -1001,7 +1012,8 @@ family_p6_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         8,
   form_id:    'form1[0].#subform[1].CheckBox16[1]',
-  checkbox_value: '2'
+  checkbox_value: '2',
+  validations:    { :"mutex" => [ "p6_7" ] }
 })
 
 family_p6_questions.each do |q|
@@ -1032,7 +1044,8 @@ family_p7_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         2,
   form_id:    'form1[0].#subform[1].CheckBox17[0]',
-  checkbox_value: '1'
+  checkbox_value: '1',
+  validations:    { :"mutex" => [ "p7_3" ] }
 })
 
 family_p7_questions << Question.create({
@@ -1040,7 +1053,8 @@ family_p7_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         3,
   form_id:    'form1[0].#subform[1].CheckBox17[1]',
-  checkbox_value: '2'
+  checkbox_value: '2',
+  validations:    { :"mutex" => [ "p7_2" ] }
 })
 
 family_p7_questions << Question.create({
@@ -1123,7 +1137,8 @@ family_p8_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         5,
   form_id:        'form1[0].#subform[1].CheckBox18[0]',
-  checkbox_value: '1'
+  checkbox_value: '1',
+  validations:    { :"mutex" => [ "p8_6" ] }
 })
 
 family_p8_questions << Question.create({ 
@@ -1131,7 +1146,8 @@ family_p8_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         6,
   form_id:        'form1[0].#subform[1].CheckBox18[1]',
-  checkbox_value: '2'
+  checkbox_value: '2',
+  validations:    { :"mutex" => [ "p8_5" ] }
 })
 
 family_p8_questions << FormText.create({
@@ -1144,7 +1160,8 @@ family_p8_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         8,
   form_id:        'form1[0].#subform[1].CheckBox19[0]',
-  checkbox_value: '1'
+  checkbox_value: '1',
+  validations:    { :"mutex" => [ "p8_10" ] }
 })
 
 # TODO: figure out if the spouse reference in the following text is a typo (should be child?)
@@ -1160,7 +1177,8 @@ family_p8_questions << Question.create({
   field_type:     'checkbox',
   seq_no:         10,
   form_id:        'form1[0].#subform[1].CheckBox19[1]',
-  checkbox_value: '2'
+  checkbox_value: '2',
+  validations:    { :"mutex" => [ "p8_8" ] }
 })
 
 family_p8_questions.each do |q|
@@ -1333,22 +1351,15 @@ background_p3_questions << Question.create({
 
 background_p3_questions << Question.create({ 
   name:           'Attended From',
-  field_type:     'string',
-  seq_no:         4,
-  form_id:        'form1[0].#subform[1].DateTimeField41[0]'
-})
-
-background_p3_questions << Question.create({ 
-  name:           'Date From',
   field_type:     'date',
-  seq_no:         6,
+  seq_no:         4,
   form_id:        'form1[0].#subform[1].DateTimeField24[0]',
 })
 
 background_p3_questions << Question.create({ 
-  name:           'Date To',
+  name:           'Attended To',
   field_type:     'date',
-  seq_no:         7,
+  seq_no:         5,
   form_id:        'form1[0].#subform[1].DateTimeField26[0]',
 })
 
@@ -1387,7 +1398,7 @@ background_p4_questions << Question.create({
 })
 
 background_p4_questions << Question.create({ 
-  name:           'Dates From',
+  name:           'Attended From',
   field_type:     'date',
   seq_no:         3,
   form_id:        'form1[0].#subform[1].DateTimeField42[0]'
@@ -1565,10 +1576,15 @@ asylum_application_p1_questions << Question.create({
 
 # TODO: move this to another page
 
+asylum_application_p1_questions << FormText.create({
+  guidance:       'Do you also want to apply for withholding of removal under the Convention Against Torture?',
+  seq_no:         8
+})
+
 asylum_application_p1_questions << Question.create({
-  name:           'Do you also want to apply for withholding of removal under the Convention Against Torture?',
+  name:           'Yes',
   field_type:     'checkbox',
-  seq_no:         8,
+  seq_no:         9,
   form_id:        'form1[0].#subform[0].CheckBox31[0]',
   checkbox_value: '1'
 })
@@ -1617,7 +1633,7 @@ asylum_application_p2_questions << Question.create({
 })
 
 asylum_application_p2_questions << FormText.create({
-  guidance:       'Explain in detail: <br />1. What happened;<br />2. When the harm or mistreatment or threats occurred;<br />Who caused the harm or mistreatment or threats; and<br />4. Why you believe the harm or mistreatment or threats occured.',
+  guidance:       'Explain in detail: <br />1. What happened;<br />2. When the harm or mistreatment or threats occurred;<br />Who caused the harm or mistreatment or threats; and<br />4. Why you believe the harm or mistreatment or threats occurred.',
   seq_no:         4,
   validations:    { :"show_dep" => "p2_3" }
 })
@@ -1798,7 +1814,6 @@ asylum_application_p5_questions << FormText.create({
   guidance:       'Describe for each person the level of participation, any leadership or other positions held, and the length of time you or your family members were involved in each organization or activity.',
   seq_no:         4,
   validations:    { :"show_dep" => "p5_3" },
-  translate:      true
 })
 
 asylum_application_p5_questions << Question.create({
@@ -1806,7 +1821,8 @@ asylum_application_p5_questions << Question.create({
   field_type:     'text',
   seq_no:         5,
   form_id:        'form1[0].#subform[6].TextField16[1]',
-  validations:    { :"show_dep" => "p5_3" }
+  validations:    { :"show_dep" => "p5_3" },
+  translate:      true
 })
 
 asylum_application_p5_questions.each do |q|

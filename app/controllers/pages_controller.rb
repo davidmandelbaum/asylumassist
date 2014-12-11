@@ -70,7 +70,7 @@ class PagesController < ApplicationController
       # calculate if dependency is on this page
       if dep.include? curr_page_string
         q = Question.find_by(page: curr_page, seq_no: dep.split("_")[2])
-        if q.answer.text == q.checkbox_value
+        if q.answer_text(curr_entry) == q.checkbox_value
           next_page = Page.find_by(section: curr_page.section, seq_no: curr_seq_no+2) 
         end
       end
