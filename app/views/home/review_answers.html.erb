@@ -5,38 +5,40 @@
 
 <div class="row">
     <div class="col-md-6">
-        <% @sections.order('seq_no ASC').each do |s| %>
+        <% @sections.order('seq_no ASC').each_with_index do |s, i| %>
             <div class="panel panel-default">
             <div class="panel-heading">
-                <h2 class="panel-title"><%= s.name %></h2>
+              <h2 class="panel-title"><a href="#<%= s.id %>" data-toggle="collapse" data-target="#<%= s.id %>"><%= s.name %> (click to show/hide)</h2>
             </div>
-            <div class="panel-body">
-                <% s.pages.order('seq_no ASC').each do |p| %>
-                    <h4><%= p.name %> <span class='label label-default'><%= p.seq_no %> of <%= s.pages.length %></span></h4>
-                <% @entry.get_page_answers(p).each do |a| %>
-                  <% if a.class == FormText %>
-                    <%= a.title %><br /><% if a.guidance %><%= a.guidance.html_safe %><br /><% end %>
-                  <% else %>
-                    <% if a.question.field_type != "checkbox" %>
-                      <% if !a.text or a.text == "" %>
-                        <%= link_to a.question.name, p, :class => "review_answer_missing" %>
-                      <% else %>
-                          <%= link_to a.question.name, p, :class => "review_answer" %><br />
-                      <% end %>
-                    <% end %>
-                    <% if a.question.field_type == 'checkbox' %>
-                      <% if a.text == a.question.checkbox_value %>
-                        <%= check_box_tag a.question.name, a.question.name, true, data: { "completed" => "" } %>&nbsp;&nbsp;<%= a.question.name %><br />
-                      <% else %>
-                        <%= check_box_tag a.question.name, a.question.name, false %>&nbsp;&nbsp;<%= a.question.name %><br />
-                      <% end %>
+            <div id="<%= s.id %>" class="panel-collapse collapse<% if i == 0 %> in<% end %>">
+              <div class="panel-body">
+                  <% s.pages.order('seq_no ASC').each do |p| %>
+                    <h4><%= link_to( p.name, controller: 'pages', action: 'show', id: p.id) %> <span class='label label-default'><%= p.seq_no %> of <%= s.pages.length %></span></h4>
+                  <% @entry.get_page_answers(p).each do |a| %>
+                    <% if a.class == FormText %>
+                      <%= a.title %><br /><% if a.guidance %><%= a.guidance.html_safe %><br /><% end %>
                     <% else %>
-                        <%= a.text %><br />
+                      <% if a.question.field_type != "checkbox" %>
+                        <% if !a.text or a.text == "" %>
+                          <%= link_to a.question.name, p, :class => "review_answer_missing" %>
+                        <% else %>
+                            <%= link_to a.question.name, p, :class => "review_answer" %><br />
+                        <% end %>
+                      <% end %>
+                      <% if a.question.field_type == 'checkbox' %>
+                        <% if a.text == a.question.checkbox_value %>
+                          <%= check_box_tag a.question.name, a.question.name, true, data: { "completed" => "" } %>&nbsp;&nbsp;<%= a.question.name %><br />
+                        <% else %>
+                          <%= check_box_tag a.question.name, a.question.name, false %>&nbsp;&nbsp;<%= a.question.name %><br />
+                        <% end %>
+                      <% else %>
+                          <%= a.text %><br />
+                      <% end %>
                     <% end %>
-                  <% end %>
-            <% end %>
-            <hr />
-            <% end %>
+              <% end %>
+              <hr />
+              <% end %>
+              </div>
             </div>
         </div>
     <% end %>
@@ -44,10 +46,17 @@
 </div>
 
 <%= link_to('Download filled form', { controller: 'home', action: 'submit'}, type: 'button', class:' btn btn-lg btn-success') %>
-<%= link_to('Submit to translator', { controller: 'home', action: 'submit_to_translator'}, type: 'button', class:' btn btn-lg btn-success') %>
-<%= link_to('Submit to machine translator', { controller: 'home', action: 'submit_to_machine_translator'}, type: 'button', class:' btn btn-lg btn-success', id: 'machine_translator') %>
+Click here to immediately download the I-589 form with you answers filled in.
+<br /><br />
 
-<br />
+<%= link_to('Submit to translator', { controller: 'home', action: 'submit_to_translator'}, type: 'button', class:' btn btn-lg btn-success') %>
+Click here to submit your application to a volunteer translator. You will receive an email when the translation is complete.
+<br /><br />
+
+<%= link_to('Submit to machine translator', { controller: 'home', action: 'submit_to_machine_translator'}, type: 'button', class:' btn btn-lg btn-success', id: 'machine_translator') %>
+Click here to have your application translated immediately by a real-time online translation service.
+
+<br /><br />
 
 </div>
 

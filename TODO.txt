@@ -1,10 +1,6 @@
 ## BU(G)S
 - edge case with dependencies on p9
-- differentiate between guidance and answers on review answers page
-- fix review answers showing guidance when questions aren't filled out
-- move devise checkboxes
-- link to page on review answers
-- waiting indicator on review answers page (machine translator)
+- localize button text at bottom of review answers
 
 ## FRONT-END (D)ESIGN
 
