@@ -25,13 +25,13 @@ family = Section.create({
 background = Section.create({
   name:           'Background',
   seq_no:         3,
-  guidance:       'Background information'
+  guidance:       'This section of the application asks for extensive background information, including past residences, education, employment, and family members.<br /><br />Please have ready accurate historical information for these categories, including exact locations and date ranges.'
 })
 
 asylum_application = Section.create({
   name:           'Asylum Application',
   seq_no:         4,
-  guidance:       'Asylum application information'
+  guidance:       'This section of the applications asks for a detailed and specific account of the basis of your claim to asylum.<br /><br />Please have ready as much background information and supporting detail as possible to support your asylum claim. This includes specific dates, places, and descriptions about all events and actions described.'
 })
 
 I18n.locale = :en

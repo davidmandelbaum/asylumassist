@@ -9,26 +9,26 @@
     <tr>
         <% @personal = Section.find_by(seq_no: 1) %>
         <td><%= link_to(@personal.name, controller: 'sections', action: 'show', id: @personal.id) %></td>
-        <td>Lorem ipsum</td>
-        <td>Lorem ipsum</td>
+        <td>The first part of the application requests biographical information about you. This section collects information which may form an important part of your claim. As with every part of the application, you must be careful to answer these questions correctly.</td>
+        <td>All personal information, including current and past addresses, social security number (if present), passport information, and dates of prior international travel.</td>
     </tr>
     <tr>
         <% @family = Section.find_by(seq_no: 2) %>
         <td><%= link_to(@family.name, controller: 'sections', action: 'show', id: @family.id) %></td>
-        <td>Lorem ipsum</td>
-        <td>Lorem ipsum</td>
+        <td>This part of the application asks for information about your spouse and children. Most applicants for asylum based on sexual orientation will not be married or have children. If you are married, the section for your spouse must be completed, whether or not your spouse is included as part of the this application. The information requested regarding spouse and children is similar to the information requested for you and should be filled out as explained above.</td>
+        <td>Family information on spouse (if married) and children (if you have children). Similar documents as above: passport information, social security number (if present), and dates of prior international travel.</td>
     </tr>
     <tr>
         <% @background = Section.find_by(seq_no: 3) %>
         <td><%= link_to(@background.name, controller: 'sections', action: 'show', id: @background.id) %></td>
-        <td>Lorem ipsum</td>
-        <td>Lorem ipsum</td>
+        <td>This section of the application asks for extensive background information, including past residences, education, employment, and family members.</td>
+        <td>Accurate historical information for the categories mentioned to the left, including exact locations and date ranges.</td>
     </tr>
     <tr>
         <% @asylum_application = Section.find_by(seq_no: 4) %>
         <td><%= link_to(@asylum_application.name, controller: 'sections', action: 'show', id: @asylum_application.id) %></td>
-        <td>Lorem ipsum</td>
-        <td>Lorem ipsum</td>
+        <td>This section of the applications asks for a detailed and specific account of the basis of your claim to asylum.</td>
+        <td>As much background information and supporting detail as possible to support your asylum claim. This includes specific dates, places, and descriptions about all events and actions described.</td>
     </tr>
 </table>
 
