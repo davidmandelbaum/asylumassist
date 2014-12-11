@@ -9,7 +9,6 @@
 ## (F)RONT-END CODE
 
 ## BACK-(E)ND CODE
-- save information about translator into entry
 
 ## DATA ENT(R)Y
 - skip spouse if not married
@@ -28,6 +27,7 @@
 - parsley localizations
 
 ## (B)ONUS
+- save information about translator into entry
 - localize button text at bottom of review answers
 - add another status (A.I.18)
 - add another child
