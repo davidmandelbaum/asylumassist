@@ -8,17 +8,18 @@
 #
 
 user = User.create! :email => 'david.m.mandelbaum@gmail.com', :password => 'password', :password_confirmation => 'password', :admin => 1
+user = user
 
 personal = Section.create({
   name:           'Personal',
   seq_no:         1,
-  guidance:       'Personal information'
+  guidance:       'The first part of the application requests biographical information about you. This section collects information which may form an important part of your claim. As with every part of the application, you must be careful to answer these questions correctly. Wherever the question asks for information that does not apply to you or for which there is no answer, you must write "not applicable", "N/A", or "none."'
 })
 
 family = Section.create({
   name:           'Family',
   seq_no:         2,
-  guidance:       'Family information'
+  guidance:       'This part of the application asks for information about the applicant’s spouse and children. Most applicants for asylum based on sexual orientation will not be married or have children. For those applicants who are married, the section for the applicant’s spouse must be completed, whether or not the applicant’s spouse is included as part of the this application. If the applicant is not married, check the box on the top line and proceed to the Question 2 which asks about children. If the applicant has no children simply write “none.” The information requested regarding spouse and children is similar to the information requested for the applicant and should be filled out as explained above.'
 })
 
 background = Section.create({
@@ -35,9 +36,11 @@ asylum_application = Section.create({
 
 I18n.locale = :en
 
+# --------------------------------------------
+
 personal_p1 = Page.create({ seq_no: 1,
                             name: 'Basic Personal Information',
-                            guidance: 'This is for your most basic personal information. Ensure that all names are spelled correctly, and that your last name is filled out in ALL CAPS.' })
+                            guidance: 'Ensure that all names are spelled correctly.' })
 
 personal_p1.section = personal
 personal_p1.save()
@@ -47,14 +50,14 @@ personal_p1_questions = []
 personal_p1_questions << Question.create({
   name:               'Alien Registration Number',
   form_id:            'form1[0].#subform[0].TextField1[0]',
-  explanation:        'A-Number (if any)',
+  explanation:        'The A number is the number assigned to people who have ever filed an application with the INS, CIS, or have had a case in Immigration Court.<br />The A number is an eight or nine digit number. Most applicants applying for asylum will not have an A number at the time the application is filed. If you do not have an A number, the correct answer here is "none."',
   seq_no:             1,
   field_type:         'string'
 })
 
 personal_p1_questions << Question.create({ name: 'U.S. Social Security Number',
                               form_id: 'form1[0].#subform[0].TextField1[1]',
-                              explanation: '(if any)',
+                              explanation: 'If you have any valid Social Security number that has ever been issued to you, you must enter it here. If you have an IRS taxpayer I.D. number, do not enter it here.',
                               seq_no: 2,
                               field_type: 'string' })
 
@@ -66,7 +69,7 @@ personal_p1_questions << Question.create({ name: 'First Name',
 
 personal_p1_questions << Question.create({ name: 'Last Name',
                               form_id: 'form1[0].#subform[0].TextField1[2]',
-                              explanation: 'Make sure this is complete',
+                              explanation: 'List all surnames. Always use your true information even if any identifying documents have been falsified.',
                               seq_no: 6,
                               field_type: 'string',
                               validations: { :"allcaps" => "true"} })
@@ -79,7 +82,7 @@ personal_p1_questions << Question.create({ name: 'Middle Name',
 
 personal_p1_questions << Question.create({ name: 'What other names have you used?',
                               form_id: 'form1[0].#subform[0].TextField1[3]',
-                              explanation: 'Include maiden name and aliases',
+                              explanation: 'Include maiden name and aliases. If you are transgender and go by a different name from what is on your identity documents, please put your other name here.',
                               field_type: 'string',
                               seq_no: 7 })
 
@@ -92,7 +95,7 @@ end
 
 personal_p2 = Page.create({ seq_no: 2,
                             name: 'Residence in the U.S.',
-                            guidance: 'Where you physically reside' })
+                            guidance: 'This address determines which Asylum Office has jurisdiction over your application. Therefore, it is important that this information is correct and that the Immigration Service is notified of any changes to this address after the filing of the application.' })
 
 personal_p2.section = personal
 personal_p2.save()
@@ -221,7 +224,8 @@ end
 # ------------------------------------------------------
 
 personal_p4 = Page.create({ seq_no: 4,
-                            name: 'Gender and Marital Status' })
+                            name: 'Gender and Marital Status',
+                            guidance: 'If you are transgender, you should enter the sex that you use to self-identify.<br />If you are in a relationship other than marriage -- such as a civil union or domestic partnership, you should check the box labeled "single."'})
 
 personal_p4.section = personal
 personal_p4.save()
@@ -239,7 +243,8 @@ personal_p4_questions << Question.create({
   form_id:            'form1[0].#subform[0].PartALine9Gender[0]',
   field_type:         'checkbox',
   seq_no:             2,
-  checkbox_value:     'M' 
+  checkbox_value:     'M', 
+  validations:        { :"mutex" => [ "p4_2" ] }
 })
 
 personal_p4_questions << Question.create({
@@ -247,7 +252,8 @@ personal_p4_questions << Question.create({
   form_id:            'form1[0].#subform[0].PartALine9Gender[1]',
   field_type:         'checkbox',
   seq_no:             3,
-  checkbox_value:     'F' 
+  checkbox_value:     'F',
+  validations:        { :"mutex" => [ "p4_2" ] }
 })
 
 personal_p4_questions << FormText.create({
@@ -315,6 +321,7 @@ personal_p5_questions << Question.create({
   name:               'Present Nationality (citizenship)',
   form_id:            'form1[0].#subform[0].TextField1[6]',
   field_type:         'string',
+  explanation:           'If you hold dual citizenship, include each country of nationality.',
   seq_no:             3,
 })
 
@@ -322,6 +329,7 @@ personal_p5_questions << Question.create({
   name:               'Nationality at Birth',
   form_id:            'form1[0].#subform[0].TextField1[18]',
   field_type:         'string',
+  explanation:           'Enter this information even if it is the same as present nationality.',
   seq_no:             4,
 })
 
@@ -336,6 +344,7 @@ personal_p5_questions << Question.create({
   name:               'Religion',
   form_id:            'form1[01.#subform[0].TextField1[20]',
   field_type:         'string',
+  explanation:           'Make sure to mark "none" if you do not have a religious affiliation. Asylum applications are often returned if this box is left blank.',
   seq_no:             6,
 })
 
@@ -399,6 +408,7 @@ personal_p6_questions << Question.create({
   name:               'What is your current I-94 Number, if any?',
   form_id:            'form1[0].#subform[0].TextField3[0]',
   field_type:         'string',
+    explanation:        'The I-94 is the white or green passport-sized Departure Card that a foregn national is given when he/she enters the United States with inspection at an immigration port of entry. The I-94 will have a number of approximately 12 digits in the top left corner which should be entered here. If you entered illegally, you should write "none" in thix box.',
   seq_no:             6,
 })
 
@@ -1354,7 +1364,7 @@ end
 background_p4 = Page.create({
   seq_no:             4,
   name:               'Employment',
-  guidance:           'Provide the following information about your employment during the past 5 years. List your present employment first.'
+  guidance:           'Provide the following information about your employment during the past 5 years. List your present employment first. If you are uncomfortable giving the name of your employer for fear of getting them in trouble, you may provide a vague response, such as "Mexican Restaurant, Brooklyn, NY". Similarly, if you have relatives who are in the United States without lawful status, you may provide a vague current location.'
 })
 
 background_p4.section = background
@@ -1492,7 +1502,7 @@ end
 asylum_application_p1 = Page.create({
   seq_no:             1,
   name:               'Why are you applying for asylum?',
-  guidance:           'Why are you applying for asylum or withholding of removal under section 241(b)(3) of the INA, or for withholding of removal under the Convention Against Torture? Check the appropriate box(es) below and then provide detailed answers to questions A and B below.'
+  guidance:           'Why are you applying for asylum or withholding of removal under section 241(b)(3) of the INA, or for withholding of removal under the Convention Against Torture? Check the appropriate box(es) below and then provide detailed answers to questions A and B below.<br />If you are making a claim based on sexual orientation, transgender identity, and/or HIV status, you should check the box "Membership in a Particular Social Group".'
 })
 
 asylum_application_p1.section = asylum_application
@@ -1553,6 +1563,8 @@ asylum_application_p1_questions << Question.create({
   checkbox_value: '1'
 })
 
+# TODO: move this to another page
+
 asylum_application_p1_questions << Question.create({
   name:           'Do you also want to apply for withholding of removal under the Convention Against Torture?',
   field_type:     'checkbox',
@@ -1571,7 +1583,9 @@ end
 asylum_application_p2 = Page.create({
   seq_no:             2,
   name:               'Harm/mistreatment/threats',
-  guidance:           ''
+  guidance:           'This question is asking about past persecution. It is important to succinctly state any past harm that either the applicant or anyone whom she knows personally has suffered on account of her sexual orientation, transgender identity or HIV-positive status. If the applicant has never directly experienced harm herself, it is very useful for her to give detailed examples of harm that her family or friends have experienced as this helps personalize her fear of future persecution. Likewise even if the harm she suffered in her country didn’t rise to the level of persecution, it is important (if factually possible) to include some examples of harm here (for example, school taunts, family disownment) to paint a picture of the life that the applicant is afraid to return to.
+  
+  It is best to be succinct and specific in answering this question because the Asylum Officer will probably follow along with the answers to the “essay” questions during the interview.'
 })
 
 asylum_application_p2.section = asylum_application
@@ -1627,7 +1641,9 @@ end
 asylum_application_p3 = Page.create({
   seq_no:             3,
   name:               'Fear upon return',
-  guidance:           ''
+  guidance:           'This question essentially asks whether the applicant fears future persecution. For the applicant to qualify for asylum the answer to this question must be “yes.” Again, it is helpful to be both succinct and specific in detailing the type of harm feared – abuse by police, gay bashings, coercive psychological “treatment,” forced marriage, disownment by family, lack of medical treatment, inability to find any employment, etc.
+  
+  The answer to this question is especially important if the applicant did not experience past persecution. You should explain specifically how the applicant became fearful of the consequences of being LGBT/H especially if he had no personal experience with such persecution. In some cases, the applicant may have become aware of the persecution of other sexual minorities because of incidents in which friends or acquaintances had been victims of persecution, or when such incidents happened to strangers and were reported in the media or documented in other sources. Again the applicant should be as specific as possible about how he learned of the harm that occurred to others.'
 })
 
 asylum_application_p3.section = asylum_application
@@ -1669,7 +1685,8 @@ asylum_application_p3_questions << Question.create({
   field_type:     'text',
   seq_no:         5,
   form_id:        'form1[0].#subform[4].#subform[5].TextField15[0]',
-  validations:    { :"show_dep" => "p3_3" }
+  validations:    { :"show_dep" => "p3_3" },
+  translate:      true
 })
 
 asylum_application_p3_questions.each do |q|
@@ -1682,7 +1699,11 @@ end
 asylum_application_p4 = Page.create({
   seq_no:             4,
   name:               'Arrests, interrogations, etc.',
-  guidance:           ''
+  guidance:           'You may have already included information about arrests or detentions the applicant suffered in his country in your answers to a previous question, but you should still list such incidents again in answer to this question. Remember, this question doesn’t only ask about convictions, but includes arrests, detentions, and interrogations. Thus any interaction the applicant had with the police or military in which he did not feel free to leave should be included here.
+  
+  Answering this question can help provide details about the basis of the applicant’s claim, if, for example, he was detained and abused by the police because of his sexual orientation. In some sexual orientation based cases, applicants have been previously arrested, charged and convicted of violating laws prohibiting homosexuality or homosexual sexual conduct. These “prosecutions” for private sexual activity between consenting adults may in fact be persecution.
+                                                                                               
+                                                                                               It is also important to include any information about arrests or detentions even if they are unrelated to the asylum claim itself. Convictions for some crimes could lead to a bar to asylum so the Officer will pay close attention to the answers to this section. See Section # 6.2.'
 })
 
 asylum_application_p4.section = asylum_application
@@ -1724,7 +1745,8 @@ asylum_application_p4_questions << Question.create({
   field_type:     'text',
   seq_no:         5,
   form_id:        'form1[0].#subform[6].TextField16[0]',
-  validations:    { :"show_dep" => "p4_3" }
+  validations:    { :"show_dep" => "p4_3" },
+  translate:      true
 })
 
 asylum_application_p4_questions.each do |q|
@@ -1737,7 +1759,11 @@ end
 asylum_application_p5 = Page.create({
   seq_no:             5,
   name:               'Associations with organizations or groups',
-  guidance:           ''
+  guidance:           'This question is usually most relevant to someone who is claiming persecution based on her political opinion or affiliation with a certain political organization. In the case of sexual-orientation based claims, if the applicant was a member of an LGBT/H organization and for that reason was targeted for persecution then the applicant may have a dual claim based on LGBT/H status and political opinion. The applicant should list any or all associations or memberships with LGBT/H organizations in her home country along with corroborating evidence of such membership such as letters, membership cards, news stories, etc.
+  
+  Even if the applicant herself was not affiliated with any organizations in her country, she may fear returning because of her family’s affiliations. For example, a Colombian applicant with a politically active brother may fear returning to her country based on her own imputed political opinion because of her brother’s activities. It is therefore important to answer this question thoroughly regarding the entire family.
+  
+  The answer to this question could also trigger mandatory bars to asylum if the applicant was affiliated with an organization with the United States considers to be a terrorist or genocidal organization.'
 })
 
 asylum_application_p5.section = asylum_application
@@ -1771,7 +1797,8 @@ asylum_application_p5_questions << Question.create({
 asylum_application_p5_questions << FormText.create({
   guidance:       'Describe for each person the level of participation, any leadership or other positions held, and the length of time you or your family members were involved in each organization or activity.',
   seq_no:         4,
-  validations:    { :"show_dep" => "p5_3" }
+  validations:    { :"show_dep" => "p5_3" },
+  translate:      true
 })
 
 asylum_application_p5_questions << Question.create({
@@ -1792,7 +1819,7 @@ end
 asylum_application_p6 = Page.create({
   seq_no:             6,
   name:               'Continued participation',
-  guidance:           ''
+  guidance:           'The answer to this question could impact the your fear of future persecution, so if you are still involved in any of these groups, you should explain your involvement thoroughly.'
 })
 
 asylum_application_p6.section = asylum_application
@@ -1834,7 +1861,8 @@ asylum_application_p6_questions << Question.create({
   field_type:     'text',
   seq_no:         5,
   form_id:        'form1[0].#subform[6].TextField16[2]',
-  validations:    { :"show_dep" => "p6_3" }
+  validations:    { :"show_dep" => "p6_3" },
+  translate:      true
 })
 
 asylum_application_p6_questions.each do |q|
@@ -1847,7 +1875,7 @@ end
 asylum_application_p7 = Page.create({
   seq_no:             7,
   name:               'Afraid of torture?',
-  guidance:           ''
+  guidance:           'If the applicant is applying for relief under the Convention against Torture, she should be able to answer truthfully “yes” to this question. See Section # 7 for more information about CAT relief. Basically, if the applicant fears physical harm or pain either directly at the hands of her government or with the acquiescence of her government, she should respond that she fears torture in her country. Again, although the answer to this question may be redundant with answers to other questions, you should still include succinct but detailed information about why the applicant fears torture and by whom.'
 })
 
 asylum_application_p7.section = asylum_application

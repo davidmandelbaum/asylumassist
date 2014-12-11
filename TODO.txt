@@ -12,6 +12,7 @@
 - translator view
 
 ## DATA ENT(R)Y
+- add translate to fields that require it
 - CAT box
 - add another status (A.I.18)
 - add another child
@@ -20,6 +21,7 @@
 - skip kids if they don't exist
 - signature page
 - add translations for submitted_to_translator text
+- add translations for submitted_to_machine_translator text
 
 ## DE(P)LOYMENT
 
