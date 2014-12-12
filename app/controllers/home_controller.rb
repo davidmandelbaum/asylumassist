@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  before_action :set_locale
+  # before_action :set_locale
 
   before_filter :authenticate_user!,
     :only => [:structure]
